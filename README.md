@@ -7,6 +7,7 @@
 <li><a href="https://github.com/splincode/codework/tree/master/cpp/fso">js-фреймворк работы с css классами dom элементов</a></li>
 </ul>
 
+<br>
 
 <img src="https://upload.wikimedia.org/wikipedia/ru/8/8a/Stankin.gif" width="10%" height="10%" align="left" alt="">
 <h3>C++</h3>
