@@ -1,7 +1,9 @@
 # задачи по программированию
 
 <img src="https://upload.wikimedia.org/wikipedia/ru/8/8a/Stankin.gif" width="10%" height="10%" align="left" alt="">
-<h3>C++</h3>
+<h5>C++</h5>
+<h5>Лабораторные работы</h5>
+<br><br>
 <ul>
 <li><a href="https://github.com/splincode/codework/tree/master/cpp/fso">Функции для работы с файлами</a></li>
 <li><a href="https://github.com/splincode/codework/tree/master/cpp/associative">Статичный ассоциативный массив</a></li>
