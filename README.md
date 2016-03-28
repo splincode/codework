@@ -1,10 +1,10 @@
-# задачи по программированию
+# Задачи по программированию
 
 <img src="https://avatars.yandex.net/get-bunker/7dab1734c4d1632185bd09b2d8e6b66e8cafb732/normal/7dab17.png" width="10%" height="10%" align="left" alt="">
 <h3>JavaScript</h3>
 <ul>
-<li><a href="https://github.com/splincode/codework/tree/master/cpp/fso">Сортировщик карточек путешественника</a></li>
-<li><a href="https://github.com/splincode/codework/tree/master/cpp/fso">js-фреймворк работы с css классами dom элементов</a></li>
+<li><a href="#">Сортировщик карточек путешественника</a></li>
+<li><a href="#">js-фреймворк работы с css классами dom элементов</a></li>
 </ul>
 
 <br>
