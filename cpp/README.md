@@ -1,6 +1,4 @@
-# задачи по программированию
-
-<h3>C++: </h3>
+<h3>Содержание </h3>
 <ul>
 <li><a href="//github.com/splincode/Cpp/tree/master/fso">Функции для работы с файлами</a></li>
 <li><a href="//github.com/splincode/Cpp/tree/master/associative">Статичный ассоциативный массив</a></li>
