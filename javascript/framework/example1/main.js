@@ -80,5 +80,9 @@ document.addEventListener('DOMContentLoaded', function(){
 
     }, 1000);
 
+    ('.maxim').addClass('border');
+    
+    ('.maxim').addClass('padding');
+    ('.maxim').removeClass('padding');
 
 }, false);

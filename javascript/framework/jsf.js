@@ -188,7 +188,7 @@
 		}
 
 		return this;
-	}
+	};
 
 	String.prototype.mediacss = function(type, value){
 		let dom = this.toString();
@@ -205,7 +205,21 @@
 	 	document.body.appendChild(style);
 
 	 	return this;
-	}
+	};
+
+	String.prototype.addClass = function(classtext) {
+		let dom = document.querySelectorAll(this.toString());
+		for(let i = 0; i < dom.length; ++i) dom[i].className += ` ${classtext}`;
+
+		return this;	
+	};
+
+	String.prototype.removeClass = function(classname) {
+		let dom = document.querySelectorAll(this.toString());
+		for(let i = 0; i < dom.length; ++i) dom[i].className = dom[i].className.replace(` ${classname}`, '');
+
+		return this;	
+	};
 
 	Map.prototype.toString = function(css){
 		let text = '';
@@ -226,5 +240,4 @@
 		}
 
 		return text;
-		
-	}
+	};

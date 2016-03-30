@@ -8,3 +8,11 @@
 	align-items: baseline;
 	align-content: flex-start;
 }
+
+.border {
+	border: 2px dashed lightgreen !important;
+}
+
+.padding {
+	padding: 50px !important; 
+}
