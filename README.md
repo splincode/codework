@@ -4,7 +4,7 @@
 <h3>JavaScript</h3>
 <ul>
 <li><a href="#">Сортировщик карточек путешественника</a></li>
-<li><a href="https://github.com/splincode/codework/tree/master/javascript/framework">js-фреймворк работы с css классами dom элементов</a></li>
+<li><a href="https://github.com/splincode/codework/tree/master/javascript/framework">JS-фреймворк работы с css классами dom элементов</a></li>
 </ul>
 
 <br>
