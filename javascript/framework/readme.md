@@ -12,10 +12,10 @@ js-фреймворк работы с css классами dom элементо�
 
 ### 
 
-1. Управление блоками <br>
-<img src="https://habrastorage.org/files/251/f37/013/251f37013e0649a588db1e4432f59746.gif" align="center"/>
-2. Решение СЛАУ методом Крамера  <br>
-
+1. <a href="https://github.com/splincode/codework/blob/master/javascript/framework/example1/index.html">Управление блоками</a><br>
+<img src="https://habrastorage.org/files/251/f37/013/251f37013e0649a588db1e4432f59746.gif" align="center" /> <br>
+2. <a href="https://github.com/splincode/codework/blob/master/javascript/framework/example2/index.html">Решение СЛАУ методом Крамера</a>  <br>
+<img src="https://habrastorage.org/files/326/639/f2e/326639f2eeb347d795fbb285bb407ec5.png" align="center"/> <br>
 ## Документация
 
 ### 
