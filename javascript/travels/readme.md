@@ -8,7 +8,7 @@
 
 * ​Take train 78A from Madrid to Barcelona. Seat 45B. <br>
 * Take the airport bus from Barcelona to Gerona Airport. No seat assignment. <br>
-* From Gerona Airport, take flight SK455 to Stockholm. Gate 45B. Seat 3A. Baggage drop at ticket counter 344. <br>
+* From Gerona Airport, take flight SK455 to Stockholm. Gate 45B. Seat 3A. <br> Baggage drop at ticket counter 344. <br>
 * From Stockholm, take flight SK22 to New York JFK. Gate 22. Seat 7B.  <br>
 Baggage will be automatically transferred from your last leg. <br>
 
