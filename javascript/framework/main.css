@@ -1,0 +1,10 @@
+#main {
+	width: 600px;
+	height: auto;
+	margin: 100px auto;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-items: baseline;
+	align-content: flex-start;
+}
