@@ -26,12 +26,12 @@ Baggage will be automatically transferred from your last leg. <br>
 ## Решение
 1. Так как начальный пункт (A) и конечный пункт (B), встречается всего лишь одни раз в цепочке событий, это говорит о том, что
 мы сможем найти A и B
-
-Пример:
-Madrid - Barcelona
-Barcelona - Gerona
-Gerona - Stockholm
-Stockholm - New York
-
+<br>
+Пример:<br>
+Madrid - Barcelona<br>
+Barcelona - Gerona<br>
+Gerona - Stockholm<br>
+Stockholm - New York<br>
+<br>
 [Madrid] и [New York] встретились всего лишь один раз, так, как Madrid встретился первый город в карточке, значит это пункт A,
 где пункт B New York 
