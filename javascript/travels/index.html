@@ -13,8 +13,9 @@
 	    <h1>Добавить карточку</h1>
 	    <p>входные данные должны быть строгими, <br>
 	       цепочка не должна быть кольцевой (A &#8800; B)</p>
-
-
+		
+		<textarea class="card_add" cols="40" rows="5"></textarea>
+		<button class="card_add_list">Добавить карточку</button>
 	  </article>
 
 	  <aside>
@@ -25,12 +26,21 @@
 
 	  <section>
 	    <h1>Текущая цепочка</h1>
+	    <div class="list">
+	    	<p>Нет карточек</p>
+	    </div>
 	  </section>
 
 	  <section>
 	    <h1>Маршрут путешествия</h1>
+	    <div class="end_list">
+	    	<p>Нет маршрута</p>
+	    </div>
 	  </section>
 
 	</main>
+
+	<script src='js/gui.js'></script>
+	<script src='js/app.js'></script>
 </body>
 </html>
