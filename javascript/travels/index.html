@@ -5,7 +5,11 @@
 	<title>Маршрут путешественника</title>
 	<link rel="stylesheet" href="css/main.css">
 	<script>
-		var Card = []; // список карточек
+		var Card = [
+			'', // откуда
+			'', // куда
+			[] // текущая карточка, ее информация
+		]; // список карточек
 	</script>
 </head>
 <body>
@@ -13,11 +17,13 @@
 	<main>
 
 	  <article>
-	    <h1>Добавить карточку</h1>
-	    <p>входные данные не должны повторяться, <br>
-	       цепочка не должна быть кольцевой (A &#8800; B)</p>
+	    <h1 title='входные данные не должны повторяться, маршрут путешествия не должен быть замкнутым (A &#8800; B)'>Добавить карточку</h1>
+	    <p>Полная информация о маршруте:</p>
 		
-		<textarea class="card_add" cols="40" rows="5"></textarea>
+		<textarea class="card_add" rows="5"></textarea>
+		<p>Населенные пункты:</p>
+		<input type="text" class="from" placeholder="Откуда">
+		<input type="text" class="to" placeholder="Куда"><br><br>	
 		<button class="card_add_list" onclick="add_list(Card)">Добавить карточку</button>
 	  </article>
 
@@ -39,11 +45,11 @@
 	    <div class="end_list">
 	 	<p>Нет маршрута</p>
 	
-		<!-- <p class="ticket">
+		<p class="ticket">
 			<span class="node">1</span>
 			From Gerona Airport, take flight SK455 to Stockholm. Gate 45B. Seat 3A. 
 			Baggage drop at ticket counter 344. 
-		</p> -->
+		</p>
 
 	    </div>
 	  </section>
