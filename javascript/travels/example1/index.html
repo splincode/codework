@@ -5,11 +5,7 @@
 	<title>Маршрут путешественника</title>
 	<link rel="stylesheet" href="css/main.css">
 	<script>
-		var Card = [
-			'', // откуда
-			'', // куда
-			[] // текущая карточка, ее информация
-		]; // список карточек
+		var Cards = []; // список карточек
 	</script>
 </head>
 <body>
@@ -24,13 +20,13 @@
 		<p>Населенные пункты:</p>
 		<input type="text" class="from" placeholder="Откуда">
 		<input type="text" class="to" placeholder="Куда"><br><br>	
-		<button class="card_add_list" onclick="add_list(Card)">Добавить карточку</button>
+		<button class="card_add_list" onclick="add_list(Cards)">Добавить карточку</button>
 	  </article>
 
 	  <aside>
 	    <h1>Сортировка</h1>
-	    <p>Текущее количество карточек: <span class='card'>0</span></p>
-	    <button class="sort">Получить маршрут</button>
+	    <p>Текущее количество карточек: <span class='card_num'>0</span></p>
+	    <button class="sort" onclick="sort_list(Cards)">Получить маршрут</button>
 	  </aside>
 
 	  <section>
@@ -43,14 +39,7 @@
 	  <section>
 	    <h1>Маршрут путешествия</h1>
 	    <div class="end_list">
-	 	<p>Нет маршрута</p>
-	
-		<p class="ticket">
-			<span class="node">1</span>
-			From Gerona Airport, take flight SK455 to Stockholm. Gate 45B. Seat 3A. 
-			Baggage drop at ticket counter 344. 
-		</p>
-
+	 		<p>Нет маршрута</p>
 	    </div>
 	  </section>
 

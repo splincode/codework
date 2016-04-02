@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Маршрут путешественника</title>
+</head>
+<body>
+	
+
+	<script src='travelsort.js'></script>
+	<script>
+			'use strict';
+			let list = [
+				['*', 'Тверь', 'Саранск'],
+				['*', 'Барнаул', 'Казань'],
+				['*', 'Санкт-Петербург', 'Бишкек'],
+				['*', 'Саранск', 'Махачкала'],
+				['*', 'Казань', 'Югра'],
+				['*', 'Махачкала', 'Барнаул'],
+				['*', 'Воронеж', 'Санкт-Петербург'],
+				['*', 'Бишкек', 'Тверь']
+			];
+
+			document.write('Неотсортированный маршрут: <br>');
+			for(let i = 0; i < list.length; i++) 
+			document.write(list[i][0] + "= " + list[i][1] + " - " + list[i][2] +  '<br>');
+			document.write('<br>');
+
+			// Вызываем API
+			let ticket = new Travelsort(list);
+			if (ticket.printError() == true) {
+				list = ticket.sort_ticket();
+				ticket.write();
+			}
+
+		</script>
+</body>
+</html>

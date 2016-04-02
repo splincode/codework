@@ -3,6 +3,7 @@
 JS-фреймворк для работы с css классами dom элементов
 
 ## Использование (только в Google Chrome)
+c поддержкой ES6
 
 ```html
   <script src="jsf.js"></script>
