@@ -5,6 +5,7 @@
 <ul>
 <li><a href="https://github.com/splincode/codework/tree/master/javascript/travels">Сортировщик карточек путешественника</a></li>
 <li><a href="https://github.com/splincode/codework/tree/master/javascript/framework">JS-фреймворк для работы с css классами dom элементов</a></li>
+<li><a href="https://github.com/splincode/codework/tree/master/javascript/maker">Сверстайте телепрограмму</a></li>
 </ul>
 
 <br>
