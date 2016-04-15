@@ -1,6 +1,6 @@
 # Задачи по программированию
 
-<img src="https://habrastorage.org/files/744/d32/0e2/744d320e20e24d5e9a1ff9a135ea082c.jpg" width="10%" height="10%" align="left" alt="">
+<img src="https://habrastorage.org/files/fd5/631/a65/fd5631a65a964b4dafa01a0ec415dbfb.jpg" width="10%" height="10%" align="left" alt="">
 <h3>C++</h3>
 <ul>
 <li><a href="https://github.com/splincode/codework/tree/master/cpp/prime">Тест на простоту</a></li>
