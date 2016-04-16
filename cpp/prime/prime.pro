@@ -4,7 +4,8 @@ CONFIG -= app_bundle
 CONFIG -= qt
 
 SOURCES += main.cpp \
-    number.cpp
+    number.cpp \
+    check.cpp \
 
 HEADERS += \
     number.h

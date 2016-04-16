@@ -1,51 +1,43 @@
 #include <iostream>
-#include <number.h>
+#include "number.h"
+#include "check.cpp"
 
 using namespace std;
 int main(int argc, char *argv[]){
 
-
-    if (argc < 3 && argv[1] != "-n") {
-
-        cout << "NAME" << endl
-             << "\t prime - проверка на простоту " << endl
-             << "SYNOPSIS" << endl
-             << "\t prime [ключи]... [значения]... " << endl
-             << "DESCRIPTION" << endl
-             << "\t -n " << endl
-             << "\t   вводим число, которое будет проверено на простоту" << endl;
-
-        return 0;
-
-    } // ./prime -n 123..
+    if (!check(argc, argv)) { return 0; }
 
     Number n; // натуральное число
     n = argv[2];
 
+    int count = 6; // количество аргументов
 
-    cout << n << endl;
+    // проверка: на какую цифру оканчивается число
+    if (n.length() < 2 && n.ending(count, 0, 1, 4, 6, 8)) {
+
+        cout << "число не является простым" << endl;
+
+    } else if (n.length() > 1 && n.ending(count+1, 0, 2, 5, 4, 6, 8)) {
+
+        cout << "число не является простым" << endl;
+        return 0;
+
+    }
 
 
+    if ( (n.length() > 1 && (n.div(3) || n.div(9))) ||
+         (n.length() > 2 && ( n.div(11) ))
+    ) {
 
-      /*  string number = argv[2];
+        // если число делится на одно из [3, 7 .., 101]
+        cout << "число не является простым" << endl;
+        return 0;
 
-        auto len = number.length(); // размер числа
-        char end = (int)(number[len-1]); // на какую цифру заканчивается число
+    }
+
+    // исследуем дальше
 
 
-        if (len < 2 && (end == '0' || end == '1' || end == '4' || end == '6' || end == '8')) {
-
-            cout << "число не является простым" << endl;
-
-        } else if (len > 1 && (end == '0' || end == '2' || end == '5' || end == '4' || end == '6' || end == '8')) {
-
-            cout << "число не является простым" << endl;
-
-        } else {
-
-            // определяем простоту
-            cout << "исследуем" << endl;
-        } */
 
     return 0;
 }
