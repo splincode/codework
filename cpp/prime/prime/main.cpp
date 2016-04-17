@@ -37,9 +37,6 @@ int main(int argc, char *argv[]) {
             p = p + 2; continue;
         }
 
-        m = n%p;
-        cout << "n = " << n << " p = " << p << ", n % k = " << m <<endl;
-
         if (n % p == 0) {
             prm = false;
             break;
