@@ -4,8 +4,7 @@ CONFIG -= app_bundle
 CONFIG -= qt
 
 SOURCES += main.cpp \
-    number.cpp \
-    check.cpp \
+    biginteger.cpp
 
 HEADERS += \
-    number.h
+    biginteger.h

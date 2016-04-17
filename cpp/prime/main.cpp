@@ -1,43 +1,38 @@
 #include <iostream>
-#include "number.h"
-#include "check.cpp"
-
+#include <biginteger.cpp>
 using namespace std;
-int main(int argc, char *argv[]){
 
-    if (!check(argc, argv)) { return 0; }
+int main(int argc, char *argv[]) {
+    char *text = "77";
+    BigInteger n(text), k("3"), q;
 
-    Number n; // натуральное число
-    n = argv[2];
-
-    int count = 6; // количество аргументов
-
-    // проверка: на какую цифру оканчивается число
-    if (n.length() < 2 && n.ending(count, 0, 1, 4, 6, 8)) {
-
-        cout << "число не является простым" << endl;
-
-    } else if (n.length() > 1 && n.ending(count+1, 0, 2, 5, 4, 6, 8)) {
-
+    if (n % 2 == 0 || n == 1) {
         cout << "число не является простым" << endl;
         return 0;
-
     }
 
+    q = n.sqrt() + 1;
 
-    if ( (n.length() > 1 && (n.div(3) || n.div(9))) ||
-         (n.length() > 2 && ( n.div(11) ))
-    ) {
+    BigInteger m;
+    bool prm = true;
+    while(k <= q){
 
-        // если число делится на одно из [3, 7 .., 101]
-        cout << "число не является простым" << endl;
-        return 0;
+        if (k % 2 == 0) { k++; continue; } // отсеиваем четные делители
 
+        m = n%k;
+        cout << "n = " << n << " k = " << k << ", n % k = " << m <<endl;
+
+        if (n % k == 0) {
+            prm = false;
+            break;
+        }
+
+        k++;
     }
 
-    // исследуем дальше
-
-
+    if (prm) cout << "число является простым" << endl;
+    else cout << "число не является простым" << endl;
+    //cout << "количество итераций: " << k << endl;
 
     return 0;
 }
