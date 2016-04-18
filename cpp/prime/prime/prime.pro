@@ -8,3 +8,5 @@ SOURCES += main.cpp \
 
 HEADERS += \
     biginteger.h
+
+QMAKE_CXXFLAGS += -funroll-all-loops -funroll-loops
