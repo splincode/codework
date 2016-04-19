@@ -17,8 +17,8 @@
 <img src="https://habrastorage.org/files/a71/668/cf8/a71668cf85c645a5be5b60f546633f47.jpg"/>
 <b>Простые состоящие из нулей</b>
 <img src="https://habrastorage.org/files/7c2/b8e/077/7c2b8e0774c14da49bbb05ae9b538185.jpg"/>
-<b>Факториальные</b>
-
+<b>Простые числа Фиббоначи</b>
+<img src="https://habrastorage.org/files/0ba/76f/152/0ba76f1520b54601b4ad458e92ba60f2.jpg"/>
 <b>Уникальные простые числа</b>
 <img src="https://habrastorage.org/files/ecb/311/d6b/ecb311d6b7794445b4f4bd363942f0e6.jpg"/>
 <b>Простые числа в форме n<sup>4</sup> + 1</b>
