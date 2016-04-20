@@ -6,7 +6,7 @@
 #include <sstream>
 #include <cmath>
 #include "biginteger.h"
-#define MAX 10000 // for strings
+#define MAX 100 // максимальное хранимое число знаков
 
 BigInteger::BigInteger() // empty constructor initializes zero
 {
