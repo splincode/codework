@@ -2,6 +2,7 @@
 <h3>Оглавление</h3>
 <a href="#one">1. Теория</a><br>
 <a href="#two">2. Правила</a><br>
+<a href="#three">3. Пример работы</a><br>
 
 <h3 id="one">Теория</h3>
 Игра «Жизнь» — клеточный автомат, придуманный английским математиком Джоном Конвеем в 1970 году.
@@ -19,24 +20,5 @@
 
 * Игрок не принимает прямого участия в игре, а лишь расставляет или генерирует начальную конфигурацию «живых» клеток, которые затем взаимодействуют согласно правилам уже без его участия (он является наблюдателем). <br>
 
-<!--
-
 <h3 id="three">BFS</h3>
-<img src="https://habrastorage.org/files/137/887/565/13788756539e42f99ddd661d722566de.png"/><br>
-
-<h3 id="four">Вывод графа</h3>
-<img src="https://habrastorage.org/files/caa/a2b/a52/caaa2ba522e1444e88500fd7b54a508f.png"/><br>
-
-<h3 id="foury">BFS, DFS</h3>
-<img src="https://habrastorage.org/files/ec6/d3d/17c/ec6d3d17cd1a4788ac77d4e8ab4f6760.png"/><br>
-
-<h3 id="five">Алгоритм</h3>
-<p>Cписок вершин, где каждая из которых, хранит порядковые номера вершин, с которыми соединена ребром.</p>
-<img src="https://habrastorage.org/files/96f/a18/9a9/96fa189a979e41988a47fd9ac03eef8d.png"/>
-<img src="https://habrastorage.org/files/563/47b/ac9/56347bac9b574626b312fd32c6a68f0a.png"/>
-
-<br>
-Дополнительная информация: <br>
-1. https://www.youtube.com/watch?v=uT1p5Eiw9CE <br>
-2. https://www.youtube.com/watch?v=ImMnYq2zP4Y <br>
--->
+<img src="https://habrastorage.org/files/367/3ea/1de/3673ea1de70f4837a7a352573b8e28d9.gif"/>

@@ -1,0 +1,10 @@
+<!DOCTYPE RCC><RCC version="1.0">
+<qresource prefix="/">
+    <file>live.html</file>
+    <file>source/css/normalize.css</file>
+    <file>source/css/bootstrap.css</file>
+    <file>source/css/style.css</file>
+    <file>source/js/jquery.js</file>
+    <file>source/js/app.js</file>
+</qresource>
+</RCC>
