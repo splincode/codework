@@ -1,6 +1,23 @@
 # Задачи по программированию
 
 <img src="https://habrastorage.org/files/bf3/57e/832/bf357e832ba24e69b4182efc56d07283.jpg" width="18%" height="10%" alt="">
+<h4>PHP</h4>
+<ul>
+	<li>
+		<a href="https://github.com/splincode/codework/tree/master/cpp/theory">Теория
+		<sup> незакончено</sup></a>
+	</li>
+	<li>
+		<a href="https://github.com/splincode/codework/tree/master/cpp/sort">Сортировщик</a>
+		<sup> незакончено</sup>
+	</li>
+	<li>
+		<a href="https://github.com/splincode/codework/tree/master/cpp/link">Ссылка возврата</a>
+		<sup> незакончено</sup>
+	</li>
+</ul><br>
+
+<img src="https://habrastorage.org/files/bf3/57e/832/bf357e832ba24e69b4182efc56d07283.jpg" width="18%" height="10%" alt="">
 <h4>C++</h4>
 <ul>
 	<li>
