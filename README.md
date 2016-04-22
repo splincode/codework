@@ -1,6 +1,6 @@
 # Задачи по программированию
 
-<img src="http://zismo.biz/uploads/monthly_03_2016/post-198720-0-01045700-1457486892.png" width="18%" height="10%" alt="">
+<img src="https://upload.wikimedia.org/wikipedia/commons/b/b2/VKontakte.svg" width="18%" height="10%" alt="">
 <h4>PHP</h4>
 <ul>
 	<li>
