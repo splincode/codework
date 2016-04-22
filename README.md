@@ -3,7 +3,8 @@
 <img src="https://habrastorage.org/files/bf3/57e/832/bf357e832ba24e69b4182efc56d07283.jpg" width="18%" height="10%" alt="">
 <h4>C++</h4>
 <ul>
-	<li><a href="https://github.com/splincode/codework/tree/master/cpp/prime">Тест на простоту</a></li>
+	<li><a href="https://github.com/splincode/codework/tree/master/cpp/prime">Тест на простоту числа</a></li>
+	<li><a href="https://github.com/splincode/codework/tree/master/cpp/prime">Библиотека для работы с памятью</a></li>
 </ul><br>
 
 <img src="https://avatars.yandex.net/get-bunker/7dab1734c4d1632185bd09b2d8e6b66e8cafb732/normal/7dab17.png" width="10%" height="10%" alt="">
