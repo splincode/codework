@@ -34,7 +34,7 @@ q(x)         | 4sin2&#960;xcos<sup>2</sup>&#960;x
 l            |
 a<sup>2</sup>| 3
 
-Данные | Second Header
+Данные | Значения
 ------------ | -------------
 Content from cell 1 | Content from cell 2
 Content in the first column | Content in the second column
