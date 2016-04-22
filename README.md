@@ -8,11 +8,12 @@
 		<sup> незакончено</sup>
 	</li>
 	<li>
-		<a href="https://github.com/splincode/codework/tree/master/php/sort">Сортировщик</a>
+		<a href="https://github.com/splincode/codework/tree/master/php/sort">
+		Отсортировать все слова по количеству вхождений</a>
 		<sup> незакончено</sup>
 	</li>
 	<li>
-		<a href="https://github.com/splincode/codework/tree/master/php/link">Ссылка возврата</a>
+		<a href="https://github.com/splincode/codework/tree/master/php/link">Пример проивзодительной SQL-выборки</a>
 		<sup> незакончено</sup>
 	</li>
 </ul><br>
