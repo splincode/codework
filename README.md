@@ -30,4 +30,5 @@
 <li><a href="https://github.com/splincode/codework/tree/master/cpp/tree">Структура данных - дерево</a></li>
 <li><a href="https://github.com/splincode/codework/tree/master/cpp/var">Универсальный скалярный тип</a></li>
 <li><a href="https://github.com/splincode/codework/tree/master/cpp/gamelife">Игра «Жизнь»</a></li>
+<li><a href="https://github.com/splincode/codework/tree/master/cpp/interpreator">Интерпретатор</a></li>
 </ul>
