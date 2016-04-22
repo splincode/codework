@@ -78,3 +78,15 @@
 		Мультитранслятор</a><sup> незакончено</sup>
 	</li>
 </ul>
+
+<h4>JavaScript</h4>
+<ul>
+	<li>
+		<a href="https://github.com/splincode/codework/tree/master/javascript/transcalency">
+		Уравнение теплопроводности</a><sup> незакончено</sup>
+	</li>
+	<li>
+		<a href="https://github.com/splincode/codework/tree/master/javascript/wave">
+		Волновое уравнение</a><sup> незакончено</sup>
+	</li>
+</ul>
