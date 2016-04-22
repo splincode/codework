@@ -75,6 +75,6 @@
 	</li>
 	<li>
 		<a href="https://github.com/splincode/codework/tree/master/cpp/multitranslater">
-		Транслятор</a><sup> незакончено</sup>
+		Мультитранслятор</a><sup> незакончено</sup>
 	</li>
 </ul>
