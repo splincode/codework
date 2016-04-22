@@ -51,7 +51,7 @@
 	</li>
 	<li>
 		<a href="https://github.com/splincode/codework/tree/master/cpp/graph">
-		Структура данных -граф</a>
+		Структура данных - граф</a>
 	</li>
 	<li>
 		<a href="https://github.com/splincode/codework/tree/master/cpp/tree">
@@ -71,6 +71,10 @@
 	</li>
 	<li>
 		<a href="https://github.com/splincode/codework/tree/master/cpp/translater">
+		Транслятор</a><sup> незакончено</sup>
+	</li>
+	<li>
+		<a href="https://github.com/splincode/codework/tree/master/cpp/multitranslater">
 		Транслятор</a><sup> незакончено</sup>
 	</li>
 </ul>
