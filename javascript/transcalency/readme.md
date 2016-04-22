@@ -3,12 +3,6 @@
 <a href="#two">&nbsp;&nbsp;&nbsp;1.1. Пример работы</a><br>
 <a href="#three">2. Указания</a><br>
 <a href="#four">&nbsp;&nbsp;&nbsp;2.1. Исходные значения и описание</a><br>
-<a href="#five">&nbsp;&nbsp;&nbsp;2.2. Семантический анализ</a><br>
-<a href="#six">&nbsp;&nbsp;&nbsp;2.3. Промежуточный код. Его цель</a><br>
-<a href="#seven">&nbsp;&nbsp;&nbsp;2.4. Многоязыковые трансляторы</a><br>
-<a href="#eight">&nbsp;&nbsp;&nbsp;2.5. Многоязыковые трансляторы. Переносимость</a><br>
-<a href="#night">&nbsp;&nbsp;&nbsp;2.6. Виды промежуточных представлений </a><br>
-
 
 <h3 id="one">1. Найти функцию u(x, t)</h3>
 <p>Найти функцию u(x, t) удовлетворяющую при 0 < x < l и t > 0 уравнению: <br>
