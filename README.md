@@ -4,15 +4,15 @@
 <h4>PHP</h4>
 <ul>
 	<li>
-		<a href="https://github.com/splincode/codework/tree/master/cpp/theory">Теория
-		<sup> незакончено</sup></a>
-	</li>
-	<li>
-		<a href="https://github.com/splincode/codework/tree/master/cpp/sort">Сортировщик</a>
+		<a href="https://github.com/splincode/codework/tree/master/php/theory">Теория</a>
 		<sup> незакончено</sup>
 	</li>
 	<li>
-		<a href="https://github.com/splincode/codework/tree/master/cpp/link">Ссылка возврата</a>
+		<a href="https://github.com/splincode/codework/tree/master/php/sort">Сортировщик</a>
+		<sup> незакончено</sup>
+	</li>
+	<li>
+		<a href="https://github.com/splincode/codework/tree/master/php/link">Ссылка возврата</a>
 		<sup> незакончено</sup>
 	</li>
 </ul><br>
