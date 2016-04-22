@@ -69,4 +69,8 @@
 		<a href="https://github.com/splincode/codework/tree/master/cpp/interpretor">
 		Интерпретатор</a><sup> незакончено</sup>
 	</li>
+	<li>
+		<a href="https://github.com/splincode/codework/tree/master/cpp/translater">
+		Транслятор</a><sup> незакончено</sup>
+	</li>
 </ul>
