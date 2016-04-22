@@ -31,6 +31,14 @@
 		<a href="https://github.com/splincode/codework/tree/master/javascript/maker">
 		Сверстайте телепрограмму</a> <sup> незакончено</sup>
 	</li>
+	<li>
+		<a href="https://github.com/splincode/codework/tree/master/javascript/libya">
+		Создайте библиотеку</a> <sup> незакончено</sup>
+	</li>
+	<li>
+		<a href="https://github.com/splincode/codework/tree/master/javascript/error">
+		Найдите и исправьте ошибки</a> <sup> незакончено</sup>
+	</li>
 </ul><br>
 
 <img src="https://upload.wikimedia.org/wikipedia/ru/8/8a/Stankin.gif" width="10%" height="10%" alt="">
