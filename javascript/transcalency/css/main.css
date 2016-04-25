@@ -1,0 +1,42 @@
+	* {margin: 0; padding: 0}
+
+	/***********************/
+	.centered {
+		width: 1024px;
+		height: 500px;
+		margin: 50px auto;
+		outline: 1px solid #c3c3c3
+	}
+
+	.centered .left, 
+	.centered .right {
+		float:left;
+		width: 30%;
+		margin-left: 1%;
+		height: 91%;
+		position: relative;
+		padding:2%;
+	}
+
+	.centered .right {
+		width: 60%
+	}
+	/***********************/
+		.layer, /* поле количество слоев */
+		.tau, /* поле тау-переменной */
+		.h, /* поле h-переменной */
+		.l, /* поле l-переменной */
+		.a /* поле a^2 */
+		{
+			padding:5px;
+		}
+
+	/***********************/
+	canvas.graph {
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		outline: 1px solid red
+	}

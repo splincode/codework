@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Уравнение теплопроводности</title>
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/main.css">
+	<script src="js/jquery.js"></script>
+	<script src="js/app.js"></script>
+</head>
+<body>
+	<div class="centered">
+		<div class="left">
+			<h3>Уравнение u<sup>'</sup><sub>t</sub> - a<sup>2</sup>u<sup>''</sup><sub>xx</sub> = 0</h3>
+			<br>граничные условия: <br>
+			u(0, t) = 0 <br>
+			u(l, t) = 0 <br> 
+			начальные условия: <br>
+			u(x, 0) = q(x) <br><br>
+
+			<br>искомые значения: <br>
+			l = <span class="l" contenteditable="true">3</span><br>
+			a<sup>2</sup> = <span class="a" contenteditable="true">3</span><br>
+			q(x) = 4sin2&#960;xcos<sup>2</sup>&#960;x <br> <br><br>
+
+			шаг: <br>
+			t = <span class="tau" contenteditable="true">3</span><br>
+			h = <span class="h" contenteditable="true">3</span><br><br><br>
+
+			количество слоев: <span class="layer" contenteditable="true">30</span> <br>
+
+		</div>
+		<div class="right">
+			<canvas class="graph"></canvas>
+		</div>
+	</div>
+</body>
+</html>

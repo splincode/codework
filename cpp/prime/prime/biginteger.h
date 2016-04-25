@@ -1,5 +1,5 @@
 #include <string>
-#define MAX 10000 // for strings
+#define MAX 100 // for strings
 
 using namespace std;
 //-------------------------------------------------------------
@@ -28,6 +28,7 @@ public:
     bool operator < (BigInteger b);
     bool operator >= (BigInteger b);
     bool operator <= (BigInteger b);
+    bool operator && (BigInteger b);
     BigInteger& operator ++(); // prefix
     BigInteger  operator ++(int); // postfix
     BigInteger& operator --(); // prefix

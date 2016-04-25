@@ -102,23 +102,32 @@ BigInteger BigInteger::pow(int n)
         return p;
 }
 //-------------------------------------------------------------
-BigInteger BigInteger::sqrt()
-{
+BigInteger BigInteger::sqrt() {
+   BigInteger start = 1,
+              end = (*this),
+              x = (*this),
+              ans = 0;
 
-    BigInteger x0 = (*this);
-    BigInteger x1 = (*this);
+   if (x == 0 || x == 1) return x;
 
-    x1 += 1;
-    x1 /= 2;
+   while (start <= end) {
+    BigInteger mid = (start + end) / 2;
 
-    while (x1 < x0) {
-        x0 = x1;
-        x1 += (*this) / x0;
-        x1 /= 2;
-     }
+       // If x is a perfect square
+       if (mid*mid == x) return mid;
 
-    return x0;
+       // Since we need floor, we update answer when mid*mid is
+       // smaller than x, and move closer to sqrt(x)
+       if (mid*mid < x) {
+         start = mid + 1;
+         ans = mid;
+       } else // If mid*mid is greater than x
+         end = mid - 1;
+       }
+
+   return ans;
 }
+
 //-------------------------------------------------------------
 void BigInteger::operator = (BigInteger b)
 {
@@ -139,6 +148,11 @@ bool BigInteger::operator != (BigInteger b)
 bool BigInteger::operator > (BigInteger b)
 {
     return greater((*this) , b);
+}
+//-------------------------------------------------------------
+bool BigInteger::operator && (BigInteger b)
+{
+    return (b) > 1 ? true : false;
 }
 //-------------------------------------------------------------
 bool BigInteger::operator < (BigInteger b)
@@ -242,7 +256,7 @@ BigInteger BigInteger::operator * (BigInteger b)
 // Warning: Denomerator must be within "long long" size not "BigInteger"
 BigInteger BigInteger::operator / (BigInteger b)
 {
-    long long den = toInt( b.getNumber() );
+    unsigned long long den = toInt( b.getNumber() );
     BigInteger div;
 
     div.setNumber( divide(getNumber(), den).first );

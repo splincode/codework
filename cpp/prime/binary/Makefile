@@ -490,7 +490,8 @@ compiler_clean:
 ####### Compile
 
 main.o: ../prime/main.cpp ../prime/biginteger.cpp \
-		../prime/biginteger.h
+		../prime/biginteger.h \
+		../prime/init.cpp
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o ../prime/main.cpp
 
 ####### Install
