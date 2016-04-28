@@ -1,0 +1,84 @@
+
+function factorial (var n) {
+    return (n < 2) ? 1 : n * factorial (n - 1);
+}
+
+function pow2(var n) {
+    return n*n;
+}
+
+function abs(var n) {
+    return (n > 0) ? n : -n;
+}
+
+function sqrt(var n){
+    
+    var start = 1,
+        xend = n,
+        x = n,
+        ans = 0;
+
+    if (x == 0 || x == 1) return x;
+
+    while (start <= xend) {
+        var mid = (start + xend) / 2;
+        mid = ceil(mid);
+
+        // If x is a perfect square
+        if (mid*mid == x) return mid;
+
+       // Since we need floor, we update answer when mid*mid is
+       // smaller than x, and move closer to sqrt(x)
+       if (mid*mid < x) {
+         start = mid + 1;
+         ans = mid;
+       } else // If mid*mid is greater than x
+         xend = mid - 1;
+    }
+
+   return ans;
+
+}
+
+program
+
+    var a = 10,
+        b = 20,
+        c = 30;
+
+    // сумма 3х чисел
+    var result = a + b + c;
+    writeln("Число a = ", result);
+
+    // факториал
+    var n = 8;
+    n = factorial(8);
+    writeln("8! = ", n);
+
+    // квадратный корень
+    write("\nВычисление квадратного корня уравнения..\n")
+    write("Введите a = "); read(a);
+    write("Введите b = "); read(b);
+    write("Введите c = "); read(c);
+
+    var D = pow2(b) - 4*a*c;
+    var x1 = 0, x2 = 0;
+
+    if (D < 0) { 
+        write("Нет корней \n"); 
+    } else if (D == 0) {
+        x1 = -b/(2*a);
+        writeln("x1 = x2, x1 = ", x1);
+    } else {
+
+        x1 = (-b+sqrt(D))/(2*a);
+        x2 = (-b-sqrt(D))/(2*a);
+        
+      writeln( 
+            "x1 = " + to_string(x1) + ", " , 
+            "x2 = " + to_string(x2)
+        );
+
+    }
+
+end
