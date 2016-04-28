@@ -102,8 +102,8 @@
 		Игра «Жизнь»</a>
 	</li>
 	<li>
-		<a href="https://github.com/splincode/codework/tree/master/cpp/interpretor">
-		Интерпретатор</a><sup> незакончено</sup>
+		<a href="https://github.com/splincode/codework/tree/master/cpp/compiler">
+		Транслятор</a><sup> незакончено</sup>
 	</li>
 	<li>
 		<a href="https://github.com/splincode/codework/tree/master/cpp/translater">
