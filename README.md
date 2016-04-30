@@ -103,7 +103,7 @@
 	</li>
 	<li>
 		<a href="https://github.com/splincode/codework/tree/master/cpp/compiler">
-		Компилятор (транспайлер)</a>
+		Компилятор</a>
 	</li>
 	<li>
 		<a href="https://github.com/splincode/codework/tree/master/cpp/translater">
