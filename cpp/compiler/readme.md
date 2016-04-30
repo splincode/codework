@@ -19,6 +19,34 @@
 
 <b id="two">1.1. Пример работы</b> <br>
 <img src="https://habrastorage.org/files/ccb/4c0/ee4/ccb4c0ee4aba4f609b798bbe87838b86.gif"/>
+<b>1.2. Использование</b> <br>
+```bash
+	$ cd ~/ # загружаем репозиторий в корень домашней директории
+	$ mkdir compiler # создаем папку compiler
+	$ cd compiler # заливаем необходимые файлы в compiler из текущего репозитория
+	$ ls # bin  compiler.pro  compiler.pro.user  compiler.sh  main.cpp  main.psx  readme.md
+	$ gedit ~/.bashrc # добавляем в конец строчки
+```
+
+```text
+	alias compiler='sh compiler.sh'
+	export PATH="$PATH:~/compiler/"
+```
+
+```bash
+	$ cd ~/compiler/
+	$ gedit compiler.sh # редактируем путь до компилятора
+```
+
+```text
+	изменяем 
+	cp "$FILE" /home/splincode/Develop/codework/cpp/compiler/main.psx
+	cd /home/splincode/Develop/codework/cpp/compiler/bin && make
+
+	на
+	cp "$FILE" ~/compiler/main.psx
+	cd ~/compiler/bin && make
+```
 
 <h3 id="three">2. Теория</h3>
 <b id="four">2.1. Цель трансляции</b>
