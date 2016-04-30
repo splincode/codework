@@ -31,9 +31,11 @@
 ```text
 	alias compiler='sh compiler.sh'
 	export PATH="$PATH:~/compiler/"
+	закрываем файли и сохраняем его
 ```
 
 ```bash
+	$ source ~/.bashrc
 	$ cd ~/compiler/
 	$ gedit compiler.sh # редактируем путь до компилятора
 ```
