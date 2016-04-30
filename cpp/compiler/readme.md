@@ -24,13 +24,14 @@
 	$ cd ~/ # загружаем репозиторий в корень домашней директории
 	$ mkdir compiler # создаем папку compiler
 	$ cd compiler # заливаем необходимые файлы в compiler из текущего репозитория
-	$ ls # bin  compiler.pro  compiler.pro.user  compiler.sh  main.cpp  main.psx  readme.md
+	$ ls # содержимое должно быть таким
+	bin  compiler  compiler.pro  compiler.pro.user  compiler.sh  main.cpp  main.psx  readme.md  run
 	$ gedit ~/.bashrc # добавляем в конец строчки
 ```
 
 ```text
-	alias compiler='sh compiler.sh'
-	export PATH="$PATH:~/compiler/"
+	alias compiler='run'
+	export PATH="$PATH:~/compiler/run/bin"
 	закрываем файли и сохраняем его
 ```
 
@@ -61,21 +62,40 @@
 	// пишем программу на псевдо-pascal 
 	// mycode.psx (pascal next = psx)
 	
-	// пользовательская функция
-	function print(var t = "") {
+	// пользовательские функции
+	void print(var t) {
 		// write, writeln - 
 		// стандартные функции вывода
-		return writeln(t, "\n");
+		writeln("", t);
+	}
+
+	function asb(var n = 0){
+		return (n > 0) ? n : -n;
 	}
 
 	program
-		var a = 10;
-		write(a); 
+		var a = -100;
+		writeln("|a| = ", abs(a)); 
 
 		var text = "hello world";
 		print(text);
 	end
 
+```
+
+```bash
+	$ сompiler # вызываем компилятор и прописываем файла на компиляцию
+	Текущая директория: /home/splincode/myprogram
+	Напишите название файла, который хотите скомпилировать: mycode.psx
+```
+
+	Если в синтаксисе присутствуют ошибки, компилятор придупредить об этом. После успешной компиляции, 
+	в текущей директории будет доступен бинарный исполняемый файл - compiler
+
+```bash
+	$ ./compiler
+	|a| = 100
+	hello world
 ```
 
 <h3 id="three">2. Теория</h3>
