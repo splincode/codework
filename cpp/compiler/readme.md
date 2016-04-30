@@ -59,9 +59,10 @@
 ```javascript
 	
 	// пишем программу на псевдо-pascal 
-	// (pascal next = psx)
+	// mycode.psx (pascal next = psx)
 	
-	// пример создания своих функций
+	// пример создания
+	// пользовательской функций
 	function print(var t = "") {
 		// write, writeln - 
 		// стандартные функции вывода
