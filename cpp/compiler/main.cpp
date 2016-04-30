@@ -5,8 +5,8 @@
 
 using namespace std;
 
-#define var double
-#define function double
+#define var auto
+#define function auto
 #define read(a) cin >> a;
 #define _ <<
 #define writeln(a, b) cout << a << b << endl;

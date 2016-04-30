@@ -19,7 +19,7 @@
 
 <b id="two">1.1. Пример работы</b> <br>
 <img src="https://habrastorage.org/files/ccb/4c0/ee4/ccb4c0ee4aba4f609b798bbe87838b86.gif"/>
-<b>1.2. Использование</b> <br>
+<b>1.2. Установка</b> <br>
 ```bash
 	$ cd ~/ # загружаем репозиторий в корень домашней директории
 	$ mkdir compiler # создаем папку compiler
@@ -48,6 +48,34 @@
 	на такие:
 	cp "$FILE" ~/compiler/main.psx
 	cd ~/compiler/bin && make
+```
+
+<b>1.3. Использование</b> <br>
+```bash
+	$ cd ~/myprogram # заходим в любую директорию, в любое место
+	$ touch myсode.psx # создаем файл с любым названием
+```
+
+```javascript
+	
+	// пишем программу на псевдо-pascal 
+	// (pascal next = psx)
+	
+	// пример создания своих функций
+	function print(var t = "") {
+		// write, writeln - 
+		// стандартные функции вывода
+		return writeln(t, "\n");
+	}
+
+	program
+		var a = 10;
+		write(a); 
+
+		var text = "hello world";
+		print(text);
+	end
+
 ```
 
 <h3 id="three">2. Теория</h3>
