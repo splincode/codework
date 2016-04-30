@@ -41,11 +41,11 @@
 ```
 
 ```text
-	изменяем 
+	меняем строчки:
 	cp "$FILE" /home/splincode/Develop/codework/cpp/compiler/main.psx
 	cd /home/splincode/Develop/codework/cpp/compiler/bin && make
 
-	на
+	на такие:
 	cp "$FILE" ~/compiler/main.psx
 	cd ~/compiler/bin && make
 ```
