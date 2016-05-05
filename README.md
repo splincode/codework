@@ -111,7 +111,7 @@
 	</li>
 	<li>
 		<a href="https://github.com/splincode/codework/tree/master/cpp/multitranslater">
-		Мультитранслятор</a>
+		Мультитранслятор</a><sup> незакончено</sup>
 	</li>
 </ul>
 
