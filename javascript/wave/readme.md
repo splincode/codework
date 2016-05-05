@@ -19,7 +19,8 @@ u<sup>'</sup><sub>t</sub>(x, 0) = q(x) <br>
 
 
 <b id="two">1.1. Пример работы</b> <br>
-<p></p>
+<img src="https://habrastorage.org/files/a27/597/12c/a2759712c73746828a2b290beb5428c0.png"/><br>
+<img src="https://habrastorage.org/files/261/d2d/64b/261d2d64bc734444942224095010312b.png"/><br>
 
 <h3 id="three">2. Указания</h3>
 <b id="four">2.1. Исходные значения и описание</b>
