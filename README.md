@@ -111,7 +111,7 @@
 	</li>
 	<li>
 		<a href="https://github.com/splincode/codework/tree/master/cpp/multitranslater">
-		Мультитранслятор</a><sup> незакончено</sup>
+		Мультитранслятор</a>
 	</li>
 </ul>
 
@@ -123,6 +123,6 @@
 	</li>
 	<li>
 		<a href="https://github.com/splincode/codework/tree/master/javascript/wave">
-		Волновое уравнение</a><sup> незакончено</sup>
+		Волновое уравнение</a>
 	</li>
 </ul>
