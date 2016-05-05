@@ -18,7 +18,7 @@ u(x, 0) = q(x)
 
 
 <b id="two">1.1. Пример работы</b> <br>
-<img src="https://habrastorage.org/files/323/dfb/d79/323dfbd79a804c76af478f3f8d9f6742.png"/><br>
+<img src="https://habrastorage.org/files/e36/1f4/d0a/e361f4d0a1f14998a2f0e1fdf7372b64.png"/><br>
 <img src="https://habrastorage.org/files/8fd/0cb/07c/8fd0cb07ca624341871b9185deee82e8.png"/> <br>
 <p></p>
 
