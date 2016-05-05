@@ -30,7 +30,7 @@ u<sup>'</sup><sub>t</sub>(x, 0) = q(x) <br>
 ------------ | -------------
 l            | 2
 p(x)         | 0
-c<sup>2</sup>| 4
+c<sup>2</sup>| 1
 q(x)         | sin2&#960;xcos<sup>2</sup>&#960;x - sin<sup>2</sup>&#960;xsin2&#960;x
 
 
