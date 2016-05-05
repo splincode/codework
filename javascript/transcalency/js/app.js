@@ -4,7 +4,7 @@ $(document).ready(function(){
 		return ((j).toString().replace(".", "_"));
 	}
 
-	function getValueMatrix(Matrix, v){
+	function getValueMatrix(Matrix, v, get){
 		return Matrix.get(get.toString()).get((+(v).toFixed(2)).toString())
 	};
 
@@ -162,9 +162,9 @@ $(document).ready(function(){
 				} else {
 
 					var get = +(j - tau).toFixed(eps),
-						prev = getValueMatrix(Matrix, (i-h)),
-						now = getValueMatrix(Matrix, i),
-						next = getValueMatrix(Matrix, (i+h)),
+						prev = getValueMatrix(Matrix, (i-h), get),
+						now = getValueMatrix(Matrix, i, get),
+						next = getValueMatrix(Matrix, (i+h), get),
 						x = +(   (( a2 * tau * (next-2*now+prev)) / (h*h)) + now   ).toFixed(2);
 
 						line.set(i.toString(), x);
@@ -176,25 +176,15 @@ $(document).ready(function(){
 					else {
 						
 						if (j == 0.01) {
-							if (Math.abs(x*500) < 320 && x != 0 ) {
+							if (Math.abs(x*500) < 320 ) {
 								xi = +(x*100).toFixed(0);
 								ii = +(i*100).toFixed(0);
 								toPoint(ctx, ii, xi); ctx.strokeStyle = "green";
-								console.log(+(i*100).toFixed(0) + ":" + (+(x*100).toFixed(0)));
+								//console.log(+(i*100).toFixed(0) + ":" + (+(x*100).toFixed(0)));
 							}
-							
-
 							
 						}
 
-						//if (layer < 3 && layer > 2) {
-							//console.log(
-							//	i + ":" + x
-							//);
-
-							//toPoint(ctx, x*100, j*100);
-
-					//	}
 						
 					}
 
@@ -210,7 +200,6 @@ $(document).ready(function(){
 
 		}
 
-		ctx.closePath();
 		ctx.stroke();
 
 		Matrix.set(j.toString(), line);

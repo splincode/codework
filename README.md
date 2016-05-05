@@ -119,7 +119,7 @@
 <ul>
 	<li>
 		<a href="https://github.com/splincode/codework/tree/master/javascript/transcalency">
-		Уравнение теплопроводности</a><sup> незакончено</sup>
+		Уравнение теплопроводности</a>
 	</li>
 	<li>
 		<a href="https://github.com/splincode/codework/tree/master/javascript/wave">
