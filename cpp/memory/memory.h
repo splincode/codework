@@ -1,5 +1,7 @@
 #include <initializer_list>
 #include <new>
+#include <iostream>
+using namespace std;
 
 template <typename T>
 class Memory {
@@ -8,14 +10,12 @@ class Memory {
     int size = 0;
 
 public:
-    Memory(int _size): size(_size){}
+    Memory(){}
+    Memory(int _size): size(_size-1){}
 
     void operator = (std::initializer_list<T> ints) {
 
-        void *p = malloc(size);
-        if (p == NULL) {throw std::bad_alloc();}
-
-        val = (T*) std::malloc(4*sizeof(T));
+        val = (T*) std::malloc((ints.size()-1)*sizeof(T));
         if(val) {
           size = 0;
           for (auto x : ints) {
@@ -27,25 +27,52 @@ public:
 
     }
 
-    T operator[](int i){
-        // либо можно сделать вызов исключения
-        if (i > size) val[i] = 0;
-        return val[i];
-    }
-
-    T& operator ()(int i){
+    T& operator [](int i){
         T* ptr = val;
 
-        while (ptr != NULL) {
+        for (int j = 0; j < i; j++){
+            if (i == j) break;
             ptr++;
         }
 
         return *ptr;
     }
 
+    void push (T arg){
 
-    int get() const {
-        return size;
+        T temp[size+1];
+
+        if(val) {
+
+          int newsize = 0;
+          for (int i = 0 ; i < size; i++) {
+             temp[newsize] = val[newsize];
+             newsize++;
+          }
+
+          newsize++;
+          temp[newsize-1] = arg;
+          size = newsize;
+
+          val = (T*) std::malloc(size*sizeof(T));
+
+          for (int i = 0 ; i < size; i++) {
+             val[i] = temp[i];
+          }
+
+         }
+
+    }
+
+    void deletememory(){
+
+       for (int i = 0 ; i < size; i++) {val[i] = 0;}
+       size = 0;
+
+    }
+
+    int getsize() const {
+        return size-1;
     }
 
 };

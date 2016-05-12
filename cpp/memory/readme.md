@@ -10,6 +10,7 @@
 <p></p>
 
 <b id="two">1.1. Пример работы</b> <br>
+<img src="https://habrastorage.org/files/020/458/7f1/0204587f1f5a41c29a24fedf16d020b1.png"/>
 <p></p>
 
 <h3 id="three">2. Теория</h3>
@@ -28,3 +29,4 @@
 
 <b id="six">2.3. Дополнительная литература</b>
 <p><a href="https://ru.wikipedia.org/wiki/New_(C%2B%2B)">new (C++)</a></p>
+<p><a href="http://stackoverflow.com/questions/184537/in-what-cases-do-i-use-malloc-vs-new">malloc vs new</a></p>
