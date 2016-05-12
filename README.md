@@ -26,7 +26,6 @@
 	</li>
 	<li>
 		<a href="https://github.com/splincode/codework/tree/master/cpp/memory">Библиотека для работы с памятью</a>
-		<sup> незакончено</sup>
 	</li>
 	<li>
 		<a href="https://github.com/splincode/codework/tree/master/cpp/link">Ссылка возврата</a>
