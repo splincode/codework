@@ -16,6 +16,7 @@
 </p>
 
 <b id="two">1.1. Пример работы</b> <br>
+<img src="https://habrastorage.org/files/1e7/643/ca9/1e7643ca9b324926aad34e7ec3794441.png"/>
 <p></p>
 
 <h3 id="three">2. Теория</h3>
