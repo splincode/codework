@@ -1,0 +1,6 @@
+<!DOCTYPE RCC><RCC version="1.0">
+<qresource prefix="/">
+    <file>html/index.html</file>
+    <file>html/css/kube.css</file>
+</qresource>
+</RCC>
