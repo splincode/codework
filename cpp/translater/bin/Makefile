@@ -530,7 +530,12 @@ compiler_rcc_clean:
 	-$(DEL_FILE) qrc_app.cpp
 qrc_app.cpp: ../app.qrc \
 		../html/index.html \
-		../html/css/kube.css
+		../html/css/kube.css \
+		../html/js/db.js \
+		../html/js/jquery.js \
+		../html/js/app.js \
+		../html/js/latin.js \
+		../html/js/russian.js
 	/home/splincode/Qt/5.6/gcc_64/bin/rcc -name app ../app.qrc -o qrc_app.cpp
 
 compiler_moc_header_make_all:

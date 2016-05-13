@@ -9,7 +9,7 @@ $(function(){
 		text = $("#text").val();
 		words = text.toLowerCase().replace(/[,.?!:]/g, "").split(' ');
 		adverb = 0;
-
+		console.log(words)
 		for(var option in words) {
 			word_from = words[option];
 
@@ -38,7 +38,7 @@ $(function(){
 					} else {
 						word_translate = word.translate[To];
 					}
-
+					console.log(word_translate)
 					text = text.toLowerCase().replace(word_from, word_translate);
 
 				}

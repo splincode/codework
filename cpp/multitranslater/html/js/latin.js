@@ -32,20 +32,12 @@
 	});
 
 	PairLat.set("recte", {
-        info: {type: "adverb"},
+		info: {type: "adverb"},
 		translate: {
 			lat: "recte",
 			rus: "хорошо",
 		}
 	});
-
-    PairLat.set("est", {
-        info: {type: "union"},
-        translate: {
-            lat: "est",
-            rus: "",
-        }
-    });
 
 	PairLat.set("quod", {
 		info: {type: "pronoun"},

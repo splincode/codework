@@ -1,5 +1,5 @@
 	
-	PairLat.set("hi", {
+	PairRus.set("привет", {
 		info: {type: "verb"},
 		translate: {
 			lat: "hi", // перевод на латынь
@@ -7,7 +7,7 @@
 		}
 	});
 
-	PairLat.set("orbis", {
+	PairRus.set("мир", {
 		info: {type: "noun"},
 		translate: {
 			lat: "orbis",
@@ -15,7 +15,7 @@
 		}
 	});
 
-	PairLat.set("maksim", {
+	PairRus.set("максим", {
 		info: {type: "proper_noun"},
 		translate: {
 			lat: "Maksim",
@@ -23,7 +23,7 @@
 		}
 	});
 
-	PairLat.set("omnia", {
+	PairRus.set("все", {
 		info: {type: "adverb"},
 		translate: {
 			lat: "omnia",
@@ -31,31 +31,23 @@
 		}
 	});
 
-	PairLat.set("recte", {
-        info: {type: "adverb"},
+	PairRus.set("хорошо", {
+		info: {type: "adverb", article: "est "},
 		translate: {
 			lat: "recte",
 			rus: "хорошо",
 		}
 	});
 
-    PairLat.set("est", {
-        info: {type: "union"},
-        translate: {
-            lat: "est",
-            rus: "",
-        }
-    });
-
-	PairLat.set("quod", {
+	PairRus.set("он", {
 		info: {type: "pronoun"},
 		translate: {
 			lat: "quod",
 			rus: "он",
 		}
 	});
-	
-	PairLat.set("veni", {
+
+	PairRus.set("прийти", {
 		info: {type: "adverb"},
 		translate: {
 			lat: "veni",
@@ -63,7 +55,15 @@
 		}
 	});
 
-	PairLat.set("vidi", {
+	PairRus.set("пришел", {
+		info: {type: "adverb"},
+		translate: {
+			lat: "veni",
+			rus: "пришел",
+		}
+	});
+
+	PairRus.set("увидеть", {
 		info: {type: "adverb"},
 		translate: {
 			lat: "vidi",
@@ -71,7 +71,7 @@
 		}
 	});
 
-	PairLat.set("viсi", {
+	PairRus.set("победить", {
 		info: {type: "adverb"},
 		translate: {
 			lat: "viсi",
@@ -79,7 +79,7 @@
 		}
 	});
 
-	PairLat.set("et", {
+	PairRus.set("и", {
 		info: {type: "adverb"},
 		translate: {
 			lat: "et",
@@ -87,7 +87,7 @@
 		}
 	});
 
-	PairLat.set("ego", {
+	PairRus.set("я", {
 		info: {type: "adverb"},
 		translate: {
 			lat: "ego",

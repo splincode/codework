@@ -71,6 +71,14 @@
 		}
 	});
 
+    PairRus.set("увидел", {
+        info: {type: "adverb"},
+        translate: {
+            lat: "vidi",
+            rus: "увидел",
+        }
+    });
+
 	PairRus.set("победить", {
 		info: {type: "adverb"},
 		translate: {
@@ -78,6 +86,15 @@
 			rus: "победить",
 		}
 	});
+
+    PairRus.set("победил", {
+        info: {type: "adverb"},
+        translate: {
+            lat: "viсi",
+            rus: "победил",
+        }
+    });
+
 
 	PairRus.set("и", {
 		info: {type: "adverb"},
