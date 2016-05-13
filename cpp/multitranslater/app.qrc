@@ -6,6 +6,7 @@
     <file>html/js/db.js</file>
     <file>html/js/russian.js</file>
     <file>html/js/latin.js</file>
+    <file>html/js/eng.js</file>
     <file>html/js/app.js</file>
 </qresource>
 </RCC>

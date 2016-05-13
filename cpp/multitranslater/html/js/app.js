@@ -25,8 +25,11 @@ $(function(){
 						if (adverb > 0) {
 							adverb = 0;
 
-							if (word.info.hasOwnProperty('article')) 
-								article = word.info.article;
+							if (word.info.hasOwnProperty('article')) {
+								if (word.info.article.hasOwnProperty(To))
+									article = word.info.article[To];
+								else article = "";
+							}
 							else 
 								article = "";
 

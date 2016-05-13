@@ -3,6 +3,7 @@
 		info: {type: "verb"},
 		translate: {
 			lat: "hi", // перевод на латынь
+			eng: "hello", 
 			rus: "привет",
 		}
 	});
@@ -12,6 +13,7 @@
 		translate: {
 			lat: "orbis",
 			rus: "мир",
+			eng: "world",
 		}
 	});
 
@@ -20,6 +22,7 @@
 		translate: {
 			lat: "Maksim",
 			rus: "Максим",
+			eng: "Максим",
 		}
 	});
 
@@ -28,6 +31,7 @@
 		translate: {
 			lat: "omnia",
 			rus: "все",
+			eng: "all",
 		}
 	});
 
@@ -36,6 +40,7 @@
 		translate: {
 			lat: "recte",
 			rus: "хорошо",
+			eng: "well",
 		}
 	});
 
@@ -44,6 +49,7 @@
 		translate: {
 			lat: "quod",
 			rus: "он",
+			eng: "he",
 		}
 	});
 	
@@ -52,6 +58,7 @@
 		translate: {
 			lat: "veni",
 			rus: "прийти",
+			eng: "came",
 		}
 	});
 
@@ -60,6 +67,7 @@
 		translate: {
 			lat: "vidi",
 			rus: "увидеть",
+			eng: "saw",
 		}
 	});
 
@@ -68,6 +76,7 @@
 		translate: {
 			lat: "viсi",
 			rus: "победить",
+			eng: "victory",
 		}
 	});
 
@@ -76,6 +85,7 @@
 		translate: {
 			lat: "et",
 			rus: "и",
+			eng: "and",
 		}
 	});
 
@@ -84,5 +94,6 @@
 		translate: {
 			lat: "ego",
 			rus: "я",
+			eng: "i",
 		}
 	});

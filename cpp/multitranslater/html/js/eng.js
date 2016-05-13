@@ -1,5 +1,5 @@
 	
-	PairRus.set("привет", {
+	PairEng.set("hello", {
 		info: {type: "verb"},
 		translate: {
 			lat: "hi", // перевод на латынь
@@ -8,7 +8,16 @@
 		}
 	});
 
-	PairRus.set("мир", {
+	PairEng.set("hi", {
+		info: {type: "verb"},
+		translate: {
+			lat: "hi", // перевод на латынь
+			eng: "hi", // перевод на латынь
+			rus: "привет",
+		}
+	});
+
+	PairEng.set("world", {
 		info: {type: "noun"},
 		translate: {
 			lat: "orbis",
@@ -17,7 +26,7 @@
 		}
 	});
 
-	PairRus.set("максим", {
+	PairEng.set("Maksim", {
 		info: {type: "proper_noun"},
 		translate: {
 			lat: "Maksim",
@@ -26,7 +35,7 @@
 		}
 	});
 
-	PairRus.set("все", {
+	PairEng.set("all", {
 		info: {type: "adverb"},
 		translate: {
 			lat: "omnia",
@@ -35,7 +44,7 @@
 		}
 	});
 
-	PairRus.set("хорошо", {
+	PairEng.set("well", {
 		info: {type: "adverb", article: {lat: "est ", eng: "is "}},
 		translate: {
 			lat: "recte",
@@ -44,7 +53,7 @@
 		}
 	});
 
-	PairRus.set("он", {
+	PairEng.set("he", {
 		info: {type: "pronoun"},
 		translate: {
 			lat: "quod",
@@ -53,7 +62,7 @@
 		}
 	});
 
-	PairRus.set("прийти", {
+	PairEng.set("come", {
 		info: {type: "adverb"},
 		translate: {
 			lat: "veni",
@@ -62,7 +71,7 @@
 		}
 	});
 
-	PairRus.set("пришел", {
+	PairEng.set("пришел", {
 		info: {type: "adverb"},
 		translate: {
 			lat: "veni",
@@ -71,16 +80,16 @@
 		}
 	});
 
-	PairRus.set("увидеть", {
+	PairEng.set("see", {
 		info: {type: "adverb"},
 		translate: {
 			lat: "vidi",
 			rus: "увидеть",
-			eng: "saw",
+			eng: "see",
 		}
 	});
 
-	PairRus.set("увидел", {
+	PairEng.set("seen", {
 		info: {type: "adverb"},
 		translate: {
 			lat: "vidi",
@@ -89,7 +98,7 @@
 		}
 	});
 
-	PairRus.set("победить", {
+	PairEng.set("victory", {
 		info: {type: "adverb"},
 		translate: {
 			lat: "viсi",
@@ -98,8 +107,8 @@
 		}
 	});
 
-	PairRus.set("и", {
-		info: {type: "adverb"},
+	PairEng.set("and", {
+		info: {type: "union"},
 		translate: {
 			lat: "et",
 			rus: "и",
@@ -107,11 +116,56 @@
 		}
 	});
 
-	PairRus.set("я", {
-		info: {type: "adverb"},
+	PairEng.set("i", {
+		info: {type: "noun"},
 		translate: {
 			lat: "ego",
 			rus: "я",
 			eng: "i",
+		}
+	});
+
+	PairEng.set("i'am", {
+		info: {type: "noun"},
+		translate: {
+			lat: "ego",
+			rus: "я",
+			eng: "i",
+		}
+	});
+
+	PairEng.set("to", {
+		info: {type: "union"},
+		translate: {
+			lat: "est",
+			rus: "",
+			eng: "to",
+		}
+	});
+
+	PairEng.set("the", {
+		info: {type: "union"},
+		translate: {
+			lat: "est",
+			rus: "",
+			eng: "the",
+		}
+	});
+
+	PairEng.set("is", {
+		info: {type: "union"},
+		translate: {
+			lat: "",
+			rus: "",
+			eng: "is",
+		}
+	});
+
+	PairEng.set("superman", {
+		info: {type: "noun"},
+		translate: {
+			lat: "superman",
+			rus: "суперчеловек",
+			eng: "superman",
 		}
 	});

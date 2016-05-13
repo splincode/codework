@@ -3,12 +3,13 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Переводчик</title>
-	<link rel="stylesheet" href="css/kube.css">
-	<script src="js/jquery.js"></script>
-	<script src="js/db.js"></script>
-	<script src="js/russian.js"></script>
-	<script src="js/latin.js"></script>
-	<script src="js/app.js"></script>
+	<link rel="stylesheet" href="qrc:html/css/kube.css">
+	<script src="qrc:html/js/jquery.js"></script>
+	<script src="qrc:html/js/db.js"></script>
+	<script src="qrc:html/js/russian.js"></script>
+	<script src="qrc:html/js/latin.js"></script>
+	<script src="qrc:html/js/eng.js"></script>
+	<script src="qrc:html/js/app.js"></script>
 </head>
 <body>
 	<blocks cols="2">
@@ -21,6 +22,7 @@
 			            <select class="selectFrom">
 			                <option value="rus">Русский</option>
 			                <option value="lat">Латынь</option>	              
+			                <option value="eng">Английский</option>	              
 			            </select>
 			        </column>
 			    </row>
@@ -40,6 +42,7 @@
 			            <select class="selectTo">
 			            	<option value="lat">Латынь</option>
 			                <option value="rus">Русский</option>
+			                <option value="eng">Английский</option>	 
 			            </select>
 			        </column>
 			        <column cols="6">

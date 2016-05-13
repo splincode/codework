@@ -532,6 +532,7 @@ qrc_app.cpp: ../app.qrc \
 		../html/index.html \
 		../html/css/kube.css \
 		../html/js/db.js \
+		../html/js/eng.js \
 		../html/js/jquery.js \
 		../html/js/app.js \
 		../html/js/latin.js \
@@ -542,6 +543,7 @@ qrc_app.cpp: ../app.qrc \
 		../html/index.html \
 		../html/css/kube.css \
 		../html/js/db.js \
+		../html/js/eng.js \
 		../html/js/jquery.js \
 		../html/js/app.js \
 		../html/js/latin.js \
