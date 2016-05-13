@@ -8,7 +8,8 @@ $(function(){
 
 		text = $("#text").val();
 		words = text.toLowerCase().replace(/[,.?!:]/g, "").split(' ');
-
+		adverb = 0;
+		console.log(words)
 		for(var option in words) {
 			word_from = words[option];
 
@@ -19,7 +20,25 @@ $(function(){
 				if (word.translate.hasOwnProperty(To)){
 
 					// если можно перевести это слово
-					word_translate = word.translate[To];
+					if (word.info.type == 'adverb') {
+						
+						if (adverb > 0) {
+							adverb = 0;
+
+							if (word.info.hasOwnProperty('article')) 
+								article = word.info.article;
+							else 
+								article = "";
+
+							word_translate = article + word.translate[To];
+						} else word_translate = word.translate[To];
+						
+						adverb++;
+
+					} else {
+						word_translate = word.translate[To];
+					}
+					console.log(word_translate)
 					text = text.toLowerCase().replace(word_from, word_translate);
 
 				}
