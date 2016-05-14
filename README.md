@@ -106,11 +106,11 @@
 	</li>
 	<li>
 		<a href="https://github.com/splincode/codework/tree/master/cpp/translater">
-		Транслятор</a><sup> незакончено</sup>
+		Транслятор</a>
 	</li>
 	<li>
 		<a href="https://github.com/splincode/codework/tree/master/cpp/multitranslater">
-		Мультитранслятор</a><sup> незакончено</sup>
+		Мультитранслятор</a>
 	</li>
 </ul>
 

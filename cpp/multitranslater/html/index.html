@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Переводчик</title>
+	<link rel="stylesheet" href="css/kube.css">
 	<link rel="stylesheet" href="qrc:html/css/kube.css">
 	<script src="qrc:html/js/jquery.js"></script>
 	<script src="qrc:html/js/db.js"></script>
@@ -12,7 +13,7 @@
 	<script src="qrc:html/js/app.js"></script>
 </head>
 <body>
-	<blocks cols="2">
+	<blocks cols="3">
 	    <div>
 
 			<form method="post" action="" class="forms">
@@ -38,26 +39,44 @@
 			<form method="post" action="" class="forms">
 			    <row>
 			        <column cols="6">
-			            <label>Язык</label>
-			            <select class="selectTo">
+			            <label>Промежуточный язык</label>
+			            <select class="selectBetween">
 			            	<option value="lat">Латынь</option>
-			                <option value="rus">Русский</option>
-			                <option value="eng">Английский</option>	 
 			            </select>
-			        </column>
-			        <column cols="6">
-			            <label>&nbsp;</label>
-			            <button type="primary">Перевести</button>
 			        </column>
 			    </row>
 			    <section>
 			        <label>Перевод</label>
-			        <textarea rows="6" id="translate"></textarea>
+			        <textarea rows="6" id="textBetween"></textarea>
 			    </section>
 			</form>
 
 
 	    </div>
+
+        <div>
+    		<form method="post" action="" class="forms">
+    		    <row>
+    		        <column cols="6">
+    		            <label>Язык</label>
+    		            <select class="selectTo">
+    		            	<option value="eng">Английский</option>
+    		            	<option value="lat">Латынь</option>
+    		                <option value="rus">Русский</option>
+    		            </select>
+    		        </column>
+    		        <column cols="6">
+    		            <label>&nbsp;</label>
+    		            <button type="primary">Перевести</button>
+    		        </column>
+    		    </row>
+    		    <section>
+    		        <label>Перевод</label>
+    		        <textarea rows="6" id="translate"></textarea>
+    		    </section>
+    		</form>
+        </div>
+
 	</blocks>
 </body>
 </html>

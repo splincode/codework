@@ -97,7 +97,7 @@
 
 
 	PairRus.set("и", {
-		info: {type: "adverb"},
+        info: {type: "union"},
 		translate: {
 			lat: "et",
 			rus: "и",
