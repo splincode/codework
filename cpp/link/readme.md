@@ -11,6 +11,26 @@
 <b id="two">1.1. Пример работы</b><br>
 <img src="https://habrastorage.org/files/825/9b9/a84/8259b9a840de427d862193a706695a28.png" alt="">
 <br>
+```c++
+#include <iostream>
+using namespace std;
+
+void virus(){ cout << "выполнился вредоносный код" << endl;}
+
+void foo(){
+    cout << "foo" << endl;
+
+    void* a[1];
+    a[3] = (void*) (&virus); // вышли за пределы памяти
+}
+
+int main(){
+
+    foo();
+    return 0;
+}
+
+```
 
 <h3 id="three">2. Теория</h3>
 <b id="four">2.1. Cтек вызовов</b>
