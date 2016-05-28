@@ -2,7 +2,7 @@
 <a href="#one">1. Решение задачи</a><br>
 <a href="#two">&nbsp;&nbsp;&nbsp;1.1. Пример работы</a><br>
 <a href="#three">2. Теория</a><br>
-<a href="#four">&nbsp;&nbsp;&nbsp;2.1. new (C++)</a><br>
+<a href="#four">&nbsp;&nbsp;&nbsp;2.1. Стек вызовов</a><br>
 <a href="#six">&nbsp;&nbsp;&nbsp;2.3. Дополнительная литература</a><br>
 
 <h3 id="one">Написать программу, которая будет вредоносной</h3>
