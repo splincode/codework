@@ -29,7 +29,6 @@
 	</li>
 	<li>
 		<a href="https://github.com/splincode/codework/tree/master/cpp/link">Ссылка возврата</a>
-		<sup> незакончено</sup>
 	</li>
 </ul><br>
 
