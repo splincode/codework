@@ -8,8 +8,8 @@ void foo(){
     cout << "foo" << endl;
     int n = 5;
 
-    void* a[5];
-    a[11] = (void*) (&virus); // вышли за пределы памяти
+    void* a[1];
+    a[3] = (void*) (&virus); // вышли за пределы памяти
 }
 
 int main(){
