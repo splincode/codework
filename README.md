@@ -111,6 +111,10 @@
 		<a href="https://github.com/splincode/codework/tree/master/cpp/multitranslater">
 		Мультитранслятор</a>
 	</li>
+	<li>
+		<a href="https://github.com/splincode/codework/tree/master/cpp/lambda">
+		Интерпретатор лямбда-исчислений</a>
+	</li>
 </ul>
 
 <h4>JavaScript</h4>
