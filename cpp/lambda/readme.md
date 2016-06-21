@@ -11,6 +11,7 @@
 </p>
 
 <b id="two">1.1. Пример работы</b> <br>
+<img src="https://habrastorage.org/files/31b/ff5/193/31bff5193ad745578bbac8b0dc35ddf2.png" align="center" /> <br>
 <p></p>
 
 <h3 id="three">2. Теория</h3>
@@ -40,6 +41,14 @@ g (Y g)
 <br>
 <b id="six">2.3. Пример</b> <br>
 ```text
+λx.λy.x+(5*y) 10 (λx.λy.y-x+10 5 (λu.u+8 1))
+> 80
+
+λx.λy.λz.x+y+z 1 (λx.x+2 3) 5
+> 11
+
+λx.λy.λz.x+y+y+z 1 2 3
+> 8
 
 ```
 <br>

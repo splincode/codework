@@ -1,5 +1,12 @@
 <!DOCTYPE RCC><RCC version="1.0">
 <qresource prefix="/">
     <file>view/index.html</file>
+    <file>view/css/app.css</file>
+    <file>view/css/foundation.css</file>
+    <file>view/js/app.js</file>
+    <file>view/js/vendor/foundation.js</file>
+    <file>view/js/vendor/foundation.min.js</file>
+    <file>view/js/vendor/jquery.js</file>
+    <file>view/js/vendor/what-input.js</file>
 </qresource>
 </RCC>
