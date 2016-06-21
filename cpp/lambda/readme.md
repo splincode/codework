@@ -11,8 +11,8 @@
 </p>
 
 <b id="two">1.1. Пример работы</b> <br>
-<img src="https://habrastorage.org/files/31b/ff5/193/31bff5193ad745578bbac8b0dc35ddf2.png" align="center" /> <br>
-<img src="https://habrastorage.org/files/cba/ce4/5e7/cbace45e7fec4a389cb11add8f5dd7cc.gif"/>
+<img src="https://habrastorage.org/files/31b/ff5/193/31bff5193ad745578bbac8b0dc35ddf2.png" align="center" /> <br> <br>
+<img src="https://habrastorage.org/files/10a/d38/4bb/10ad384bb0344db59edbc9fa12c53198.gif"/>
 <p></p>
 
 <h3 id="three">2. Теория</h3>
