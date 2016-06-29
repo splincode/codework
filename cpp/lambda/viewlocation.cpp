@@ -42,7 +42,7 @@ ViewLocation& ViewLocation::title(QString title){
 
 ViewLocation& ViewLocation::show(){
     view->setContextMenuPolicy(Qt::CustomContextMenu);
-    view->load(QUrl("qrc:" + index));
+    view->load(QUrl("qrc:" + index + ".html"));
     view->show();
 
     return *this;

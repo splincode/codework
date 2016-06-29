@@ -1,4 +1,5 @@
-$(document).foundation()
+$(document).foundation();
+
 $(function(){
 	$("#primary-color").keyup(function(){
 		var text = $(this).val();
@@ -34,7 +35,7 @@ $(function(){
 
 					for(var j=i+1; j <= i + count; ++j){
 
-						 // не нашли нужное количество переменных
+                        // не нашли нужное количество переменных
 						if (terms[j].indexOf("λ") !== -1 ) break;
 						else x++;
 

@@ -11,5 +11,6 @@ RESOURCES += \
     app.qrc
 
 HEADERS += \
-    ViewLocation.h
+    ViewLocation.h \
+    viewlocation.h
 
