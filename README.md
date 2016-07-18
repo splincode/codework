@@ -1,5 +1,14 @@
 # Задачи по программированию
 
+<img src="http://json.tv/images/general/2014/12/09/20141209192310-1292.png" width="18%" height="10%" alt="">
+<h4>JavaScript</h4>
+<ul>
+	<li>
+		<a href="https://github.com/splincode/codework/tree/master/javascript/theory">Проверка теоретических знаний</a>
+		<sup> незакончено</sup>
+	</li>
+</ul><br>
+
 <img src="https://upload.wikimedia.org/wikipedia/commons/b/b2/VKontakte.svg" width="18%" height="10%" alt="">
 <h4>PHP</h4>
 <ul>
