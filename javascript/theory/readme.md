@@ -1,7 +1,7 @@
 <h3>Оглавление</h3>
 <a href="#n1">1. Почему выводится 12, а не 3</a><br>
-<a href="#n2">2. Пример работы</a><br>
-<a href="#n3">3. Указания</a><br>
+<a href="#n2">2. Почему на экране ничего не выводится</a><br>
+<a href="#n3">3. Почему интерпретатор указывает нам в выводе тип number</a><br>
 <a href="#n4">4. Исходные значения и описание</a><br>
 <a href="#n5">5. Исходные значения и описание</a><br>
 <a href="#n6">6. Исходные значения и описание</a><br>
@@ -30,6 +30,16 @@ document.body.innerHTML = sum(1, '2');
 if (typeof 1 = 'number') {
     document.body.innerHTML = 'It is a number';
 }
+```
+
+<b>Решение на JSfiddle: </b>
+
+<h3 id="n3">3. Почему интерпретатор указывает нам в выводе тип number</h3>
+<p>Объяснить поведение интерпретатора, дать рекомендации<br>
+<b>Ссылка на JSfiddle: </b> http://jsfiddle.net/z2bvxu9b/1/ <br>
+
+```javascript
+document.body.innerHTML = typeof (1 / []);
 ```
 
 <b>Решение на JSfiddle: </b>
