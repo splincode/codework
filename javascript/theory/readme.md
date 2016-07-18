@@ -2,11 +2,12 @@
 <a href="#n1">1. Почему выводится 12, а не 3</a><br>
 <a href="#n2">2. Почему на экране ничего не выводится</a><br>
 <a href="#n3">3. Почему интерпретатор указывает нам в выводе тип number</a><br>
-<a href="#n4">4. Как сделать так, чтобы функция могла принимать нуль и при этом делала проверку на существование аргумента</a><br>
+<a href="#n4">4. Как сделать так, чтобы функция могла принимать нуль
+и при этом делала проверку на существование аргумента</a><br>
 <a href="#n5">5. Почему происходит изменение объекта foo, при изменении объекта bar</a><br>
-<a href="#n6">6. Исходные значения и описание</a><br>
-<a href="#n7">7. Исходные значения и описание</a><br>
-<a href="#n8">8. Исходные значения и описание</a><br>
+<a href="#n6">6. Почему не работает наследование прототипов</a><br>
+<a href="#n7">7. Сделайте так, чтобы рамка поля ввода подсвечивалась, когда она выделена пользователем</a><br>
+<a href="#n8">8. Почему при запросах на экран не выводятся теги pre и их данные</a><br>
 
 <h3 id="n1">1. Почему выводится 12, а не 3</h3>
 <p>Объяснить поведение интерпретатора, дать рекомендации<br>
@@ -72,7 +73,96 @@ var bar = foo;
 bar.a++;
 
 document.body.innerHTML = foo.a;
+```
 
+<b>Решение на JSfiddle: </b>
+
+<h3 id="n6">6. Почему не работает наследование прототипов</h3>
+<p>Объяснить поведение интерпретатора, дать рекомендации<br>
+<b>Ссылка на JSfiddle: </b> http://jsfiddle.net/pq28aqys/1/ <br>
+
+```javascript
+function extends(child, parent) {
+    var emptyCtor = function() {};
+    emptyCtor.prototype = parent.prototype;
+    child.prototype = new emptyCtor;
+    child._super = parent;
+    return child;
+};
+
+var ParentClass = function() {
+	this.a = 1;
+};
+
+var ChildClass = extends(function() {}, ParentClass);
+
+document.body.innerHTML = new ChildClass.a;
+
+```
+
+<b>Решение на JSfiddle: </b>
+
+<h3 id="n7">7. Сделайте так, чтобы рамка поля ввода подсвечивалась, когда она выделена пользователем</h3>
+<p>Объяснить поведение интерпретатора, дать рекомендации<br>
+<b>Ссылка на JSfiddle: </b> http://jsfiddle.net/usbacu8t/2/ <br>
+
+```html
+<form id="formElement">
+    One: <input type="text"><br>
+    Two: <input type="text">
+</form>
+```
+
+```css
+.focused {
+    outline: solid 2px red;
+}
+```
+
+```javascript
+var formElement = document.forms['formElement'];
+
+formElement.onfocus = function(evt) {
+    var activeElement = formElement.querySelector('.focused');
+	if (activeElement) {
+	    activeElement.classList.remove('focused');
+    }
+    evt.target.classList.add('focused');
+};
+
+formElement.onblur = function(evt) {
+	var activeElement = formElement.querySelector('.focused');
+    if (activeElement) {
+     	activeElement.classList.remove('focused');   
+    }
+};
+```
+
+<b>Решение на JSfiddle: </b>
+
+
+<b>Решение на JSfiddle: </b>
+
+<h3 id="n8">8. Почему при запросах на экран не выводятся теги pre и их данные</h3>
+<p>Объяснить поведение интерпретатора, дать рекомендации<br>
+<b>Ссылка на JSfiddle: </b> http://jsfiddle.net/ctgarz3o/ <br>
+
+```javascript
+var DataLoader = {
+	xhr: new XMLHttpRequest,
+    load: function(url, callback, method) {
+        this.xhr.onload = callback;
+        this.xhr.send(method || 'GET', url);
+    }
+};
+
+function show_data(evt) {
+	var xhr = evt.target;
+    document.body.innerHTML = '<pre>' + xhr.response + '</pre>';
+};
+
+DataLoader.load('https://api.github.com/users/o0/repos', show_data);
+DataLoader.load('https://api.github.com/repositories', show_data);
 ```
 
 <b>Решение на JSfiddle: </b>
