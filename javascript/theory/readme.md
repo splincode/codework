@@ -13,7 +13,7 @@
 <p>Объяснить поведение интерпретатора, дать рекомендации<br>
 <b>Ссылка на JSfiddle: </b> http://jsfiddle.net/x9xwug8x/ <br>
 
-```
+```javascript
 function sum(a, b) {
   return a + b;
 };
