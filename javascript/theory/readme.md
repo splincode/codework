@@ -10,7 +10,10 @@
 
 <h3 id="n1">1. Почему выводится 12, а не 3</h3>
 <p>Объяснить поведение интерпретатора, дать рекомендации<br>
-<b>Ссылка на JSfiddle: </b> [http://jsfiddle.net/x9xwug8x/](http://jsfiddle.net/x9xwug8x/)
+
+<b>Ссылка на JSfiddle: </b> 
+http://jsfiddle.net/x9xwug8x/
+
 ```javascript
 function sum(a, b) {
   return a + b;
@@ -18,6 +21,7 @@ function sum(a, b) {
 
 document.body.innerHTML = sum(1, '2');
 ```
+
 <b>Решение на JSfiddle: </b>
 
 
