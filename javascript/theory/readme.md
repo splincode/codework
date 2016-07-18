@@ -13,13 +13,11 @@
 <b>Ссылка на JSfiddle: </b> http://jsfiddle.net/x9xwug8x/ <br>
 
 ```
-
 function sum(a, b) {
   return a + b;
 };
 
 document.body.innerHTML = sum(1, '2');
-
 ```
 
 <b>Решение на JSfiddle: </b>
