@@ -138,7 +138,7 @@ typeof /s/ === 'object';   // Firefox 5+  Conform to ECMAScript 5.1
 document.body.innerHTML = typeof (1 / []);
 ```
 
-<b>Решение на JSfiddle: </b>
+<b>Решение на JSfiddle: </b> http://jsfiddle.net/756ng4hy/ <br>
 
 <h3 id="n4">4. Как сделать так, чтобы функция могла принимать нуль и при этом делала проверку на существование аргумента</h3>
 <p>Объяснить поведение интерпретатора, дать рекомендации<br>
