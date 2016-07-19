@@ -21,7 +21,35 @@ function sum(a, b) {
 document.body.innerHTML = sum(1, '2');
 ```
 
-<b>Решение на JSfiddle: </b>
+<b>Решение на JSfiddle: </b> http://jsfiddle.net/qx1tffuk/ <br>
+
+```text
+Всего есть три преобразования:
+
+Строковое преобразование
+Числовое преобразование
+Преобразование к логическому значению
+
+Оператор (+) может отрабатывать определенным образом:
+// Number + Number -> addition
+1 + 2 // 3
+
+// Boolean + Number -> addition
+true + 1 // 2
+
+// Boolean + Boolean -> addition
+false + false // 0
+
+// Number + String -> concatenation
+5 + "foo" // "5foo"
+
+// String + Boolean -> concatenation
+"foo" + false // "foofalse"
+
+// String + String -> concatenation
+"foo" + "bar" // "foobar"
+
+```
 
 <h3 id="n2">2. Почему на экране ничего не выводится</h3>
 <p>Объяснить поведение интерпретатора, дать рекомендации<br>
