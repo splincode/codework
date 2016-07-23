@@ -9,7 +9,7 @@
 	</li>
 </ul><br>
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/b/b2/VKontakte.svg" width="18%" height="10%" alt="">
+<img src="http://www.spomoni.com/wp-content/uploads/2013/04/2013-3-18-11-32-34-759.png" width="18%" height="10%" alt="">
 <h4>PHP</h4>
 <ul>
 	<li>
