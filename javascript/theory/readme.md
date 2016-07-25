@@ -61,6 +61,8 @@ if (typeof 1 = 'number') {
 }
 ```
 
+<b>Решение на JSfiddle: </b> http://jsfiddle.net/p1wqLa95/ <br>
+
 ```text
 Для проверки на равенство в JS существует специальные операторы сравнения
 Равно (==) и строгое равно (===), рекомендуется использовать последнее
@@ -128,8 +130,6 @@ typeof /s/ === 'function'; // Chrome 1-12 Non-conform to ECMAScript 5.1
 typeof /s/ === 'object';   // Firefox 5+  Conform to ECMAScript 5.1
 ```
 
-<b>Решение на JSfiddle: </b> http://jsfiddle.net/p1wqLa95/ <br>
-
 <h3 id="n3">3. Почему интерпретатор указывает нам в выводе тип number</h3>
 <p>Объяснить поведение интерпретатора, дать рекомендации<br>
 <b>Ссылка на JSfiddle: </b> http://jsfiddle.net/z2bvxu9b/1/ <br>
@@ -137,6 +137,8 @@ typeof /s/ === 'object';   // Firefox 5+  Conform to ECMAScript 5.1
 ```javascript
 document.body.innerHTML = typeof (1 / []);
 ```
+
+<b>Решение на JSfiddle: </b> http://jsfiddle.net/e1zaxax7/ <br>
 
 ```text
 Неявное численное преобразование примитивов. Если простым языком, 
@@ -150,8 +152,6 @@ console.log( 1 / [] ); // Infinity, т.к. исходя из примера вы
 console.log( 'A' + [] ); // A
 console.log( 'A' - [] ); // NaN
 ```
-
-<b>Решение на JSfiddle: </b> http://jsfiddle.net/e1zaxax7/ <br>
 
 <h3 id="n4">4. Как сделать так, чтобы функция могла принимать нуль и при этом делала проверку на существование аргумента</h3>
 <p>Объяснить поведение интерпретатора, дать рекомендации<br>
@@ -169,7 +169,22 @@ function getAHalf(arg) {
 document.body.innerHTML = getAHalf(0);
 ```
 
-<b>Решение на JSfiddle: </b>
+<b>Решение на JSfiddle: </b> http://jsfiddle.net/omaxphp/1x87gt3f/ <br>
+
+```text
+Доступ к «лишним» аргументам. Доступ к ним осуществляется через «псевдо-массив» arguments. Он содержит список аргументов по номерам: arguments[0], arguments[1]…, а также свойство length.
+
+Например, выведем список всех аргументов:
+function sayHi() {
+  for (var i = 0; i < arguments.length; i++) {
+    alert( "Привет, " + arguments[i] );
+  }
+}
+
+sayHi("Винни", "Пятачок"); // 'Привет, Винни', 'Привет, Пятачок'
+Все параметры находятся в arguments, даже если они есть в списке. 
+Код выше сработал бы также, будь функция объявлена sayHi(a,b,c)
+```
 
 <h3 id="n5">5. Почему происходит изменение объекта foo, при изменении объекта bar</h3>
 <p>Объяснить поведение интерпретатора, дать рекомендации<br>
@@ -183,7 +198,7 @@ bar.a++;
 document.body.innerHTML = foo.a;
 ```
 
-<b>Решение на JSfiddle: </b>
+<b>Решение на JSfiddle: </b> 
 
 <h3 id="n6">6. Почему не работает наследование прототипов</h3>
 <p>Объяснить поведение интерпретатора, дать рекомендации<br>
