@@ -199,7 +199,8 @@ bar.a++;
 document.body.innerHTML = foo.a;
 ```
 
-<b>Решение на JSfiddle: </b>  http://jsfiddle.net/omaxphp/pLr08etz/ <br>
+<b>Решение на JSfiddle 1: </b>  http://jsfiddle.net/omaxphp/L53q0bu5/ <br>
+<b>Решение на JSfiddle 2: </b>  http://jsfiddle.net/omaxphp/sLy2es5f/ <br>
 
 ```text
 В переменной, которой присвоен объект, хранится не сам объект,
