@@ -250,7 +250,92 @@ document.body.innerHTML = new ChildClass.a;
 
 ```
 
-<b>Решение на JSfiddle: </b>
+<b>Решение на JSfiddle 1: </b> http://jsfiddle.net/omaxphp/baw7do0q/ <br>
+<b>Решение на JSfiddle 2: </b> http://jsfiddle.net/omaxphp/41jqdops/ <br>
+<b>Решение на JSfiddle 3: </b> http://jsfiddle.net/omaxphp/1q54q2v0/ <br>
+
+```text
+Наследование на классах. Функция extend
+
+Для того чтобы объект класса Rabbit унаследовал от класса Animal - нужно
+Описать Animal
+Описать Rabbit
+Унаследовать кролика от объекта Animal:
+Rabbit.prototype = new Animal()
+Однако, у такого подхода есть два недостатка:
+
+Для наследования создается совершенно лишний объект new Animal()
+Конструктор Animal должен предусматривать этот лишний вызов для и при необходимости делать такое "недоживотное", годное лишь на прототип.
+К счастью, можно написать такую функцию, которая будет брать два класса и делать первый потомком второго:
+
+function extend(Child, Parent) {
+    var F = function() { }
+    F.prototype = Parent.prototype
+    Child.prototype = new F()
+    Child.prototype.constructor = Child
+    Child.superclass = Parent.prototype
+}
+
+****************************
+функция не создает лишних объектов и в качестве бонуса записывает класс-родитель
+в свойство потомка superclass - это удобно для вызова родительских методов в 
+конструкторе и при перекрытии методов
+****************************
+function extend(Child, Parent) {
+    var F = function() { }
+    F.prototype = Parent.prototype
+    Child.prototype = new F()
+    Child.prototype.constructor = Child
+    Child.superclass = Parent.prototype
+}
+
+****************************
+// ---- родительский класс ----
+
+function Animal(name, walkSpeed) {
+
+    // объявить приватную переменную
+    var speed = walkSpeed
+
+    // объявить открытую переменную
+    this.distance = 0
+
+    // добавить метод, использующий private speed
+    this.walk = function(time) {
+        this.distance = this.distance + time*speed
+    }
+
+    // добавить метод, использующий private name
+    this.toString = function() {
+        return name+" на расстоянии "+this.distance
+    }
+}
+
+// ---- класс наследник ----
+
+function Bird(name, walkSpeed, flySpeed) {
+    // вызов родительского конструктора
+    Bird.superclass.constructor.call(this, name, walkSpeed)
+
+    this.fly = function(time) {
+        this.distance = this.distance + time*flySpeed
+    }
+}
+
+extend(Bird, Animal)
+
+bird = new Bird("Птыц", 1, 10)
+
+bird.walk(3)
+
+alert(bird) // => Птыц на расстоянии 3
+
+bird.fly(2)
+
+alert(bird) // => Птыц на расстоянии 23
+
+
+```
 
 <h3 id="n7">7. Сделайте так, чтобы рамка поля ввода подсвечивалась, когда она выделена пользователем</h3>
 <p>Объяснить поведение интерпретатора, дать рекомендации<br>
