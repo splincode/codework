@@ -5,7 +5,6 @@
 <ul>
 	<li>
 		<a href="https://github.com/splincode/codework/tree/master/javascript/theory">Проверка теоретических знаний</a>
-		<sup> незакончено</sup>
 	</li>
 </ul><br>
 
