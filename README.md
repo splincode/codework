@@ -21,7 +21,7 @@
 		<sup> незакончено</sup>
 	</li>
 	<li>
-		<a href="https://github.com/splincode/codework/tree/master/php/sql">Пример проивзодительной SQL-выборки</a>
+		<a href="https://github.com/splincode/codework/tree/master/php/sql">Пример производительной SQL-выборки</a>
 		<sup> незакончено</sup>
 	</li>
 </ul><br>
