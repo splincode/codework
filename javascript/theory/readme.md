@@ -373,7 +373,7 @@ formElement.onblur = function(evt) {
 };
 ```
 
-<b>Решение на JSfiddle: </b>
+<b>Решение на JSfiddle: </b> http://jsfiddle.net/omaxphp/u3cvggf1/ <br>
 
 <h3 id="n8">8. Почему при запросах на экран не выводятся теги pre и их данные</h3>
 <p>Объяснить поведение интерпретатора, дать рекомендации<br>
@@ -403,7 +403,8 @@ DataLoader.load('https://api.github.com/repositories', show_data);
 В примере, была ошибка
 Failed to execute 'send' on 'XMLHttpRequest': The object's state must be OPENED.
 Это означает о том, что вам необходимо сначала использовать метод .open ( .. )
-перед установкой заголовков запроса
+перед установкой заголовков запроса и при этом для каждого запроса нужно 
+создавать новый XMLHttpRequest
 
 // 1. Создаём новый объект XMLHttpRequest
 var xhr = new XMLHttpRequest();
