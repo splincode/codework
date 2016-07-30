@@ -432,9 +432,6 @@ echo $check_func(); // dog ok
 
 * Что такое adjacency tree? Какие есть альтернативы? 
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/2/26/Simple_cycle_graph.svg" alt="" align="left">
-
-
 ```php
 Список смежности (adjacency tree) — один из способов 
 представления графа в виде коллекции списков вершин. 
