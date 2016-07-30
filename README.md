@@ -13,7 +13,6 @@
 <ul>
 	<li>
 		<a href="https://github.com/splincode/codework/tree/master/php/theory">Теория</a>
-		<sup> незакончено</sup>
 	</li>
 	<li>
 		<a href="https://github.com/splincode/codework/tree/master/php/sort">
