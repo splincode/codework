@@ -433,19 +433,22 @@ echo $check_func(); // dog ok
 * Что такое adjacency tree? Какие есть альтернативы? 
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/2/26/Simple_cycle_graph.svg" alt="" align="left">
-<img src="http://xandeadx.ru/sites/default/files/images/part-3/20101209145748.png" alt="" align="left">
 
 
 ```php
-Список смежности (adjacency tree) — один из способов представления графа в виде коллекции списков вершин. Каждой вершине графа соответствует список, состоящий из "соседей" этой вершины.
+Список смежности (adjacency tree) — один из способов представления 
+графа в виде коллекции списков вершин. Каждой вершине графа
+соответствует список, состоящий из "соседей" этой вершины.
 
-Пример функции, которая выводит список смежности в виде вложенных ul/li:
+Пример функции, которая выводит список смежности
+в виде вложенных ul/li:
 
 <?php
 
 /**
  * Возвращает html код дерева
- * @param  array    $tree - массив в формате array(array('name' => .., 'id' => .., 'pid' => ..), array(..))
+ * @param  array    $tree - массив в формате 
+ * array(array('name' => .., 'id' => .., 'pid' => ..), array(..))
  * @param  integer  $pid - id родителя
  */
 function get_tree($tree, $pid)
