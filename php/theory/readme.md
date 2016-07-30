@@ -393,6 +393,43 @@ abstract class A implements I {
 ```
 
 * Что означает запись $a = 'ololo'; $b = $$a; 
+```php
+
+<?php
+
+$ololo = 1;
+
+$a = 'ololo'; 
+$b = $$a;
+
+print($b); // 1
+
+?>
+
+Даёт возможность получить значение в качестве названия переменной
+Такая необходимость нужна, когда возникнет есть причина на лету собирать
+имя переменной
+
+Такое будет работать и для функций
+
+<?php
+function get_animal() {
+ return 'dog';
+}
+function check_dog() {
+  return 'dog ok';
+}
+function check_cat() {
+ return 'cat ok';
+}
+ 
+$check_func = 'check_' . get_animal();
+ 
+echo $check_func(); // dog ok
+
+?>
+```
+
 * Что такое adjacency tree? Какие есть альтернативы? 
 * Для чего нужны индексы в базе данных и как они работают? 
 * Что означает запись $a = $b ?: $c; 
