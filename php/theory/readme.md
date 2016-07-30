@@ -448,7 +448,6 @@ echo $check_func(); // dog ok
 /**
  * Возвращает html код дерева
  * @param  array    $tree - массив в формате 
- * array(array('name' => .., 'id' => .., 'pid' => ..), array(..))
  * @param  integer  $pid - id родителя
  */
 function get_tree($tree, $pid)
