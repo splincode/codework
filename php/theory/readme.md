@@ -431,6 +431,61 @@ echo $check_func(); // dog ok
 ```
 
 * Что такое adjacency tree? Какие есть альтернативы? 
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/2/26/Simple_cycle_graph.svg" alt="" align="left">
+
+```php
+Список смежности (adjacency tree) — один из способов представления графа в виде коллекции списков вершин. Каждой вершине графа соответствует список, состоящий из "соседей" этой вершины.
+
+Пример функции, которая выводит список смежности в виде вложенных ul/li:
+
+<?php
+
+/**
+ * Возвращает html код дерева
+ * @param  array    $tree - массив в формате array(array('name' => .., 'id' => .., 'pid' => ..), array(..))
+ * @param  integer  $pid - id родителя
+ */
+function get_tree($tree, $pid)
+{
+    $html = '';
+ 
+    foreach ($tree as $row)
+    {
+        if ($row['pid'] == $pid)
+        {
+            $html .= '<li>' . "\n";
+            $html .= '    ' . $row['name'] . "\n";
+            $html .= '    ' . get_tree($tree, $row['id']);
+            $html .= '</li>' . "\n";
+        }
+    }
+ 
+    return $html ? '<ul>' . $html . '</ul>' . "\n" : '';
+}
+
+
+$tree = array(
+    array('name' => 'Уровень 1',     'id' => 1,  'pid' => 0),
+    array('name' => 'Уровень 1.1',   'id' => 2,  'pid' => 1),
+    array('name' => 'Уровень 1.2',   'id' => 3,  'pid' => 1),
+    array('name' => 'Уровень 1.3',   'id' => 4,  'pid' => 1),
+    array('name' => 'Уровень 2',     'id' => 5,  'pid' => 0),
+    array('name' => 'Уровень 2.1',   'id' => 6,  'pid' => 5),
+    array('name' => 'Уровень 2.2',   'id' => 7,  'pid' => 5),
+    array('name' => 'Уровень 3',     'id' => 8,  'pid' => 0),
+    array('name' => 'Уровень 3.1',   'id' => 9,  'pid' => 8),
+    array('name' => 'Уровень 3.1.1', 'id' => 10, 'pid' => 9),
+    array('name' => 'Уровень 3.1.2', 'id' => 11, 'pid' => 9),
+);
+ 
+echo get_tree($tree, 0);
+
+?>
+
+```
+<img src="http://xandeadx.ru/sites/default/files/images/part-3/20101209145748.png" alt="">
+
 * Для чего нужны индексы в базе данных и как они работают? 
 * Что означает запись $a = $b ?: $c; 
 * Какие виды атак возможны при заполнении формы для публикации в блог? 
