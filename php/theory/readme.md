@@ -433,7 +433,7 @@ echo $check_func(); // dog ok
 * Что такое adjacency tree? Какие есть альтернативы? 
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/2/26/Simple_cycle_graph.svg" alt="" align="left">
-<img src="http://xandeadx.ru/sites/default/files/images/part-3/20101209145748.png" alt="">
+<img src="http://xandeadx.ru/sites/default/files/images/part-3/20101209145748.png" alt="" align="left">
 
 
 ```php
