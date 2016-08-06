@@ -374,6 +374,7 @@ formElement.onblur = function(evt) {
 ```
 
 <b>Решение на JSfiddle: </b> http://jsfiddle.net/omaxphp/u3cvggf1/ <br>
+<b>Решение на JSfiddle: </b> http://jsfiddle.net/m4errf26/ <br>
 
 <h3 id="n8">8. Почему при запросах на экран не выводятся теги pre и их данные</h3>
 <p>Объяснить поведение интерпретатора, дать рекомендации<br>
