@@ -96,7 +96,7 @@ class WordCounter {
 
 
 
-$dump = new WordCounter("text.txt");
+$dump = new WordCounter("text2.txt");
 
 $arr = $dump->array_word();
 

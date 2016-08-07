@@ -17,3 +17,6 @@
 
 <b id="two">1.1. Пример работы</b> <br>
 <p></p>
+
+<img src="https://habrastorage.org/files/b6d/aea/ade/b6daeaade7584e5ebc2278708a5a0468.png" align="left" />
+<img src="https://habrastorage.org/files/a2c/422/0fc/a2c4220fc7534b3abaaf85e70a783953.png" align="left/>
