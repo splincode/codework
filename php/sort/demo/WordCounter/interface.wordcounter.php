@@ -9,14 +9,6 @@ interface iWordCounter {
    * @return null
    */
 
-  public function __construct($text);
-
-  /**
-   * Вывод файла на экран (оригинал)
-   *
-   * @return null
-   */
-
   public function print_file();
 
   /**
