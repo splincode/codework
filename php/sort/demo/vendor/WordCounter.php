@@ -70,7 +70,7 @@ class WordCounter {
    * @return this
    */
 
-  public function prinFile()
+  public function printFile()
   {
 
     echo $this->string;
