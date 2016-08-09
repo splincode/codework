@@ -1,11 +1,13 @@
 <?php
 
-  require 'WordCounter/class.wordcounter.php';
+  require 'WordCounter/WordCounter.php';
 
-  $dump = new WordCounter("text2.txt"); // text.txt || text2.txt
+  use Vendor\File as Word;  
 
-  $arr = $dump->array_word(); // получаем отсортированный массив
+  $dump = new Word\Counter("text.txt"); // text.txt || text2.txt
+
+  $arr = $dump->arrayWord(); // получаем отсортированный массив
   
   foreach ($arr as $key => $value) {
-    echo "$key $value <br>\n";
+    echo "$value <br>\n";
   }

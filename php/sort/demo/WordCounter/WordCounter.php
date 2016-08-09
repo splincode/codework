@@ -1,6 +1,6 @@
 <?php
-  
-require 'interface.wordcounter.php';
+
+namespace Vendor\File;
 
 /**
  * Есть файл с текстом. Текст может содержать любые символы. Нужно выбрать из него все уникальные слова,
@@ -15,17 +15,9 @@ require 'interface.wordcounter.php';
  *
  */
 
-class WordCounter implements iWordCounter {
-
-  /*
-  ****************************
-  PRIVATE
-  ****************************
-  */
-
+class Counter {
 
   private $originFileString;
-  private $words = [];
 
   /**
    * Получение содержимого файла
@@ -34,53 +26,16 @@ class WordCounter implements iWordCounter {
    * @return string
    */
 
-  private function fileGetContentsUtf8($fn){ 
-   $content = file_get_contents($fn); 
-    return mb_convert_encoding($content, 'UTF-8', 
-        mb_detect_encoding($content, 'UTF-8, ISO-8859-1', true)); 
-  }
-
-  /**
-   * Сортировка по значению, в сторону убывания, 
-   * без учета алфавита ключей
-   *
-   * @return null
-   */
-
-  private function sort_reverse(){
+  private function fileGetContentsUtf8($fn)
+  { 
+   
+    $content = file_get_contents($fn); 
+    return mb_convert_encoding(
+      $content, 'UTF-8', 
+      mb_detect_encoding($content, 'UTF-8, ISO-8859-1', true)
+    ); 
     
-    $arr = $this->words;
-    $temp = [];
-
-    $i = count($arr);
-    while ($i > 0) {
-
-     $max = -INF;
-
-     foreach ($arr as $key => $value) {
-       if ($max[0] < $value) 
-         $max = [ $value, $key ];
-     }
-
-     $temp[$max[1]] = $max[0];
-     
-     unset($arr[$max[1]]);
-     $i = count($arr);
-
-    }
-
-    $this->words = $temp;
-    
-    unset($temp, $arr);
-
   }
-  
-
-  /*
-  ****************************
-  PUBLIC
-  ****************************
-  */
 
   /**
    * Инициализация объекта
@@ -89,8 +44,11 @@ class WordCounter implements iWordCounter {
    * @return null
    */
 
-  function __construct($text) {
+  public function __construct($text)
+  {
+
     $this->originFileString = $this->fileGetContentsUtf8($text);
+
   }
 
   /**
@@ -99,37 +57,34 @@ class WordCounter implements iWordCounter {
    * @return null
    */
 
-  function print_file(){
+  public function prinFile()
+  {
+
     echo $this->originFileString;
+
   }
 
   /**
    * Возвращаем отсортированны массив слов по количеству вхождений
    *
-   * @return array('word':string => 'count':int)
+   * @return array()
    */
 
-  function array_word(){
+  public function arrayWord()
+  {
 
-    $text = mb_strtolower($this->originFileString);
-    preg_match_all("#(?<=\b)([a-zа-я]+)(?:\b)#siu", $text, $matches);
-    $matches = $matches[0];
+    $string = $this->originFileString;
+    
+    preg_match_all("/[a-zа-я]+/ium", $string, $words);
 
-    foreach ($matches as $key => $value) {
-      
-      if (isset($this->words[$value])) {
-        $this->words[$value]++;
-      } else {
-        $this->words += [$value=>1];
-      }
+    $counts = array_count_values(array_map('mb_strtolower', $words[0]));
+    $words = array_keys($counts);
 
-    }
-
-    ksort($this->words);
-    $this->sort_reverse();
-
-    return $this->words;
+    array_multisort($counts, SORT_NUMERIC, SORT_DESC, $words, SORT_STRING);
+    return array_map(function($a, $b) {
+      return "$a $b";
+    }, $words, $counts);
 
   }
 
-};
+}
