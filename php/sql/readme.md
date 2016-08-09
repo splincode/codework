@@ -10,3 +10,46 @@
 
 <b id="two">1.1. Пример работы</b> <br>
 <p></p>
+
+```sql
+
+CREATE TABLE OrderRock
+  (
+      `order_id` int, 
+      `client_id` int, 
+      `client_name` varchar(55),
+      `order_date` date
+    )
+;
+  
+INSERT INTO OrderRock
+  (`order_id`, `client_id`, `client_name`, `order_date`)
+    
+VALUES
+  (1, 5, 'Maxim Ivanov', '21.08.2016'),
+    (2, 1, 'Petrov Petrovich', '25.08.2016'),
+    (3, 5, 'Maxim Ivanov', '10.04.2016'),
+    (4, 2, 'Ivan Ivanovich', '01.04.2016'),
+    (5, 8, 'Alan Dzagoev', '05.04.2016'),
+    (6, 10, 'Nikita Chukin', '10.04.2016'),
+    (7, 5, 'Maxim Ivanov', '01.01.2016'),
+    (8, 5, 'Maxim Ivanov', '15.02.2016')    
+;
+```
+
+Выборка:
+
+```sql
+SELECT
+  client_id,
+  client_name,
+  order_date,
+  count(*) as counts
+FROM
+  OrderRock
+WHERE
+  order_date<(NOW()- interval 1 month)
+HAVING count(*) >=3
+```
+
+Решение на SQLFiddle: http://sqlfiddle.com/#!9/e9e838/9
