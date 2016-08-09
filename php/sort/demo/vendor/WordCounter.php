@@ -1,6 +1,6 @@
 <?php
 
-namespace Vendor\File;
+namespace Vendor;
 
 /**
  * Есть файл с текстом. Текст может содержать любые символы. Нужно выбрать из него все уникальные слова,
@@ -15,9 +15,9 @@ namespace Vendor\File;
  *
  */
 
-class Counter {
+class WordCounter {
 
-  private $originFileString;
+  private $string;
 
   /**
    * Получение содержимого файла
@@ -34,33 +34,47 @@ class Counter {
       $content, 'UTF-8', 
       mb_detect_encoding($content, 'UTF-8, ISO-8859-1', true)
     ); 
-    
+
   }
 
   /**
    * Инициализация объекта
    *
-   * @param строка $text (путь к файлу)
    * @return null
    */
 
-  public function __construct($text)
+  public function __construct()
   {
 
-    $this->originFileString = $this->fileGetContentsUtf8($text);
+   
+  }
+
+  /**
+   * Вывод файла на экран (оригинал)
+   *
+   * @param строка $filePath (путь к файлу)
+   * @return this
+   */
+
+  public function readFile($filePath)
+  {
+
+    $this->string = $this->fileGetContentsUtf8($filePath);
+    return $this;
 
   }
 
   /**
    * Вывод файла на экран (оригинал)
    *
-   * @return null
+   * @return this
    */
 
   public function prinFile()
   {
 
-    echo $this->originFileString;
+    echo $this->string;
+    return $this;
 
   }
 
@@ -73,7 +87,7 @@ class Counter {
   public function arrayWord()
   {
 
-    $string = $this->originFileString;
+    $string = $this->string;
     
     preg_match_all("/[a-zа-я]+/ium", $string, $words);
 
