@@ -38,18 +38,6 @@ class WordCounter {
   }
 
   /**
-   * Инициализация объекта
-   *
-   * @return null
-   */
-
-  public function __construct()
-  {
-
-   
-  }
-
-  /**
    * Вывод файла на экран (оригинал)
    *
    * @param строка $filePath (путь к файлу)
@@ -60,20 +48,6 @@ class WordCounter {
   {
 
     $this->string = $this->fileGetContentsUtf8($filePath);
-    return $this;
-
-  }
-
-  /**
-   * Вывод файла на экран (оригинал)
-   *
-   * @return this
-   */
-
-  public function printFile()
-  {
-
-    echo $this->string;
     return $this;
 
   }
