@@ -136,4 +136,8 @@
 		<a href="https://github.com/splincode/codework/tree/master/javascript/golden_section_method">
 		Метод золотого сечения</a>
 	</li>
+	<li>
+		<a href="https://github.com/splincode/codework/tree/master/javascript/dichotomy_method">
+		Метод дихотомии</a>
+	</li>
 </ul>
