@@ -1,0 +1,228 @@
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Решаем судоку на JavaScript</title>
+    <script src="sudoku.js" ></script>
+    <script language="JavaScript">
+	var backtracking_call = 0;
+	function solve(){
+		myTable = document.getElementById('inp');	
+		myCells = myTable.getElementsByTagName("input");
+		out = [];
+		for (i = 0; i<= 8; i++){
+			tmp = [];
+			for (j = 0; j <= 8; j++){
+				ind = i*9+j;
+				tmp[j] = parseInt(myCells[ind].value);
+			}
+			out[i] = tmp;
+		}
+		var sudoku = new Sudoku(out);
+		document.getElementById('solution').innerHTML = sudoku.html() + 
+		'<p>Вызовы обратного поиска: '+backtracking_call+'</p>';
+		backtracking_call = 0;
+	}	    
+    </script>
+    <style>
+        table {
+            border-collapse: collapse;
+            font-family: sans-serif;
+        }
+        td {
+            border: 1px solid grey;
+            padding: 2px 5px 2px 5px;
+            color: #555;
+        }
+        .in {
+            font-weight: bold;
+            color: black;
+        }
+        .rb {
+            border-right: 2px solid black;
+        }
+        .bb td {
+            border-bottom: 2px solid black;
+        }
+	table#inp{
+	    width:180px;
+	}
+	table#inp td{
+		padding:0;
+		width:20px;
+		height:20px;
+	}
+
+	table#inp input{
+		width:20px;
+		height:20px;
+	}
+    </style>
+</head>
+<body>
+Это страничка-демо к статье <a href="http://habrahabr.ru/blogs/algorithm/113837/">"Решаем судоку на JavaScript"</a> на Хабре.<br/><br/>
+Страничка создана пользователем <a href="http://rozboris.com">Rozboris</a>.<br/><br/>
+
+<form>
+<table id="inp">
+	<tr>
+		<td><input name="c11" value="0"/></td>
+		<td><input name="c21" value="0"/></td>
+		<td><input name="c31" value="0"/></td>
+		<td><input name="c41" value="2"/></td>
+		<td><input name="c51" value="0"/></td>
+		<td><input name="c61" value="0"/></td>
+		<td><input name="c71" value="7"/></td>
+		<td><input name="c81" value="8"/></td>
+		<td><input name="c91" value="0"/></td>
+	</tr>
+	<tr>
+		<td><input name="c12" value="8"/></td>
+		<td><input name="c22" value="0"/></td>
+		<td><input name="c32" value="2"/></td>
+		<td><input name="c42" value="0"/></td>
+		<td><input name="c52" value="6"/></td>
+		<td><input name="c62" value="0"/></td>
+		<td><input name="c72" value="0"/></td>
+		<td><input name="c82" value="5"/></td>
+		<td><input name="c92" value="0"/></td>
+	</tr>
+	<tr>
+		<td><input name="c13" value="0"/></td>
+		<td><input name="c23" value="0"/></td>
+		<td><input name="c33" value="3"/></td>
+		<td><input name="c43" value="0"/></td>
+		<td><input name="c53" value="8"/></td>
+		<td><input name="c63" value="0"/></td>
+		<td><input name="c73" value="0"/></td>
+		<td><input name="c83" value="0"/></td>
+		<td><input name="c93" value="2"/></td>
+	</tr>
+
+	<tr>
+		<td><input name="c14" value="0"/></td>
+		<td><input name="c24" value="3"/></td>
+		<td><input name="c34" value="9"/></td>
+		<td><input name="c44" value="8"/></td>
+		<td><input name="c54" value="0"/></td>
+		<td><input name="c64" value="0"/></td>
+		<td><input name="c74" value="0"/></td>
+		<td><input name="c84" value="4"/></td>
+		<td><input name="c94" value="0"/></td>
+	</tr>
+
+	<tr>
+		<td><input name="c15" value="0"/></td>
+		<td><input name="c25" value="2"/></td>
+		<td><input name="c35" value="0"/></td>
+		<td><input name="c45" value="1"/></td>
+		<td><input name="c55" value="0"/></td>
+		<td><input name="c65" value="0"/></td>
+		<td><input name="c75" value="0"/></td>
+		<td><input name="c85" value="0"/></td>
+		<td><input name="c95" value="8"/></td>
+	</tr>
+
+	<tr>
+		<td><input name="c16" value="1"/></td>
+		<td><input name="c26" value="0"/></td>
+		<td><input name="c36" value="0"/></td>
+		<td><input name="c46" value="0"/></td>
+		<td><input name="c56" value="9"/></td>
+		<td><input name="c66" value="6"/></td>
+		<td><input name="c76" value="0"/></td>
+		<td><input name="c86" value="0"/></td>
+		<td><input name="c96" value="0"/></td>
+	</tr>
+
+	<tr>
+		<td><input name="c17" value="0"/></td>
+		<td><input name="c27" value="0"/></td>
+		<td><input name="c37" value="0"/></td>
+		<td><input name="c47" value="9"/></td>
+		<td><input name="c57" value="0"/></td>
+		<td><input name="c67" value="0"/></td>
+		<td><input name="c77" value="0"/></td>
+		<td><input name="c87" value="0"/></td>
+		<td><input name="c97" value="7"/></td>
+	</tr>
+
+	<tr>
+		<td><input name="c18" value="9"/></td>
+		<td><input name="c28" value="4"/></td>
+		<td><input name="c38" value="0"/></td>
+		<td><input name="c48" value="0"/></td>
+		<td><input name="c58" value="1"/></td>
+		<td><input name="c68" value="0"/></td>
+		<td><input name="c78" value="0"/></td>
+		<td><input name="c88" value="2"/></td>
+		<td><input name="c98" value="0"/></td>
+	</tr>
+
+	<tr>
+		<td><input name="c19" value="0"/></td>
+		<td><input name="c29" value="5"/></td>
+		<td><input name="c39" value="1"/></td>
+		<td><input name="c49" value="0"/></td>
+		<td><input name="c59" value="0"/></td>
+		<td><input name="c69" value="8"/></td>
+		<td><input name="c79" value="4"/></td>
+		<td><input name="c89" value="0"/></td>
+		<td><input name="c99" value="0"/></td>
+	</tr>
+</table>
+<input type="button" onClick="javascript:solve()" value="Solve by backtracking!"/>
+</form>
+
+
+<div id="solution">
+</div>
+
+
+<script>
+/*
+var in_val = [
+    [0, 0, 0, 0, 0, 0, 0, 6, 0],
+    [0, 5, 7, 0, 0, 0, 0, 8, 0],
+    [8, 0, 0, 3, 6, 0, 4, 5, 0],
+    [5, 9, 0, 0, 7, 0, 0, 0, 6],
+    [0, 0, 6, 4, 5, 0, 0, 0, 7],
+    [4, 0, 3, 0, 9, 6, 0, 1, 2],
+    [2, 0, 0, 0, 0, 0, 9, 0, 5],
+    [0, 3, 0, 1, 2, 5, 6, 7, 8],
+    [0, 8, 5, 0, 0, 0, 0, 0, 4]
+];
+*/
+
+var in_val = [
+    [8, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 3, 6, 0, 0, 0, 0, 0],
+    [0, 7, 0, 0, 9, 0, 2, 0, 0],
+    [0, 5, 0, 0, 0, 7, 0, 0, 0],
+    [0, 0, 0, 0, 4, 5, 7, 0, 0],
+    [0, 0, 0, 1, 0, 0, 0, 3, 0],
+    [0, 0, 1, 0, 0, 0, 0, 6, 8],
+    [0, 0, 8, 5, 0, 0, 0, 1, 0],
+    [0, 9, 0, 0, 0, 0, 4, 0, 0]
+];
+
+/* unsolved
+var in_val = [
+    [0, 0, 0, 2, 0, 0, 7, 8, 0],
+    [8, 0, 2, 0, 6, 0, 0, 5, 0],
+    [0, 0, 3, 0, 8, 0, 0, 0, 2],
+    [0, 3, 9, 8, 0, 0, 0, 4, 0],
+    [0, 2, 0, 1, 0, 0, 0, 0, 8],
+    [1, 0, 0, 0, 9, 6, 0, 0, 0],
+    [0, 0, 0, 9, 0, 0, 0, 0, 7],
+    [9, 4, 0, 0, 1, 0, 0, 2, 0],
+    [0, 5, 1, 0, 0, 8, 4, 0, 0]
+];
+*/
+
+
+var sudoku = new Sudoku(in_val);
+document.write(sudoku.html());
+</script>
+</body>
+</html>

@@ -31,3 +31,18 @@ tr:nth-child(7) input {
 tr:nth-child(9) input {
 	border-bottom: 2px solid #000;
 }
+
+.col-info {
+    max-width: 460px;
+}
+
+.in input {
+    font-weight: bold;
+    font-size: 30px;
+}
+
+@media (max-width: 992px) {
+	.container {
+	    width: 460px;
+	}
+}
