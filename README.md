@@ -120,6 +120,10 @@
 		<a href="https://github.com/splincode/codework/tree/master/cpp/lambda">
 		Интерпретатор лямбда-исчислений</a>
 	</li>
+	<li>
+		<a href="https://github.com/splincode/codework/tree/master/cpp/sudoku">
+		Решатель судоку</a>
+	</li>
 </ul>
 
 <h4>JavaScript</h4>
