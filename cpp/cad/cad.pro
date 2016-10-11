@@ -14,3 +14,8 @@ RESOURCES += \
 
 HEADERS += \
     viewlocation.h \
+
+DISTFILES += \
+    qt.conf
+
+

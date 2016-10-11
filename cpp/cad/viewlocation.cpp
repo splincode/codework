@@ -1,5 +1,10 @@
 #include <QtWebEngineWidgets/QtWebEngineWidgets>
 #include <QString>
+#include <QGuiApplication>
+#include <QQmlApplicationEngine>
+#include <QtWebEngine>
+#include <QDebug>
+
 #include "viewlocation.h"
 
 ViewLocation::ViewLocation(QString path_page){
@@ -42,6 +47,7 @@ ViewLocation& ViewLocation::title(QString title){
 
 ViewLocation& ViewLocation::show(){
     view->setContextMenuPolicy(Qt::CustomContextMenu);
+    QtWebEngine::initialize();
     view->load(QUrl("qrc:" + index + ".html"));
     view->show();
 
