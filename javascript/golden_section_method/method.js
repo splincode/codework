@@ -7,7 +7,7 @@ if (!auto) {
 	// ввод автоматический
 	a = 1;
 	b = 2;
-	eps = 0.01;
+	eps = 0.0001;
 	fn = "x - 2*pow(x, 2)+ (1/5)*pow(x, 5)";
 
 } else {
@@ -77,7 +77,7 @@ while (h >= eps) {
 		</tr>
 	`)
 
-	if (f(c) >= f(d)) {
+	if (f(c) < f(d)) {
 		
 		a = c;
 		b = b;
@@ -106,4 +106,4 @@ document.write(`
 let x = (c + d)/2;
 
 document.write('x = (c+d)/2 = ' + x.toFixed(3) + '<br>');
-document.write('f(x) = ' + f(x).toFixed(3) + '<br>');
+//document.write('f(x) = ' + f(x).toFixed(3) + '<br>');

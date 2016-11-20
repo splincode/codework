@@ -5,10 +5,10 @@ let a, b, eps, fn;
 if (!auto) {
 
 	// ввод автоматический
-	a = 0; 
-	b = 3;
-	eps = 0.001;
-	fn = "-x*exp(-0.5*x)";
+	a = 1; 
+	b = 2;
+	eps = 0.00001;
+	fn = "x - 2*x*x + (1/5)*pow(x, 5)";
 
 } else {
 
@@ -34,12 +34,12 @@ document.write(`
 `)
 
 if (!auto) {
-	document.write(`F(x) = -x*e<sup>-0.5x</sup> [${a}, ${b}]<br> <br>`);
+	document.write(`F(x) = x - 2*x<sup>2</sup> + (1/5)*x<sup>5</sup> [${a}, ${b}]<br> <br>`);
 } else {
 	document.write(`F(x) = ${fn}, [${a}, ${b}] <br> <br>`);
 }
 
-let i = 1;
+let c, i = 1;
 
 document.write(` 
 	<div class="form-group">
@@ -51,50 +51,41 @@ document.write(`
 		<td>c</td>
 		<td>f(a)</td>
 		<td>f(c)</td>
-		<td>сравнение</td>
 		<td>|b-a|</td>
 	</tr>
 `)
 
 
-console.log(b-a)
-while (b - a >  eps) {
+while (b - a > eps){
+    c = (a + b) / 2;
+    
+    if(f(b) * f(c) < 0)
+        a = c;
+    else
+    	b = c;
 
-	 let f1 = f(a);
-	 let c = (a+b)/2;
-	 let f2 = f(c);
+    document.write(` 
+    	<tr>
+    		<td> ${i} </td>
+    		<td>` + (+a.toFixed(3)) + `</td>
+    		<td>` + (+b.toFixed(3)) + `</td>
+    		<td>` + (+c.toFixed(3)) + `</td>
+    		<td>` + (+(f(a)).toFixed(3) )+ `</td>
+    		<td>` + (+(f(c)).toFixed(3)) + `</td>
+    		<td>` + (+(Math.abs(b-a)).toFixed(3))  + `</td>
+    	</tr>
+    `);
 
-	 if (f1*f2 <= 0) {
-	 	b = c;
-	 } else {
-	 	a = c;
-	 	f1=f2;
-	 }
+    i++
 
-	document.write(` 
-		<tr>
-			<td> ${i} </td>
-			<td>` + (+a.toFixed(3)) + `</td>
-			<td>` + (+b.toFixed(3)) + `</td>
-			<td>` + (+c.toFixed(3)) + `</td>
-			<td>` + (+(f(a)).toFixed(3) )+ `</td>
-			<td>` + (+(f(c)).toFixed(3)) + `</td>
-			<td>` + ((f1 <= f2) ? "<" : ">")  + `</td>
-			<td>` + (+(Math.abs(b-a)).toFixed(3))  + `</td>
-		</tr>
-	`)
-
-	++i;
-	console.log(i)
 }
-
 
 document.write(` 
 	</table>
 	</div>
 `)
 
-let x = (a+b)/2;
+x = (a + b) / 2 ;
 
 document.write('x  = ' + (+x.toFixed(3)) + '<br>');
-document.write('f(x) = ' + (+f(x).toFixed(3)) + '<br>');
+//document.write('f(x) = ' + (+f(x).toFixed(3)) + '<br>');
