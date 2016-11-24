@@ -124,6 +124,10 @@
 		<a href="https://github.com/splincode/codework/tree/master/cpp/sudoku">
 		Решатель судоку</a>
 	</li>
+	<li>
+		<a href="https://github.com/splincode/codework/blob/master/cpp/nonlinear_conjugate_gradient_method/">
+		Метод сопряженных градиентов</a>
+	</li>
 </ul>
 
 <h4>JavaScript</h4>
@@ -145,7 +149,7 @@
 		Метод дихотомии</a>
 	</li>
 	<li>
-		<a href="https://github.com/splincode/codework/blob/master/javascript/pattern_search/index.html">
-		Метод Хука-Дживса</a>
+		<a href="https://github.com/splincode/codework/blob/master/javascript/pattern_search/">
+		Метод Хука-Дживса (прямой поиск)</a>
 	</li>
 </ul>
