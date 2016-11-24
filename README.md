@@ -145,7 +145,7 @@
 		Метод дихотомии</a>
 	</li>
 	<li>
-		<a href="https://github.com/splincode/codework/tree/master/javascript/dichotomy_method">
+		<a href="https://github.com/splincode/codework/blob/master/javascript/pattern_search/index.html">
 		Метод Хука-Дживса</a>
 	</li>
 </ul>
