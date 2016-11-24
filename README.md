@@ -144,4 +144,8 @@
 		<a href="https://github.com/splincode/codework/tree/master/javascript/dichotomy_method">
 		Метод дихотомии</a>
 	</li>
+	<li>
+		<a href="https://github.com/splincode/codework/tree/master/javascript/dichotomy_method">
+		Метод Хука-Дживса</a>
+	</li>
 </ul>
