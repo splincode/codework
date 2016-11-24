@@ -1,4 +1,4 @@
-#include <iostream> // Метод сопряженных направлений, код был написан не мною
+#include <iostream>
 #include <math.h>
 using namespace std;
 
