@@ -1,5 +1,5 @@
 ```bash
-$ node node hooke_jeeves.js
+$ node hooke_jeeves.js
 
 Исходные значения: 
 f(x) = (x1 - 2)^2 + (x1 - 2*x2)^2
