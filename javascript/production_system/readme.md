@@ -35,3 +35,4 @@
 либо одиночные образцы,
 либо несколько условий, соединенных предлогом «И».
 
+<img src="http://www.habarov.spb.ru/bz/image/ris6_2.gif" align="center" alt="">
