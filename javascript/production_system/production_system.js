@@ -1,32 +1,66 @@
-/*var stack = [];
+var readline = require('readline');
+var r = require('./roles.js');
+var rl = readline.createInterface(process.stdin, process.stdout);
+var bdNumber = 0;
+var stack = [];
+var stackEval = [];
+var globalCommand = ['выбор базы знаний с номером> ', 'ввод фактов> ']
+var counterCommand = 0;
 
-var stdin = process.openStdin();
+console.log('Список баз знаний: ');
+for (let i = 0; i < r.length; i++) {
+	console.log(`${i+1}.${r[i].name}`);
+}
 
-stdin.addListener("data", function(d) {
-    // note:  d is an object, and when converted to a string it will
-    // end with a linefeed.  so we (rather crudely) account for that  
-    // with toString() and then trim() 
-    console.log("you entered: [" + 
-        d.toString().trim() + "]");
+rl.setPrompt(globalCommand[0]);
+rl.prompt();
+rl.on('line', function(line) {
 
-    stack.push(d.toString().trim())
-    console.log(stack)
-  });*/
-/*
-var stack = '';
-  var readline = require('readline');
-  var rl = readline.createInterface(process.stdin, process.stdout);
-  rl.setPrompt('guess> ');
+	counterCommand++;
+
+	if (counterCommand == 1) {
+		bdNumber = parseInt(line.replace(/\D+/g,""));
+		console.log('Выбрана база знаний:', r[bdNumber-1].name);
+		rl.setPrompt(globalCommand[1]);
+	} else {
+		try {
+			stackEval.push(eval(line));
+		} catch(e){
+			stack.push(line.replace(/\s/g, ""));
+		}
+
+		// пробигаемся по правилам
+		let roles = r[bdNumber-1].roles;
+		for (let i = 0; i < roles.length; i++) {
+			if (!roles[i].EXCLUDE) {
+
+				let count = 0;
+				let conditions = roles[i].IF;
+				//console.log(conditions)
+				for (let j = 0; j < conditions.length; j++) {
+					//console.log(conditions[j])
+					
+					for (let k = 0; k < stack.length; k++) {
+						if (conditions[j] === stack[k]) count++;
+					}
+				}
+
+				if (count == conditions.length) {
+					roles[i].EXCLUDE = true;
+					stack.push(roles[i].THEN);
+					console.log(roles[i].THEN);
+				}
+
+				//console.log(count);
+
+
+			}
+		}
+	}
+
+
   rl.prompt();
-  rl.on('line', function(line) {
-  	  
-      if (line === "end") {
-      	console.log(stack);
-      	console.log(eval(stack))
-      } else stack += line + ';';
-
-      if (line === "right") rl.close();
-      rl.prompt();
-  }).on('close',function(){
-      process.exit(0);
-  });*/
+  //console.log(stack)
+}).on('close',function(){
+  process.exit(0);
+});
