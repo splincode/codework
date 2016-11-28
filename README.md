@@ -152,4 +152,8 @@
 		<a href="https://github.com/splincode/codework/blob/master/javascript/pattern_search/">
 		Метод Хука-Дживса (прямой поиск)</a>
 	</li>
+	<li>
+		<a href="https://github.com/splincode/codework/blob/master/javascript/production_system/">
+		Продукционная модель</a>
+	</li>
 </ul>
