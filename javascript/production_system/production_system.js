@@ -12,7 +12,7 @@ stdin.addListener("data", function(d) {
     stack.push(d.toString().trim())
     console.log(stack)
   });*/
-
+/*
 var stack = '';
   var readline = require('readline');
   var rl = readline.createInterface(process.stdin, process.stdout);
@@ -29,4 +29,4 @@ var stack = '';
       rl.prompt();
   }).on('close',function(){
       process.exit(0);
-  });
+  });*/
