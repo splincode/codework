@@ -1,6 +1,6 @@
 ## Пример работы программы
 
-<img src="" align="center" alt="">
+<img src="https://habrastorage.org/files/763/a16/416/763a164165a84d858d74eac1bc3a4a23.png" align="center" alt="">
 
 ## Теория
 
