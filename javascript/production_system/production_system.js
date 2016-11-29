@@ -52,7 +52,13 @@ rl.on('line', function(line) {
 			globalCountMathCommand++;
 			console.log(stackMath)
 		} else {
-			console.log(math.eval(stackMath + line))
+			try { 
+				console.log(math.eval(stackMath + line)) 
+
+				let result = math.eval(stackMath + line);
+				if (Boolean(result.entries)) console.log('равенство верно, теорема доказана');
+
+			} catch (e) { }
 		}
 
 		for (let i =0 ; i < roles.length; i++) {
