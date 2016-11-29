@@ -1,63 +1,106 @@
-var readline = require('readline');
-var r = require('./roles.js');
+/**
+ * Include library
+ */
+
+const readline = require('readline');
+const db = require('./libs/roles.js');
+const math = require('./libs/math.js');
+
+/**
+ * Instance
+ */
+
 var rl = readline.createInterface(process.stdin, process.stdout);
-var bdNumber = 0;
 var stack = [];
 var stackEval = [];
-var globalCommand = ['выбор базы знаний с номером> ', 'ввод фактов> ']
-var counterCommand = 0;
 
-console.log('Список баз знаний: ');
-for (let i = 0; i < r.length; i++) {
-	console.log(`${i+1}.${r[i].name}`);
-}
+var globalCommand = ['ввод фактов> ', 'ввод выражения> '];
+var globalStateMath = false;
+
+//var counterCommand = 0;
 
 rl.setPrompt(globalCommand[0]);
 rl.prompt();
+
+
+/**
+ * ReadLine command user
+ */
+
 rl.on('line', function(line) {
 
-	counterCommand++;
+	if (line.replace(/\s/g, "") === '!') {
+		// смена режима
+		globalStateMath = !globalStateMath;
+		rl.setPrompt(globalCommand[Number(globalStateMath)]);
+		rl.prompt();
+		return;
+	}
 
-	if (counterCommand == 1) {
-		bdNumber = parseInt(line.replace(/\D+/g,""));
-		console.log('Выбрана база знаний:', r[bdNumber-1].name);
-		rl.setPrompt(globalCommand[1]);
+
+	if (globalStateMath) {
+		// в режиме исполнения математических команд
+
 	} else {
-		try {
-			stackEval.push(eval(line));
-		} catch(e){
-			stack.push(line.replace(/\s/g, ""));
-		}
+		// классический режим
+		
 
-		// пробигаемся по правилам
-		let roles = r[bdNumber-1].roles;
-		for (let i = 0; i < roles.length; i++) {
-			if (!roles[i].EXCLUDE) {
 
-				let count = 0;
-				let conditions = roles[i].IF;
-				//console.log(conditions)
-				for (let j = 0; j < conditions.length; j++) {
-					//console.log(conditions[j])
-					
-					for (let k = 0; k < stack.length; k++) {
-						if (conditions[j] === stack[k]) count++;
-					}
+		
+	}
+
+
+
+
+	//counterCommand++;
+
+	/*if (line.replace(/\s/g, "") === '!') {
+		// смена режима
+		globalStateMath = !globalStateMath;
+		rl.setPrompt(globalCommand[Number(globalStateMath)]);
+		rl.prompt();
+		return;
+	}
+
+
+
+	try {
+		stackEval.push(eval(line));
+	} catch(e){
+		stack.push(line.replace(/\s/g, ""));
+	}
+
+	console.log(db)
+
+	// пробигаемся по правилам
+	let roles = db.roles;
+	for (let i = 0; i < roles.length; i++) {
+		if (!roles[i].EXCLUDE) {
+
+			let count = 0;
+			let conditions = roles[i].IF;
+			//console.log(conditions)
+			for (let j = 0; j < conditions.length; j++) {
+				//console.log(conditions[j])
+				
+				for (let k = 0; k < stack.length; k++) {
+					if (conditions[j] === stack[k]) count++;
 				}
-
-				if (count == conditions.length) {
-					roles[i].EXCLUDE = true;
-					stack.push(roles[i].THEN);
-					console.log(roles[i].THEN);
-				}
-
-				//console.log(count);
-
-
 			}
+
+			if (count == conditions.length) {
+				roles[i].EXCLUDE = true;
+				stack.push(roles[i].THEN);
+				console.log(roles[i].THEN);
+			}
+
+			//console.log(count);
+
+
 		}
 	}
 
+*/
 
   rl.prompt();
   //console.log(stack)
