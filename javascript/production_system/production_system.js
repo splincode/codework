@@ -50,7 +50,7 @@ rl.on('line', function(line) {
 			line = line.replace("set", "");
 			stackMath = stackMath + line + ";";
 			globalCountMathCommand++;
-			console.log(stackMath)
+			//console.log(stackMath)
 		} else {
 			try { 
 
@@ -70,6 +70,8 @@ rl.on('line', function(line) {
 				let conditions = roles[i].IF;
 				let conditionsState;
 				for (let j = 0; j < conditions.length; j++) {
+
+					//console.log(conditions[j]);
 
 					if (conditions[j].indexOf("$") != -1) {
 						conditionsState = conditions[j];
@@ -169,7 +171,11 @@ rl.on('line', function(line) {
 					for (let j = 0; j < conditions.length; j++) {
 						
 						for (let k = 0; k < stack.length; k++) {
+							if (!stack[k].alias) continue;
 							let firstKey = first(stack[k].alias);
+							//console.log('175', conditions[j], stack[k].line, stack[k],  stack[k].alias,  conditions[j])
+							//console.log(firstKey)
+
 							if (stack[k].line == conditions[j].replace(firstKey, stack[k].alias[firstKey])) count++;
 						}
 
@@ -201,6 +207,9 @@ rl.on('line', function(line) {
 		}
 
 	}
+
+
+	//console.log(stack)
 
   rl.prompt();
 }).on('close',function(){
