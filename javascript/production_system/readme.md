@@ -1,6 +1,8 @@
 ## Пример работы программы
 
-<img src="https://habrastorage.org/files/763/a16/416/763a164165a84d858d74eac1bc3a4a23.png" align="center" alt="">
+<img src="https://habrastorage.org/files/e57/edc/0fa/e57edc0faf2345dba42b8a279cbca97e.png" align="center" />
+
+<img src="https://habrastorage.org/files/4e1/b9e/a84/4e1b9ea842c946a5a633a24a009ed07a.png" align="center" alt="">
 
 ## Теория
 
