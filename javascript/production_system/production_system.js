@@ -53,12 +53,14 @@ rl.on('line', function(line) {
 			console.log(stackMath)
 		} else {
 			try { 
-				console.log(math.eval(stackMath + line)) 
 
 				let result = math.eval(stackMath + line);
-				if (Boolean(result.entries)) console.log('равенство верно, теорема доказана');
+				if (!result.hasOwnProperty('entries')) { console.log(result); }
+				if (result.hasOwnProperty('entries') && result.entries[0] < 2 && Boolean(result.entries)) { console.log('равенство верно, в силу доказательства метода - теорема верна'); }
 
-			} catch (e) { }
+			} catch (e) { 
+				console.log(e);
+			}
 		}
 
 		for (let i =0 ; i < roles.length; i++) {
