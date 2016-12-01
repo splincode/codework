@@ -156,4 +156,8 @@
 		<a href="https://github.com/splincode/codework/blob/master/javascript/production_system/">
 		Продукционная модель</a>
 	</li>
+	<li>
+		<a href="https://github.com/splincode/codework/blob/master/javascript/newton's_method/">
+		Метода Ньютона</a>
+	</li>
 </ul>
