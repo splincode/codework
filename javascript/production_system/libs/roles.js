@@ -1,5 +1,32 @@
 module.exports = {
 	roles: [
+
+		{	
+			IF: (fact) => (fact.indexOf("-смертен") != -1 ) ? true : false,
+			THEN: (fact) => {
+				let alias = fact.replace(/-смертен/g, '');
+				return { "$h" : alias }
+			},
+			EXCLUDE: false
+		},
+
+		{	
+			IF: (fact) => (fact.indexOf("-человек") != -1 ) ? true : false,
+			THEN: (fact) => {
+				let alias = fact.replace(/-человек/g, '');
+				return { "$p" : alias }
+			},
+			EXCLUDE: false
+		},
+
+
+		// проверка связей
+		{
+			IF: ['$h-смертен', '$p-человек'],
+			THEN: "$p-смертен",
+			EXCLUDE: false
+		},
+
 		// проверка наличия первого катета
 		{	
 			IF: (fact) => (fact.indexOf("-катет") != -1 ) ? true : false,
