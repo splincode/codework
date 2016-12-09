@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="material.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="custom.css">
+
+  </head>
+
+  <body>
+    <div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
+      
+      <header class="demo-header mdl-layout__header mdl-color--grey-100 mdl-color-text--grey-600">
+        <div class="mdl-layout__header-row">
+          <div class="closemenu"></div>
+          <span class="mdl-layout-title">Построение фигуры</span>
+          
+          <div class="mdl-layout-spacer"></div>
+        </div>
+      </header>
+      
+      <div class="demo-drawer mdl-layout__drawer mdl-color--blue-grey-900 mdl-color-text--blue-grey-50">
+        
+        <header class="demo-drawer-header">
+          <div class="demo-avatar-dropdown">
+            
+            <span>Главное меню</span>
+
+            <div class="mdl-layout-spacer"></div>
+           
+            <button id="accbtn" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+              <i class="material-icons" role="presentation">arrow_drop_down</i>
+              <span class="visuallyhidden">Accounts</span>
+            </button>
+
+            <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="accbtn">
+              <li class="mdl-menu__item newproject">  <i class="Tiny-my material-icons">mode_edit</i>Новый</li>
+              <li class="mdl-menu__item">Открыть проект</li>
+              <li class="mdl-menu__item">Сохранить проект</li>
+              <li class="mdl-menu__item">Выход</li>
+              
+            </ul>
+
+          </div>
+        </header>
+       	
+       	
+
+        <nav class="demo-navigation mdl-navigation mdl-color--blue-grey-800">
+
+        	<div class="row">
+        	    <div class="col s12">
+        	    	<p><b>Растяжение — сжатие</b> — в сопротивлении материалов — вид продольной деформации стержня или бруса,
+        	    	 возникающий в том случае, если нагрузка к нему прикладывается по его продольной оси (равнодействующая сил, 
+        	    	 	воздействующих на него, нормальна поперечному сечению стержня и проходит через его центр масс).</p>
+
+        	    	 <p>Эпюрой продольной силы называется график распределения продольной силы вдоль от бруса.
+        	    	 Ось эпюры параллельна продольной оси. Нулевая линия проводится тонкой линией. 
+        	    	 Значения чисел откладывают от оси, положительные - вверх, отрицательные вниз.</p>
+        	   	</div>
+        	</div>
+
+        </nav>
+      </div>
+     
+
+
+      <main class="mdl-layout__content mdl-color--grey-100">
+      		
+
+      	<div id="outer">
+      	    <div id="graphs">
+
+					<a class="createElement btn-floating btn-large waves-effect waves-light red" data-activates='dropdown'>
+						<i class="material-icons">add</i>
+					</a>
+
+					<ul id='dropdown' class='dropdown-content'>
+				    	<li><a class="addBlock" href="#!">Добавить стержень</a></li>
+				  	</ul>
+				  
+
+      	    </div>
+      	</div>
+
+
+
+      </main>
+
+		
+      <a target="_blank" id="view-source1" class="waves-effect waves-light btn">Фигура</a>
+      <a target="_blank" id="view-source2" class="waves-effect waves-light btn diactivate">Расчеты</a>
+      <a target="_blank" id="view-source3" class="waves-effect waves-light btn diactivate">Графики</a>
+   
+
+    <script src="lib.js"></script>
+    <script src="materialmain.js"></script>
+    <script src="material.js"></script>
+    <script src="app.js"></script>
+    
+  </body>
+</html>

@@ -1,0 +1,53 @@
+<div class="block idblock-{{$ctrl.index}}">
+	<div class="nameing">{{$ctrl.index+1}}</div>
+	
+	<div class="block-btn addRight" data-activates='dropdown-1-{{$ctrl.index}}' dropdown>+</div>
+	<div class="block-btn addLeft" data-activates='dropdown-2-{{$ctrl.index}}' dropdown>+</div>
+	<div class="block-btn addCenter" data-activates='dropdown-3-{{$ctrl.index}}' dropdown>+</div>
+	
+	<!-- ${notfirstEdge}
+	<div class="edge edgeRight">${edgeIdRight}</div>
+	 -->
+
+	<div class="sealingLeft"></div>
+	<div class="sealingRight"></div>
+	
+	<ul id='dropdown-1-{{$ctrl.index}}' class='dropdown-content'>
+    	<li ng-click="$ctrl.addKernelBlock($ctrl.index)">
+    		<a class="addBlockToRight" ref="#!">Добавить стержень</a>
+    		<div class="divider"></div>
+    	</li>
+
+    	<li ng-click="$ctrl.addKernelBlock($ctrl.index)">
+    		<a class="sealing addSealingRight" href="#!">Добавить заделку</a>
+    		<div class="divider"></div>
+    	</li>
+
+    	<li ng-click="$ctrl.addKernelBlock($ctrl.index)">
+    		<a class="" href="#!">Добавить поперечную силу (F)</a>
+    	</li>
+  	</ul>
+	
+	<ul id='dropdown-2-{{$ctrl.index}}' class='dropdown-content'>
+    	<li ng-click="$ctrl.addKernelBlock($ctrl.index)">
+    		<a class="sealing addSealingLeft" href="#!">Добавить заделку</a>
+    		<div class="divider"></div>
+    	</li>
+
+    	<li ng-click="$ctrl.addKernelBlock($ctrl.index)">
+    		<a class="" href="#!">Добавить поперечную силу (F)</a>
+    	</li>
+  	</ul>
+
+  		<ul id='dropdown-3-{{$ctrl.index}}' class='dropdown-content'>
+  	    	<li ng-click="$ctrl.addKernelBlock($ctrl.index)">
+  	    		<a class="sealing addSealingLeft" href="#!">Добавить заделку</a>
+  	    		<div class="divider"></div>
+  	    	</li>
+
+  	    	<li ng-click="$ctrl.addKernelBlock($ctrl.index)">
+  	    		<a class="" href="#!">Добавить поперечную силу (F)</a>
+  	    	</li>
+  	  	</ul>
+	
+</div>
