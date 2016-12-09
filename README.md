@@ -156,4 +156,8 @@
 		<a href="https://github.com/splincode/codework/blob/master/javascript/production_system/">
 		Продукционная модель</a>
 	</li>
+	<li>
+		<a href="https://github.com/splincode/codework/blob/master/javascript/cad/">
+		Система решения задач теоретической механики методом сил</a>
+	</li>
 </ul>
