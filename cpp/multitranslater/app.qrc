@@ -1,0 +1,12 @@
+<!DOCTYPE RCC><RCC version="1.0">
+<qresource prefix="/">
+    <file>html/index.html</file>
+    <file>html/css/kube.css</file>
+    <file>html/js/jquery.js</file>
+    <file>html/js/db.js</file>
+    <file>html/js/russian.js</file>
+    <file>html/js/latin.js</file>
+    <file>html/js/eng.js</file>
+    <file>html/js/app.js</file>
+</qresource>
+</RCC>

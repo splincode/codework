@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Переводчик</title>
+	<link rel="stylesheet" href="qrc:html/css/kube.css">
+	<script src="qrc:html/js/jquery.js"></script>
+	<script src="qrc:html/js/db.js"></script>
+	<script src="qrc:html/js/russian.js"></script>
+	<script src="qrc:html/js/latin.js"></script>
+	<script src="qrc:html/js/app.js"></script>
+</head>
+<body>
+	<blocks cols="2">
+	    <div>
+
+			<form method="post" action="" class="forms">
+			    <row>
+			        <column cols="6">
+			            <label>Язык</label>
+			            <select class="selectFrom">
+			                <option value="rus">Русский</option>
+			                <option value="lat">Латынь</option>	              
+			            </select>
+			        </column>
+			    </row>
+			    <section>
+			        <label>Текст</label>
+			        <textarea rows="6" id="text"></textarea>
+			    </section>
+			</form>
+
+	    </div>
+	    <div>
+
+			<form method="post" action="" class="forms">
+			    <row>
+			        <column cols="6">
+			            <label>Язык</label>
+			            <select class="selectTo">
+			            	<option value="lat">Латынь</option>
+			                <option value="rus">Русский</option>
+			            </select>
+			        </column>
+			        <column cols="6">
+			            <label>&nbsp;</label>
+			            <button type="primary">Перевести</button>
+			        </column>
+			    </row>
+			    <section>
+			        <label>Перевод</label>
+			        <textarea rows="6" id="translate"></textarea>
+			    </section>
+			</form>
+
+
+	    </div>
+	</blocks>
+</body>
+</html>

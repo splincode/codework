@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Древнекитайское доказательство «Стул невесты»</title>
+    <style>
+
+      body {
+          width: 900px;
+          margin: 10% auto;
+      }
+
+      .left {
+        width: 150px;
+        float:left;
+        border: 1px dotted #a9a9a9;
+        height: 140px;
+      }
+
+      .right {
+        float:left;
+        width: 680px;
+        margin: 20px;
+      }
+
+
+      input.c {
+          background: transparent;
+          border: 1px solid #a9a9a9;
+          color: #000;
+      }
+      
+      .rect {
+        width: 0;
+        height: 0;
+        border-color: green #fff #fff #fff;
+        border-color: green  transparent  transparent  transparent;
+        border-style: solid;
+        transform: rotate(-90deg);
+        margin: 30px auto;
+        visibility: hidden;
+      }
+    
+      .tafti .rect {
+        position: absolute;
+        margin: 0;
+      }
+
+      .rect.left {
+         transform: rotate(143deg);
+         margin: 0;
+      }
+
+      .rect.bottom {
+          transform: rotate(53deg);
+          border-color: red transparent;
+          left: 20px;
+      }
+
+      .rect.right {
+        border-color: blue transparent;
+        transform: rotate(-37deg);
+        top: -20px;
+      }
+
+      .rect.top {
+        border-color: pink transparent;
+        transform: rotate(-127deg);
+      }
+
+
+      .clearfix {
+        clear: both;
+      }
+
+      .pre{
+        margin-top: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .boxA, .boxB, .boxC {
+        border-radius: 50%;
+        margin-left: 10px;
+        margin-right: 10px;
+        text-align: center;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+            font-size: 12px;
+      }
+
+      .boxA {
+        background-color: blue;
+      }
+
+      .boxB {
+        background-color: red;
+      }
+
+      .boxC {
+        background-color: green
+      }
+
+      input {
+          width: 50px;
+          text-align: center;
+          margin-right: 4px;
+      }
+
+      p {
+          text-align: center;
+      }
+
+      .check {
+        opacity: 0;
+      }
+
+      .tafti {
+        position: relative;
+        float: left;
+        margin: 30px;
+        background-color: yellow;
+        border: 1px solid #282828;
+      }
+
+      .tafti .rect:after,
+      .tafti .rect:before {
+        display: none !important
+      }
+
+      .yellow {
+        width: 30px;
+        height: 30px;
+        position: relative;
+        border: 1px solid #282828;
+        text-align: center;
+        background-color: yellow;
+        float: left;
+        margin-top: 15px;
+        margin-right: 25px;
+      }
+
+      .check2 {
+        float:left;
+            margin-top: 30px;
+                width: 570px;
+      }
+
+      .yellow:after {
+        content: "(c-a)^2";
+        top: -18px;
+        left: 0;
+        position: absolute;
+            font-size: 10px;
+      }
+
+      /* .yellow:before {
+        content: "a-b";
+        right: -27px;
+            bottom: 8px;
+        position: absolute;
+      } */
+
+    </style>
+  </head>
+  <body>
+    <p><b>Теорема Пифагора</b>: сумма квадратов длин катетов равна квадрату длины гипотенузы.</p>
+    <p>a<sup>2</sup> + b<sup>2</sup> = c<sup>2</sup>:
+    <input class="a" type="number" placeholder="a=6"><sup>2</sup> +
+    <input class="b" type="number" placeholder="b=8"><sup>2</sup> =
+    <input class="c" type="number" placeholder="c=10" disabled><sup>2</sup>
+    
+    <div class="left">
+      <div id="tRect" class="rect"></div>
+    </div>
+    
+    <div class="right">
+      В научной литературе зафиксировано не менее 367 доказательств теоремы Пифагора, что объясняется как фундаментальным значением для геометрии, так и элементарностью результата. Основные направления доказательств: алгебраическое использование соотношений элементов треугольника (таков, например, популярный метод подобия), метод площадей, существуют также различные экзотические доказательства (например, с помощью дифференциальных уравнений).
+    </div>
+  
+    <div class="check">
+      <div class="clearfix"></div>
+      
+      <p> а) Предварительная проверка (Пa<sup>2</sup>  + Пb<sup>2</sup> = Пс<sup>2</sup>, где П = 3.14159...)</p>
+      <div class="pre">
+        <div class="boxA"></div>
+        <div>+</div>
+        <div class="boxB"></div>
+        <div>=</div>
+        <div class="boxC"></div>
+      </div>
+      
+      <p>б) Доказательство индийского математика Бхаскари</p>
+      <div class="tafti">
+  
+      </div>
+      <div class="check2">
+        <div class="yellow"></div>
+        <p> Сторона маленького квадрата, получившегося в центре, равна c - a, тогда:
+          b<sup>2</sup>  = 4*a*c/2 + (c-a)<sup>2</sup>  =
+             = 2*a*c + c<sup>2</sup>  - 2*a*c + a<sup>2</sup> = a<sup>2</sup>  + c<sup>2</sup> 
+        </p>
+      </div>
+    </div>
+    
+
+    <script src="jquery.js"></script>
+    <script>
+        try {
+            $ = jQuery = module.exports;
+            // If you want module.exports to be empty, uncomment:
+            // module.exports = {};
+        } catch(e) {}
+    </script>
+    <script src="app.js"></script>
+  </body>
+  <script>
+    // You can also require other files to run in this process
+    require('./renderer.js')
+  </script>
+</html>

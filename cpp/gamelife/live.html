@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="qrc:source/css/normalize.css">
+    <link rel="stylesheet" href="qrc:source/css/bootstrap.css">
+    <link rel="stylesheet" href="qrc:source/css/style.css">
+    <script src="qrc:source/js/jquery.js"></script>
+    <script src="qrc:source/js/app.js"></script>
+</head>
+<body>
+
+	<div class="main">
+	    <div class="col-lg-1 col-centered">
+	    	<div class="left">
+	    		<h1>Игра <small>Жизнь</small></h1> <br>
+	    		<button type="button" class="startgame btn btn-primary">Начать</button>
+	    		<button type="button" class="stopgame btn btn-danger">Остановить</button>
+	    		<button type="button" class="clear btn btn-warning">Очистить</button>
+	    		
+	    		<br><br><p><b>Время перехода на новое поколение:</b></p>
+	    		<div class="input-group">
+	    		    <input type="text" class="timeout form-control" placeholder="По умолчанию: 1000" 
+	    		    value="1000" aria-describedby="basic-addon2">
+	    		    <span class="input-group-addon" id="basic-addon2">мс</span>
+	    		</div>
+				
+				<br><p><b>Тип игры:</b></p>
+	    		<select class="form-control">
+	    		  <option>Классический</option>
+	    		  <option>Житель-Гопник</option>
+	    		</select>
+
+	    		<br><p><kbd>Правила игры:</kbd></p>
+	    		<p class="text-primary">Место действия — размеченная на клетки плоскость. Распределение живых клеток в начале игры называется первым поколением.</p> 
+	    	</div>
+
+	    	<div class="right">
+
+	    		<div class="modali">
+	    			<form class="form-inline" method="post" action="">
+	    			  
+	    			  <div class="form-group">
+	    			    <label for="x">Размер</label>
+	    			    <input type="text" class="form-control" id="x" placeholder="14" value="14">
+	    			  </div>
+	    			  
+	    			  <div class="form-group">
+	    			    <label for="y">x</label>
+	    			    <input type="text" class="form-control" id="y" placeholder="22" value="22">
+	    			  </div>
+
+	    			  <button id="xystate" class="btn btn-default">Задать</button>
+	    			</form>
+
+	    		</div>
+
+	    		<div class="table-responsive">
+	    		  <table class="table table-bordered">
+	    		    
+
+
+	    		  </table>
+	    		</div>
+
+	    	</div>
+	    </div>
+	</div>
+</body>
+</html>

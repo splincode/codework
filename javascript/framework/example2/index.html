@@ -1,0 +1,163 @@
+﻿<!doctype html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <title>Метод Крамера</title>
+  <link rel="stylesheet" type="text/css" href="main.css">
+  <script>
+    // старт для замера времени выполнения
+    var start = new Date().getTime(); // засечем время начала выполнения
+  </script>
+  <script src="../jsf.js"></script>
+</head>
+<body>
+
+  <div class='centered'>
+
+  	<div class="block system">
+
+     <div class="left">{</div>
+     <div class="top"></div>
+	     <div class='m one'>
+	     	<span contentEditable="true">1</span>x + <span contentEditable="true">5</span>y + <span contentEditable="true">4</span>z = <span contentEditable="true">30</span> 
+	     </div>
+	     <div class='m two'>
+	     	<span contentEditable="true">2</span>x + <span contentEditable="true">3</span>y + <span contentEditable="true">2</span>z = <span contentEditable="true">150</span> 
+	     </div>
+	     <div class='m three'>
+	     	<span contentEditable="true">1</span>x + <span contentEditable="true">10</span>y + <span contentEditable="true">9</span>z = <span contentEditable="true">110</span> 
+	     </div>
+
+  	</div>
+
+  	<div class="block">
+  		<table class='maindelta'>
+  			<tr>
+  				<td rowspan="3" class='delta'>&#9049; = </td>
+  				<td class='lefti'>1</td>
+  				<td>1</td>
+  				<td class='righti'>1</td>
+  				<td rowspan="3" class='delta eq'> = </td>
+  				<td rowspan="3" class='delta resultdeltamain'> 5 </td>
+  			</tr>
+  			<tr>
+  				<td class='lefti'>1</td>
+  				<td>1</td>
+  				<td class='righti'>1</td>
+  			</tr>
+  			<tr>
+  				<td class='lefti'>1</td>
+  				<td>1</td>
+  				<td class='righti'>1</td>
+  			</tr>
+  	
+  		</table>
+  	</div>
+
+  	<div class="block mainsresult">
+  		<div class="out">Нет корней</div>
+  		
+  		<div class="input">
+  			<div class='m'>x = &#9049; <sup>x</sup> / &#9049;= <span class='resultx'>1</span></div>
+  			<div class='m'>y = &#9049; <sup>y</sup> / &#9049;=  <span class='resulty'>2</span></div>
+  			<div class='m'>z = &#9049; <sup>z</sup> / &#9049;=  <span class='resultz'>3</span></div>
+  		</div>
+  	</div>
+
+  	<div class="clear"></div>
+
+  	<br><br>
+  	<div class="itog">
+  		
+  		<div class="block">
+  			<table class='xdelta'>
+  				<tr>
+  					<td rowspan="3" class='delta'>&#9049; <sup>x</sup> = </td>
+  					<td class='lefti'>1</td>
+  					<td>1</td>
+  					<td class='righti'>1</td>
+  					<td rowspan="3" class='delta eq'> = </td>
+  					<td rowspan="3" class='delta resultdeltamain'> 5 </td>
+  				</tr>
+  				<tr>
+  					<td class='lefti'>1</td>
+  					<td>1</td>
+  					<td class='righti'>1</td>
+  				</tr>
+  				<tr>
+  					<td class='lefti'>1</td>
+  					<td>1</td>
+  					<td class='righti'>1</td>
+  				</tr>
+  		
+  			</table>
+  		</div>
+
+  		<div class="block">
+  			<table class='ydelta'>
+  				<tr>
+  					<td rowspan="3" class='delta'>&#9049; <sup>y</sup> = </td>
+  					<td class='lefti'>1</td>
+  					<td>1</td>
+  					<td class='righti'>1</td>
+  					<td rowspan="3" class='delta eq'> = </td>
+  					<td rowspan="3" class='delta resultdeltamain'> 5 </td>
+  				</tr>
+  				<tr>
+  					<td class='lefti'>1</td>
+  					<td>1</td>
+  					<td class='righti'>1</td>
+  				</tr>
+  				<tr>
+  					<td class='lefti'>1</td>
+  					<td>1</td>
+  					<td class='righti'>1</td>
+  				</tr>
+  		
+  			</table>
+  		</div>
+
+  		<div class="block">
+  			<table class='zdelta'>
+  				<tr>
+  					<td rowspan="3" class='delta'>&#9049; <sup>z</sup> = </td>
+  					<td class='lefti'>1</td>
+  					<td>1</td>
+  					<td class='righti'>1</td>
+  					<td rowspan="3" class='delta eq'> = </td>
+  					<td rowspan="3" class='delta resultdeltamain'> 5 </td>
+  				</tr>
+  				<tr>
+  					<td class='lefti'>1</td>
+  					<td>1</td>
+  					<td class='righti'>1</td>
+  				</tr>
+  				<tr>
+  					<td class='lefti'>1</td>
+  					<td>1</td>
+  					<td class='righti'>1</td>
+  				</tr>
+  		
+  			</table>
+  		</div>
+
+
+
+  	</div>
+     
+  </div>
+
+
+  <script src='main.js'></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function(){ 
+
+      var elapsed = new Date().getTime() - start; // рассчитаем время выполнения
+      console.log("Время выполнения = " + elapsed + "ms"); // выведем в консоль время выполнения скрипта
+
+    }, false);
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+.col-centered {
+	width: 800px;
+	height: 430px;
+	border: 1px solid #c3c3c3;
+    float: none;
+    margin: 50px auto 0 auto;
+}
+
+.left {
+	float:left;
+	width: 300px;
+	margin-left: 10px;
+}
+
+.right {
+	position: relative;
+	margin-left: 50px;
+	margin-top: 15px;
+	float: left;
+	width: 400px;
+	height: 390px;
+	border:1px solid #c3c3c3;
+	padding: 5px;
+}
+
+tr td {
+	cursor:pointer;
+}
+
+.live { 
+	background: black
+}
+
+.modali {
+	position: absolute;
+	width: 300px;
+	height: 80px;
+	right: 22px;
+    top: 10px;
+}
+
+#x, 
+#y {
+	width: 45px;
+}
+
+.clear {
+	display: none
+}

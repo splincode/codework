@@ -1,0 +1,18 @@
+#main {
+	width: 600px;
+	height: auto;
+	margin: 100px auto;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-items: baseline;
+	align-content: flex-start;
+}
+
+.border {
+	border: 2px dashed lightgreen !important;
+}
+
+.padding {
+	padding: 50px !important; 
+}

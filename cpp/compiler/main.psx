@@ -1,0 +1,21 @@
+	// пишем программу на псевдо-pascal 
+	// mycode.psx (pascal next = psx)
+	
+	// пользовательские функции
+	void print(var t) {
+		// write, writeln - 
+		// стандартные функции вывода
+		writeln("", t);
+	}
+
+	function asb(var n = 0){
+		return (n > 0) ? n : -n;
+	}
+
+	program
+		var a = -100;
+		writeln("|a| = ", abs(a)); 
+
+		var text = "hello world";
+		print(text);
+	end

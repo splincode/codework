@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Маршрут путешественника</title>
+	<link rel="stylesheet" href="css/main.css">
+	<script>
+		var Cards = []; // список карточек
+	</script>
+</head>
+<body>
+
+	<main>
+
+	  <article>
+	    <h1 title='входные данные не должны повторяться, маршрут путешествия не должен быть замкнутым (A &#8800; B)'>Добавить карточку</h1>
+	    <p>Полная информация о маршруте:</p>
+		
+		<textarea class="card_add" rows="5"></textarea>
+		<p>Населенные пункты:</p>
+		<input type="text" class="from" placeholder="Откуда">
+		<input type="text" class="to" placeholder="Куда"><br><br>	
+		<button class="card_add_list" onclick="add_list(Cards)">Добавить карточку</button>
+	  </article>
+
+	  <aside>
+	    <h1>Сортировка</h1>
+	    <p>Текущее количество карточек: <span class='card_num'>0</span></p>
+	    <button class="sort" onclick="sort_list(Cards)">Получить маршрут</button>
+	  </aside>
+
+	  <section>
+	    <h1>Текущая цепочка</h1>
+	    <div class="list">
+	    	<p>Нет карточек</p>
+	    </div>
+	  </section>
+
+	  <section>
+	    <h1>Маршрут путешествия</h1>
+	    <div class="end_list">
+	 		<p>Нет маршрута</p>
+	    </div>
+	  </section>
+
+	</main>
+
+	<script src='js/travelsort.js'></script>
+	<script src='js/app.js'></script>
+</body>
+</html>

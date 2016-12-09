@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang='ru'>
+<head>
+	<meta charset='UTF-8'>
+	<title>JSF</title>
+	<link rel="stylesheet" href="main.css">
+	<script>
+		var start = new Date().getTime(); // засечем время начала выполнения
+	</script>
+	<script src='../jsf.js'></script>
+	<script src='main.js'></script>
+</head>
+<body>
+
+	<div id="main">
+		<div class='maxim'></div>
+		<div class='maxim'></div>
+		<div class='maxim'></div>
+	</div>
+
+	<script>
+		document.addEventListener('DOMContentLoaded', function(){ 
+
+			var elapsed = new Date().getTime() - start; // рассчитаем время выполнения
+			console.log("Время выполнения = " + elapsed + "ms"); // выведем в консоль время выполнения скрипта
+
+		}, false);
+	</script>
+</body>
+</html>

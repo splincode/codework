@@ -1,0 +1,60 @@
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lambda</title>
+    <link rel="stylesheet" href="qrc:view/css/foundation.css">
+    <link rel="stylesheet" href="qrc:view/css/app.css">
+  </head>
+  <body>
+
+    <div class="row">
+      <div class="large-8 medium-8 columns">
+        <hr />
+        <form>
+          <div class="input-group">
+            <span class="input-group-label white">></span>
+            <input type="text" placeholder="λx.x+1 2" id="primary-color" class="color-picker input-group-field">
+          </div>
+
+          <div class="row">
+            <div class="large-12 columns">
+              <label>Промежуточные вычисления</label>
+
+<textarea class="intermediate" 
+placeholder="λx.x+1 2 
+x = 2
+x+1 => 2+1 => 3
+"></textarea>
+
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="large-12 columns">
+              <label>Конечный ответ</label>
+              <input type="text" placeholder="3" class="resultlambda color-picker input-group-field">
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div class="large-4 medium-4 columns">
+        <hr>
+        <div class="callout">
+          <h5>&lambda;-исчисления</h5>
+          <p>Основным понятием в лямбда-исчислении является понятие выражения или формулы.
+          Лямбда-выражение имеет вид (λx.t), где x - имя переменной, а t - выражение. </p>
+          <a href="#" id="lambdaclick" class="small button">Интерпретировать</a>
+        </div>
+      </div>
+    </div>
+
+    <script src="qrc:view/js/vendor/jquery.js"></script>
+    <script src="qrc:view/js/vendor/what-input.js"></script>
+    <script src="qrc:view/js/vendor/foundation.js"></script>
+    <script src="qrc:view/js/app.js"></script>
+  </body>
+</html>

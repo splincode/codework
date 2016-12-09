@@ -1,0 +1,7 @@
+<!DOCTYPE RCC><RCC version="1.0">
+<qresource prefix="/">
+    <file>view/interface.html</file>
+    <file>view/build/sudoku.js</file>
+    <file>view/build/app.js</file>
+</qresource>
+</RCC>
