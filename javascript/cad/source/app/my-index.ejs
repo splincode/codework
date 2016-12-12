@@ -3,10 +3,76 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-<body>
+  <style>
+  	.my-app {opacity: 0;}
+  	body.onLoad .my-app {opacity: 1; transition: opacity 2s;}
+	
+	body.onLoad .preloader-wrapper {
+		display: none;
+	}
 
-    <app-component></app-component>
-    
+	.preloader-wrapper.big {
+	    width: 64px;
+	    height: 64px;
+	    margin: auto;
+	    position: fixed;
+	    top: 0;
+	    left: 0;
+	    bottom: 0;
+	    right: 0;
+	}
+
+  </style>
+</head>
+<body ng-class="{'onLoad' : onLoad ? 1:0 }">
+	
+	<div class="preloader-wrapper big active">
+	    <div class="spinner-layer spinner-blue">
+	      <div class="circle-clipper left">
+	        <div class="circle"></div>
+	      </div><div class="gap-patch">
+	        <div class="circle"></div>
+	      </div><div class="circle-clipper right">
+	        <div class="circle"></div>
+	      </div>
+	    </div>
+
+	    <div class="spinner-layer spinner-red">
+	      <div class="circle-clipper left">
+	        <div class="circle"></div>
+	      </div><div class="gap-patch">
+	        <div class="circle"></div>
+	      </div><div class="circle-clipper right">
+	        <div class="circle"></div>
+	      </div>
+	    </div>
+
+	    <div class="spinner-layer spinner-yellow">
+	      <div class="circle-clipper left">
+	        <div class="circle"></div>
+	      </div><div class="gap-patch">
+	        <div class="circle"></div>
+	      </div><div class="circle-clipper right">
+	        <div class="circle"></div>
+	      </div>
+	    </div>
+
+	    <div class="spinner-layer spinner-green">
+	      <div class="circle-clipper left">
+	        <div class="circle"></div>
+	      </div><div class="gap-patch">
+	        <div class="circle"></div>
+	      </div><div class="circle-clipper right">
+	        <div class="circle"></div>
+	      </div>
+	    </div>
+	  </div>
+
+
+	<div class="my-app">
+		<app-component></app-component>
+	</div>        
+
+    <script src="js/render.js"></script>
 </body>
 </html>

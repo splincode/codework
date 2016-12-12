@@ -1,0 +1,77 @@
+<ul class="collapsible" data-collapsible="accordion" collapsible>
+
+    <li>
+        
+        <div class="collapsible-header active">
+         <i class="Tiny material-icons clearfix">view_module</i>
+         <p> параметры стержня ({{$ctrl.index + 1}})</p>
+        </div>
+        
+        <div class="collapsible-body">
+
+            <div class="row">
+                <div class="col s4">
+            
+                    <div class="">
+                         <input placeholder="30"
+                                type="number" 
+                                ng-model="$ctrl.structure.item[$ctrl.index].L" 
+                                value="{{$ctrl.structure.item[$ctrl.index].L}}" 
+                                ng-minlength="0"
+                                min="0"
+                                class="validate Lchange">
+
+                         <label>Длинна (L, м)</label>
+                    </div>
+
+                </div>
+
+                <div class="col s2">
+                    <div class="">
+                         <input placeholder="3L"
+                                type="text" 
+                                value="{{$ctrl.structure.item[$ctrl.index].L / $ctrl.storage.base.L}}L"
+                                disabled="disabled" 
+                                class="validate Lchange">
+
+                         <label>kL</label>
+                    </div>
+
+                </div>
+
+                <div class="col s4">
+
+                    <div class="">
+                         <input placeholder="300"  
+                                type="number" 
+                                ng-model="$ctrl.structure.item[$ctrl.index].A" 
+                                value="{{$ctrl.structure.item[$ctrl.index].A}}" 
+                                ng-minlength="0"
+                                min="0"
+                                class="validate Achange">
+
+                         <label>Площадь (A, м<sup>2</sup>)</label>
+                    </div>
+
+                </div>
+
+                <div class="col s2">
+                    <div class="">
+                         <input placeholder="3A"
+                                type="text" 
+                                value="{{$ctrl.structure.item[$ctrl.index].A / $ctrl.storage.base.A}}A"
+                                disabled="disabled" 
+                                class="validate Lchange">
+
+                         <label>kA</label>
+                    </div>
+
+                </div>
+              
+            </div>
+
+
+        </div>
+
+      </li>
+  </ul>

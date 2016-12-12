@@ -4,6 +4,9 @@ import './sass/custom.scss';
 
 import { AppComponent } from './app.component';
 import { KernelComponent } from './components/kernel/kernel.component';
+import { OptionListComponent } from './components/option-list/option-list.component';
+import { PowerListComponent } from './components/power-list/power-list.component';
+
 import  storageService  from './services/storageService';
 
 import './plugins/materialize';
@@ -14,6 +17,10 @@ const app = angular.module('cad', []);
 
 app.component('appComponent', AppComponent);
 app.component('kernel', KernelComponent);
+app.component('optionList', OptionListComponent);
+app.component('powerList', PowerListComponent);
+
+/*** Инициализация директив и сервисов */
 
 app.service('storageService', storageService);
 app.directive('dropdown', function () {
@@ -29,3 +36,42 @@ app.directive('dropdown', function () {
   }
   
 });
+
+
+app.directive('collapsible', function () {
+  let directive = {
+    restrict: 'A',
+    link: link
+  };
+
+  return directive;
+
+  function link($scope, element, attrs) {
+      setTimeout(() => $(element).collapsible(), 200);
+  }
+  
+});
+
+
+app.directive('closemenu', function () {
+  let directive = {
+    restrict: 'A',
+    link: link
+  };
+
+  return directive;
+
+  function link($scope, element, attrs) {
+      setTimeout(() => {
+
+      	$(element).on({
+      		'click': function(e){
+      			$('.mdl-layout').addClass('is-small-screen')
+      		}
+      	});
+
+      }, 200);
+  }
+  
+});
+

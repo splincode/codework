@@ -2,7 +2,7 @@
       
   <header class="demo-header mdl-layout__header mdl-color--grey-100 mdl-color-text--grey-600">
     <div class="mdl-layout__header-row">
-      <div class="closemenu"></div>
+      <div class="closemenu" closemenu></div>
       <span class="mdl-layout-title">Построение фигуры</span>
       
       <div class="mdl-layout-spacer"></div>
@@ -24,10 +24,10 @@
         </button>
 
         <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="accbtn">
-          <li class="mdl-menu__item newproject">  <i class="Tiny-my material-icons">mode_edit</i>Новый</li>
-          <li class="mdl-menu__item">Открыть проект</li>
-          <li class="mdl-menu__item">Сохранить проект</li>
-          <li class="mdl-menu__item">Выход</li>
+          <li class="mdl-menu__item new-project" ng-click="$ctrl.newProject()">  <i class="Tiny-my material-icons">mode_edit</i>Новый</li>
+          <li class="mdl-menu__item open-project" ng-click="$ctrl.openProject()">Открыть проект</li>
+          <li class="mdl-menu__item save-project" ng-click="$ctrl.saveProject()">Сохранить проект</li>
+          <li class="mdl-menu__item" ng-click="$ctrl.appQuit()">Выход</li>
           
         </ul>
 
@@ -36,7 +36,7 @@
    
     <nav class="demo-navigation mdl-navigation mdl-color--blue-grey-800">
 
-    	<div class="row">
+    	<div class="row" ng-if="!$ctrl.storage.start">
     	    <div class="col s12">
     	    	<p><b>Растяжение — сжатие</b> — в сопротивлении материалов — вид продольной деформации стержня или бруса,
     	    	 возникающий в том случае, если нагрузка к нему прикладывается по его продольной оси (равнодействующая сил, 
@@ -47,6 +47,18 @@
     	    	 Значения чисел откладывают от оси, положительные - вверх, отрицательные вниз.</p>
     	   	</div>
     	</div>
+    		
+    	<!-- параметры стержней -->
+    	<option-list ng-repeat="option in $ctrl.storage.structure.item track by $index" 
+    				 index="$index"
+    				 storage="$ctrl.storage"
+    				 structure="$ctrl.storage.structure"></option-list>
+		
+		<!-- силы в узлах -->
+    	<power-list  ng-repeat="option in $ctrl.getNumberEdge() track by $index" 
+    				 index="$index"
+    				 storage="$ctrl.storage"
+    				 structure="$ctrl.storage.structure"></power-list>
 
     </nav>
   </div>
@@ -66,7 +78,10 @@
         
 
         <div id="graphs" ng-if="$ctrl.storage.start">
-          <kernel ng-repeat="kernel in $ctrl.storage.structure.item" index="$index"></kernel>
+          <kernel ng-repeat="kernel in $ctrl.storage.structure.item track by $index" 
+          		  index="$index" 
+          		  structure="$ctrl.storage.structure.item"
+          		  storage="$ctrl.storage"></kernel>
         </div>
 
   	</div>
