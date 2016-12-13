@@ -10,6 +10,8 @@ export default function (){
 		base: {
 			A: 100, // A
 			L: 10, // L
+			E: 10e5.toExponential(),
+			sigma: '', // допускаемое напряжене
 			q: false
 		},
 

@@ -49,7 +49,7 @@
                     <div ng-if="$ctrl.structure.item[$ctrl.index-1].q">
                          <input placeholder="3q"
                                 type="text" 
-                                value="{{$ctrl.structure.item[$ctrl.index-1].q / $ctrl.storage.kq }}q"
+                                value="{{ $ctrl.Math.abs($ctrl.structure.item[$ctrl.index-1].q / $ctrl.storage.kq) }}q"
                                 disabled="disabled" 
                                 class="validate Lchange">
 
@@ -59,7 +59,7 @@
                     <div ng-if="$ctrl.structure.item[$ctrl.index].q">
                          <input placeholder="3q"
                                 type="text" 
-                                value="{{$ctrl.structure.item[$ctrl.index].q / $ctrl.storage.kq }}q"
+                                value="{{ $ctrl.Math.abs($ctrl.structure.item[$ctrl.index].q / $ctrl.storage.kq) }}q"
                                 disabled="disabled" 
                                 class="validate Lchange">
 
@@ -86,7 +86,7 @@
                     <div class="">
                          <input placeholder="3F"
                                 type="text" 
-                                value="{{$ctrl.storage.structure.F[$ctrl.index] / $ctrl.storage.kF || 0 }}F"
+                                value="{{ $ctrl.Math.abs($ctrl.storage.structure.F[$ctrl.index] / $ctrl.storage.kF) || 0 }}F"
                                 disabled="disabled" 
                                 class="validate Lchange">
 

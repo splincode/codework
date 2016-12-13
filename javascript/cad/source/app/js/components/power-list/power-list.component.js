@@ -7,6 +7,7 @@ class PowerListController {
 	 */
 	constructor($rootScope, storageService){
         this.storage = storageService;
+        this.Math = window.Math;
 	}
 
 }

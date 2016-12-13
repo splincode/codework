@@ -10,6 +10,7 @@
         <div class="collapsible-body">
 
             <div class="row">
+
                 <div class="col s4">
             
                     <div class="">
@@ -64,6 +65,38 @@
                                 class="validate Lchange">
 
                          <label>kA</label>
+                    </div>
+
+                </div>
+
+                <div class="col s6">
+                
+                    <div class="">
+                         <input placeholder="10e5"
+                                type="text" 
+                                ng-model="$ctrl.structure.item[$ctrl.index].E" 
+                                value="{{($ctrl.structure.item[$ctrl.index].E).toExponential()}}" 
+                                ng-minlength="0"
+                                min="0"
+                                class="validate Lchange">
+
+                         <label>Модуль упругости (E, Па)</label>
+                    </div>
+
+                </div>
+
+                <div class="col s6">
+                
+                    <div class="">
+                         <input placeholder=""
+                                type="number" 
+                                ng-model="$ctrl.structure.item[$ctrl.index].sigma" 
+                                value="{{$ctrl.structure.item[$ctrl.index].sigma}}" 
+                                ng-minlength="0"
+                                min="0"
+                                class="validate Lchange">
+
+                         <label>[&sigma;] (Па)</label>
                     </div>
 
                 </div>

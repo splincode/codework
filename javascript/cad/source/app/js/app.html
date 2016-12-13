@@ -3,7 +3,9 @@
   <header class="demo-header mdl-layout__header mdl-color--grey-100 mdl-color-text--grey-600">
     <div class="mdl-layout__header-row">
       <div class="closemenu" closemenu></div>
-      <span class="mdl-layout-title">Построение фигуры</span>
+      
+      <span class="mdl-layout-title" ng-if="$ctrl.page.preprocess">Построение фигуры</span>
+      <span class="mdl-layout-title" ng-if="$ctrl.page.process">Расчет компонент</span>
       
       <div class="mdl-layout-spacer"></div>
     </div>
@@ -24,9 +26,18 @@
         </button>
 
         <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="accbtn">
-          <li class="mdl-menu__item new-project" ng-click="$ctrl.newProject()">  <i class="Tiny-my material-icons">mode_edit</i>Новый</li>
-          <li class="mdl-menu__item open-project" ng-click="$ctrl.openProject()">Открыть проект</li>
-          <li class="mdl-menu__item save-project" ng-click="$ctrl.saveProject()">Сохранить проект</li>
+          <li class="mdl-menu__item new-project" ng-click="$ctrl.newProject()">
+          	<i class="Tiny-my material-icons">mode_edit</i>Новый
+			<span class="key">Ctrl+N</span>
+          </li>
+          <li class="mdl-menu__item open-project" ng-click="$ctrl.openProject()">
+          	Открыть проект
+			<span class="key">Ctrl+O</span>
+          </li>
+          <li class="mdl-menu__item save-project" ng-click="$ctrl.saveProject()">
+          	Сохранить проект
+			<span class="key">Ctrl+S</span>
+          </li>
           <li class="mdl-menu__item" ng-click="$ctrl.appQuit()">Выход</li>
           
         </ul>
@@ -64,7 +75,7 @@
   </div>
 
   <main class="mdl-layout__content mdl-color--grey-100" ng-class="{'active-first-element' : $ctrl.storage.start}">
-  	<div id="outer">
+  	<div id="outer" ng-if="$ctrl.page.preprocess">
   	    
         <div id="graphs" ng-if="!$ctrl.storage.start">
     			<a class="createElement btn-floating btn-large waves-effect waves-light red" data-activates='dropdown' dropdown>
@@ -78,6 +89,9 @@
         
 
         <div id="graphs" ng-if="$ctrl.storage.start">
+		  
+		  <input id="zoomer" type ="range" min ="5.0" max="10.0" step ="1.0" value ="10" ng-model="$ctrl.storage.ye" />
+
           <kernel ng-repeat="kernel in $ctrl.storage.structure.item track by $index" 
           		  index="$index" 
           		  structure="$ctrl.storage.structure.item"
@@ -85,9 +99,22 @@
         </div>
 
   	</div>
+
+  	<div id="outer" ng-if="$ctrl.page.process">
+		<div class="page-process">
+			Процесс
+		</div>
+  	</div>
+
   </main>
 
   <a target="_blank" id="view-source1" class="waves-effect waves-light btn">Фигура</a>
-  <a target="_blank" id="view-source2" class="waves-effect waves-light btn diactivate">Расчеты</a>
+
+  <a target="_blank" 
+  	 id="view-source2" class="waves-effect waves-light btn" 
+  	 ng-click="(!$ctrl.storage.structure.leftSealing || !$ctrl.storage.structure.rightSealing) ? '': $ctrl.pageProcess() "
+  	 ng-class="{ 'diactivate' : !$ctrl.storage.structure.leftSealing || !$ctrl.storage.structure.rightSealing ? 1:0}">Расчеты</a>
+
   <a target="_blank" id="view-source3" class="waves-effect waves-light btn diactivate">Графики</a>
+
 </div>

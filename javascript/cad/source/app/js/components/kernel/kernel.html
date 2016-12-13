@@ -50,11 +50,11 @@
       </li>
 
     	<li ng-if="!(($ctrl.index+1) == $ctrl.structure.length) && !$ctrl.storage.structure.F[$ctrl.index+1]" ng-click="$ctrl.addPowerF($ctrl.index+1)">
-    		<a class="" href="#!">Добавить силу (F)</a>
+    		<a class="" href="#!">Добавить усилие (F) вправо от узла </a>
     	</li>
 
       <li ng-if="$ctrl.storage.structure.F[$ctrl.index+1]" ng-click="$ctrl.removePowerF($ctrl.index+1)">
-        <a class="" href="#!">Удалить силу (F)</a>
+        <a class="" href="#!">Удалить усилие (F) </a>
       </li>
 
   	</ul>
@@ -71,26 +71,26 @@
       </li>
 
     	<li ng-if="!(($ctrl.index+1) == 1) && !$ctrl.storage.structure.F[$ctrl.index]" ng-click="$ctrl.addPowerLeftF($ctrl.index)">
-    		<a class="" href="#!">Добавить силу (F)</a>
+    		<a class="" href="#!">Добавить усилие (F) влево от узла</a>
     	</li>
 
       <li ng-if="$ctrl.storage.structure.F[$ctrl.index]" ng-click="$ctrl.removePowerF($ctrl.index)">
-        <a class="" href="#!">Удалить силу (F)</a>
+        <a class="" href="#!">Удалить усилие (F)</a>
       </li>
 
   	</ul>
 
 		<ul id='dropdown-center-{{$ctrl.index}}' class='dropdown-content'>
 	    	<li ng-click="$ctrl.addPowerQ($ctrl.index)" ng-if="$ctrl.structure[$ctrl.index].q === false">
-	    		<a class="" href="#!">Добавить силу (q)</a>
+	    		<a class="" href="#!">Добавить нагрузку (q)</a>
 	    	</li>
 
         <li ng-click="$ctrl.removePowerQ($ctrl.index)" ng-if="$ctrl.structure[$ctrl.index].q !== false">
-          <a class="" href="#!">Удалить силу (q)</a>
+          <a class="" href="#!">Удалить нагрузку (q)</a>
         </li>
 
         <li ng-click="$ctrl.changePowerQ($ctrl.index)" ng-if="$ctrl.structure[$ctrl.index].q !== false">
-          <a class="" href="#!">Изменить направление (q)</a>
+          <a class="" href="#!">Изменить направление нагрузки (q)</a>
         </li>
 
         <li ng-click="$ctrl.removeKernelBlock($ctrl.index)">

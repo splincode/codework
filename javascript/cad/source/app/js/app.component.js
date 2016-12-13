@@ -8,6 +8,13 @@ class AppController {
 	constructor($rootScope, $scope, storageService){
 
         this.storage = storageService;
+        
+        this.page = {
+          preprocess: true,
+          process: false,
+          postprocess: false
+        };
+
         this._newProject = angular.copy(storageService); 
 
         window.clicked = false;
@@ -39,30 +46,41 @@ class AppController {
             $('.mdl-layout__content').scrollLeft($('.mdl-layout__content').scrollLeft() + (clickY - e.pageX));
         };
 
-        // ctrl + s = сохранение проекта
-        $(window).keypress(function(event) {
-            if (!(event.which == 115 && event.ctrlKey) && !(event.which == 19)) return true;
-            $('.save-project').trigger('click')
-            event.preventDefault();
-            return false;
+        $(window).bind('keydown', function(event) {
+            if (event.ctrlKey || event.metaKey) {
+                switch (String.fromCharCode(event.which).toLowerCase()) {
+                case 's':
+                    $('.save-project').trigger('click')
+                    event.preventDefault();
+                    break;
+                case 'o':
+                    $('.open-project').trigger('click')
+                    event.preventDefault();
+                    break;
+                case 'n':
+                    $('.new-project').trigger('click')
+                    event.preventDefault();
+                    break;
+                }
+            }
         });
 
-        // ctrl + o = открытие проекта
-        /*$(window).keypress(function(event) {
-            if (!(event.which == 115 && event.ctrlKey) && !(event.which == 79)) return true;
-            $('.save-project').trigger('click')
-            event.preventDefault();
+        $('.mdl-layout__content').bind('mousewheel', function(e){
+            if (!storageService.start) return;
+            if (e.originalEvent.wheelDelta /120 > 0 && event.ctrlKey == true) {
+              if (storageService.ye < 10) {
+                storageService.ye += 1;
+              }
+            } else if (e.originalEvent.wheelDelta /120 < 0 && event.ctrlKey == true) {
+              if (storageService.ye > 5) {
+                storageService.ye -= 1;
+              }
+            }
+            angular.element($( 'body' )).scope().$apply();
+            e.preventDefault();
             return false;
         });
-
-        // ctrl + s = сохранение проекта
-        $(window).keypress(function(event) {
-            if (!(event.which == 115 && event.ctrlKey) && !(event.which == 19)) return true;
-            $('.save-project').trigger('click')
-            event.preventDefault();
-            return false;
-        });*/
-
+    
 	}
 
     /**
@@ -181,7 +199,16 @@ class AppController {
       let storageService = this.storage;
       let startService = this._newProject;
       angular.extend(storageService, startService);
-      //angular.element($( 'body' )).scope().$apply();
+    }
+
+    /**
+     * [pageProcess description]
+     * @return {[type]} [description]
+     */
+    pageProcess(){
+      let page = this.page;
+      for (let i in page) page[i] = false;
+      page.process = true;
     }
 
 }

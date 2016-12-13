@@ -29,12 +29,15 @@ function createWindow () {
   }))
 
   // Дебаг
-  mainWindow.webContents.openDevTools()
+  //mainWindow.webContents.openDevTools()
 
   // Событие, когда закрылось окно
   mainWindow.on('closed', function () {
     mainWindow = null
   })
+
+  mainWindow.setMinimumSize(720, 620);
+
 }
 
 
@@ -58,7 +61,7 @@ app.on('ready', function () {
 
     const menuTemplate = [
         {
-            label: 'Меню',
+            label: 'Система автоматизированного проектирования',
             submenu: [
             {
                 label: 'Полноэкранный режим',
