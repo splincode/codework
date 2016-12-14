@@ -6,19 +6,24 @@ import { AppComponent } from './app.component';
 import { KernelComponent } from './components/kernel/kernel.component';
 import { OptionListComponent } from './components/option-list/option-list.component';
 import { PowerListComponent } from './components/power-list/power-list.component';
+import { SettlementsComponent } from './components/settlements/settlements.component';
 
 import  storageService  from './services/storageService';
 
 import './plugins/materialize';
 import './plugins/materialize-plugins';
+import './plugins/elif';
+
+window.gauss = require('./plugins/gauss');
 
 /*** Инициализация приложения */
-const app = angular.module('cad', []);
+const app = angular.module('cad', ['elif']);
 
 app.component('appComponent', AppComponent);
 app.component('kernel', KernelComponent);
 app.component('optionList', OptionListComponent);
 app.component('powerList', PowerListComponent);
+app.component('settlements', SettlementsComponent);
 
 /*** Инициализация директив и сервисов */
 

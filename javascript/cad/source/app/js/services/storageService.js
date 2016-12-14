@@ -3,6 +3,7 @@ export default function (){
 	let service = {
 
 		start: false, // запущена ли отрисовка
+		minimal: false, // масштабирование с коэффициент 0
 		ye: 10, // условные единицы
 		kq: 1,
 		kF: 1,
@@ -17,7 +18,7 @@ export default function (){
 
 		structure: {
 			item: [], // KernelList
-			F: [],
+			F: [], // PowerFList
 			leftSealing: false, // заделка слева
 			rightSealing: false // заделка
 		},

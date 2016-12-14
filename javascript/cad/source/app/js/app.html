@@ -6,6 +6,7 @@
       
       <span class="mdl-layout-title" ng-if="$ctrl.page.preprocess">Построение фигуры</span>
       <span class="mdl-layout-title" ng-if="$ctrl.page.process">Расчет компонент</span>
+      <span class="mdl-layout-title" ng-if="$ctrl.page.postprocess">Построение графиков</span>
       
       <div class="mdl-layout-spacer"></div>
     </div>
@@ -90,7 +91,7 @@
 
         <div id="graphs" ng-if="$ctrl.storage.start">
 		  
-		  <input id="zoomer" type ="range" min ="5.0" max="10.0" step ="1.0" value ="10" ng-model="$ctrl.storage.ye" />
+		  <input ng-if="!$ctrl.storage.minimal" id="zoomer" type ="range" min ="5.0" max="10.0" step ="1.0" value ="10" ng-model="$ctrl.storage.ye" />
 
           <kernel ng-repeat="kernel in $ctrl.storage.structure.item track by $index" 
           		  index="$index" 
@@ -101,19 +102,17 @@
   	</div>
 
   	<div id="outer" ng-if="$ctrl.page.process">
-		<div class="page-process">
-			Процесс
-		</div>
+		<settlements></settlements>
   	</div>
 
   </main>
 
-  <a target="_blank" id="view-source1" class="waves-effect waves-light btn">Фигура</a>
+  <a target="_blank" id="view-source1" class="waves-effect waves-light btn" ng-click=" $ctrl.pagePreProcess()">Фигура</a>
 
   <a target="_blank" 
   	 id="view-source2" class="waves-effect waves-light btn" 
-  	 ng-click="(!$ctrl.storage.structure.leftSealing || !$ctrl.storage.structure.rightSealing) ? '': $ctrl.pageProcess() "
-  	 ng-class="{ 'diactivate' : !$ctrl.storage.structure.leftSealing || !$ctrl.storage.structure.rightSealing ? 1:0}">Расчеты</a>
+  	 ng-click=" !($ctrl.storage.structure.leftSealing + $ctrl.storage.structure.rightSealing) ? '': $ctrl.pageProcess() "
+  	 ng-class="{ 'diactivate' : !($ctrl.storage.structure.leftSealing + $ctrl.storage.structure.rightSealing) ? 1:0}">Расчеты</a>
 
   <a target="_blank" id="view-source3" class="waves-effect waves-light btn diactivate">Графики</a>
 

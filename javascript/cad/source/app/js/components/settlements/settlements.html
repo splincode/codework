@@ -1,0 +1,150 @@
+<div class="page-process">
+	<p><b>Уравнение равновесия всех узлов:</b></p>
+	<p>[A]{&Delta;} = {b}</p>
+	<p>[A] - глобальная матрица реакций</p>
+	<p>Кол-во узлов: {{ $ctrl.getNumberEdgeTo().length }}</p>
+
+	<table>
+		<tr ng-repeat="i in $ctrl.getNumberEdgeTo() track by $index">
+			<td ng-repeat="j in $ctrl.getNumberEdgeTo() track by $index">
+				
+					<span ng-if=" (i == 1) && ( i == j || (i+1) == j ) " >
+						<span  ng-if=" j % 2" >
+							K<sup>{{j}}</sup><sub>11</sub>
+							{{ $ctrl.appendToTempA(i, j, j, "K11") }}
+						</span>
+						<span  ng-if=" !(j % 2) ">
+							K<sup>{{j-1}}</sup><sub>12</sub>
+							{{ $ctrl.appendToTempA(i, j, j-1, "K12") }}
+						</span>
+					</span>
+
+					<span ng-else-if=" (i != 1 && i != $ctrl.getNumberEdgeTo().length ) && ( (i-1) == j || i == j || (i+1) == j )" >
+						<span  ng-if=" (i-1) == j ">
+							K<sup>{{i-1}}</sup><sub>21</sub>
+							{{ $ctrl.appendToTempA(i, j, i-1, "K21") }}
+						</span>
+						<span  ng-if=" i == j ">
+							K<sup>{{i-1}}</sup><sub>22</sub> + K<sup>{{i}}</sup><sub>11</sub>
+							{{ $ctrl.appendToTempA(i, j, i-1, "K22+K11") }}
+						</span>
+						<span  ng-if=" (i+1) == j ">
+							K<sup>{{i}}</sup><sub>12</sub>
+							{{ $ctrl.appendToTempA(i, j, i, "K12") }}
+						</span>
+					</span>
+
+					<span ng-else-if=" (i == $ctrl.getNumberEdgeTo().length) && ( (i-1) == j || i == j ) " >
+						<span  ng-if="(i-1) == j">
+							K<sup>{{i}}</sup><sub>21</sub>
+							{{ $ctrl.appendToTempA(i, j, i-1, "K21") }}
+						</span>
+
+						<span  ng-if=" i == j ">
+							K<sup>{{i}}</sup><sub>11</sub>
+							{{ $ctrl.appendToTempA(i, j, i-1, "K11") }}
+						</span>
+					</span>
+
+					<span ng-else>0</span>
+		
+			</td>
+		</tr>
+	</table>
+
+	<table>
+		<tr>
+			<td>K<sup>p</sup><sub>11</sub></td>
+			<td class="slim-right">K<sup>p</sup><sub>12</sub></td>
+			<td rowspan="2">=</td>
+			<td class="slim-left">E<sub>p</sub>A<sub>p</sub>/L<sub>p</sub></td>
+			<td>-E<sub>p</sub>A<sub>p</sub>/L<sub>p</sub></td>
+		</tr>
+
+		<tr>
+			<td>K<sup>p</sup><sub>21</sub></td>
+			<td class="slim-right">K<sup>p</sup><sub>22</sub></td>
+	
+			<td class="slim-left">-E<sub>p</sub>A<sub>p</sub>/L<sub>p</sub></td>
+			<td>E<sub>p</sub>A<sub>p</sub>/L<sub>p</sub></td>
+		</tr>
+
+	</table>
+
+	<br>
+	<p>В соответствии с методом перемещений составляем соответствующую систему линейных алгебраических уравнений: </p>
+
+	<table>
+		<tr ng-repeat="i in $ctrl.getNumberEdgeTo() track by $index">
+			<td ng-repeat="j in $ctrl.getNumberEdgeTo() track by $index">
+				
+
+				{{$ctrl.tempA[i-1][j-1]}}
+			</td>
+			
+			<td class="slim-left slim-right" ng-if=" i == 1 " rowspan="{{ $ctrl.getNumberEdgeTo().length }}">Х</td>
+			
+			<td class="slim-left slim-right">
+				&Delta; <sub>{{i}}</sub>
+			</td>
+			
+			<td class="slim-left slim-right" ng-if=" i == 1 " rowspan="{{ $ctrl.getNumberEdgeTo().length }}">=</td>
+
+			<td>
+				{{$ctrl.tempQ[i-1]}}
+			</td>
+
+		</tr>
+	</table>
+	
+	<br>
+	<p>Учитываем кинематические граничные условия &Delta;<sub>1</sub> = &Delta;<sub>{{$ctrl.getNumberEdgeTo().length}}</sub> </p>
+
+	{{ $ctrl.tempInto() }}
+
+	<table>
+		<tr ng-repeat="i in $ctrl.getNumberEdgeTo() track by $index">
+			<td ng-repeat="j in $ctrl.getNumberEdgeTo() track by $index">
+				
+
+				{{$ctrl.A[i-1][j-1]}}
+			</td>
+			
+			<td class="slim-left slim-right" ng-if=" i == 1 " rowspan="{{ $ctrl.getNumberEdgeTo().length }}">Х</td>
+			
+			<td class="slim-left slim-right">
+				&Delta; <sub>{{i}}</sub>
+			</td>
+			
+			<td class="slim-left slim-right" ng-if=" i == 1 " rowspan="{{ $ctrl.getNumberEdgeTo().length }}">=</td>
+
+			<td>
+				{{$ctrl.Q[i-1]}}
+			</td>
+
+		</tr>
+	</table>
+
+	<table>
+		<tr ng-repeat="i in $ctrl.getNumberEdgeTo() track by $index">
+			<td ng-repeat="j in $ctrl.getNumberEdgeTo() track by $index">
+				{{$ctrl.A[i-1][j-1]}} х &Delta;<sub>{{j}}</sub> <span ng-if="!(j == $ctrl.getNumberEdgeTo().length)">+</span>
+			</td>			
+			<td>=</td>
+			<td>
+				{{$ctrl.Q[i-1]}}
+			</td>
+		</tr>
+	</table>
+	
+	<br>
+	<p>Глобальный вектор перемещений:</p>
+
+	<span ng-repeat="i in $ctrl.getNumberEdgeTo() track by $index">
+			&Delta;<sub>{{i}}</sub> = 
+			{{ $ctrl.gaussRound($ctrl.resultDelta[i-1], 4) }}
+			<br>
+	</span>			
+
+
+</div>

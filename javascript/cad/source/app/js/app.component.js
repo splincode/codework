@@ -1,87 +1,124 @@
 class AppController {
 
-	/**
-	 * [инициация структуры приложения]
-	 * @param  {Object} $rootScope     [глобальная область видимости приложения]
-	 * @param  {Object} storageService [хранимая информация о приложении]
-	 */
-	constructor($rootScope, $scope, storageService){
+  	/**
+  	 * [инициация структуры приложения]
+  	 * @param  {Object} $rootScope     [глобальная область видимости приложения]
+  	 * @param  {Object} storageService [хранимая информация о приложении]
+  	 */
+  	constructor($rootScope, $scope, storageService){
+          let self = this;
 
-        this.storage = storageService;
-        
-        this.page = {
-          preprocess: true,
-          process: false,
-          postprocess: false
-        };
+          this.storage = storageService;
+          this.Math = window.Math;
 
-        this._newProject = angular.copy(storageService); 
+          this.page = {
+            preprocess: true,
+            process: false,
+            postprocess: false
+          };
 
-        window.clicked = false;
-        window.clickX = 0;
-        window.clickY = 0;
+          this._newProject = angular.copy(storageService); 
 
-        $rootScope.onLoad = false;
-        setTimeout(function(){
-          $rootScope.onLoad = true;
-          angular.element($( 'body' )).scope().$apply();
-        }, 2000);
+          window.clicked = false;
+          window.clickX = 0;
+          window.clickY = 0;
 
-        $('.mdl-layout__content').on({
-            'mousemove': function(e) {
-                clicked && updateScrollPos(e);
-            },
-            'mousedown': function(e) {
-                clicked = true;
-                clickY = e.pageX;
-            },
-            'mouseup': function() {
-                clicked = false;
-                $('.mdl-layout__content').css('cursor', 'auto');
-            }
-        });
-
-        let updateScrollPos = function(e) {
-            $('.mdl-layout__content').css('cursor', 'move');
-            $('.mdl-layout__content').scrollLeft($('.mdl-layout__content').scrollLeft() + (clickY - e.pageX));
-        };
-
-        $(window).bind('keydown', function(event) {
-            if (event.ctrlKey || event.metaKey) {
-                switch (String.fromCharCode(event.which).toLowerCase()) {
-                case 's':
-                    $('.save-project').trigger('click')
-                    event.preventDefault();
-                    break;
-                case 'o':
-                    $('.open-project').trigger('click')
-                    event.preventDefault();
-                    break;
-                case 'n':
-                    $('.new-project').trigger('click')
-                    event.preventDefault();
-                    break;
-                }
-            }
-        });
-
-        $('.mdl-layout__content').bind('mousewheel', function(e){
-            if (!storageService.start) return;
-            if (e.originalEvent.wheelDelta /120 > 0 && event.ctrlKey == true) {
-              if (storageService.ye < 10) {
-                storageService.ye += 1;
-              }
-            } else if (e.originalEvent.wheelDelta /120 < 0 && event.ctrlKey == true) {
-              if (storageService.ye > 5) {
-                storageService.ye -= 1;
-              }
-            }
+          $rootScope.onLoad = false;
+          setTimeout(function(){
+            $rootScope.onLoad = true;
             angular.element($( 'body' )).scope().$apply();
-            e.preventDefault();
-            return false;
-        });
-    
-	}
+          }, 2000);
+
+          $('.mdl-layout__content').on({
+              'mousemove': function(e) {
+                  clicked && updateScrollPos(e);
+              },
+              'mousedown': function(e) {
+                  clicked = true;
+                  clickY = e.pageX;
+              },
+              'mouseup': function() {
+                  clicked = false;
+                  $('.mdl-layout__content').css('cursor', 'auto');
+              }
+          });
+
+          let updateScrollPos = function(e) {
+              $('.mdl-layout__content').css('cursor', 'move');
+              $('.mdl-layout__content').scrollLeft($('.mdl-layout__content').scrollLeft() + (clickY - e.pageX));
+          };
+
+          $(window).bind('keydown', function(event) {
+              if (event.ctrlKey || event.metaKey) {
+                  switch (String.fromCharCode(event.which).toLowerCase()) {
+                  case 's':
+                      $('.save-project').trigger('click')
+                      event.preventDefault();
+                      break;
+                  case 'o':
+                      $('.open-project').trigger('click')
+                      event.preventDefault();
+                      break;
+                  case 'n':
+                      $('.new-project').trigger('click')
+                      event.preventDefault();
+                      break;
+                  }
+              }
+          });
+
+          $('.mdl-layout__content').bind('mousewheel', function(e){
+              if (!storageService.start) return;
+              if (!self.page.preprocess) return;
+
+              if (e.originalEvent.wheelDelta /120 > 0 && event.ctrlKey == true) {
+                if (storageService.ye < 10) {
+                  storageService.ye += 1;
+                }
+              } else if (e.originalEvent.wheelDelta /120 < 0 && event.ctrlKey == true) {
+                if (storageService.ye > 5) {
+                  storageService.ye -= 1;
+                }
+              }
+              angular.element($( 'body' )).scope().$apply();
+              e.preventDefault();
+              return false;
+          });
+
+          
+          $('input').on('focus', ()=>{
+            self.reRender();
+          });
+
+          $(window).keydown(function (e) {
+            if (e.which == 32){//space bar
+
+                if (storageService.ye != 0) {
+                  storageService.minimal = true;
+                  storageService.ye = 0;
+                  angular.element($( 'body' )).scope().$apply();
+                }  
+            }
+          });
+
+          $(window).keyup(function (e) {
+            if (e.which == 32){//space bar
+
+                storageService.minimal = false;
+                storageService.ye = 10;
+                angular.element($( 'body' )).scope().$apply();
+            }
+          });
+      
+  	}
+
+    /**
+     * [reRender description]
+     * @return {[type]} [description]
+     */
+    reRender(){
+      angular.element($( 'body' )).scope().$apply();
+    }
 
     /**
      * [добавление стержня]
@@ -106,7 +143,8 @@ class AppController {
      */
     getNumberEdge(){
       let storageService = this.storage;
-      return new Array(storageService.structure.item.length+1);
+      let countEdge = new Array(storageService.structure.item.length+1);
+      return countEdge;
     }
 
     /**
@@ -197,7 +235,12 @@ class AppController {
 
     newProject(){
       let storageService = this.storage;
-      let startService = this._newProject;
+      let startService = angular.copy(this._newProject);
+
+      let page = this.page;
+      for (let i in page) page[i] = false;
+      page.preprocess = true;
+
       angular.extend(storageService, startService);
     }
 
@@ -209,6 +252,12 @@ class AppController {
       let page = this.page;
       for (let i in page) page[i] = false;
       page.process = true;
+    }
+
+    pagePreProcess(){
+      let page = this.page;
+      for (let i in page) page[i] = false;
+      page.preprocess = true;
     }
 
 }

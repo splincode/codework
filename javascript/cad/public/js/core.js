@@ -99,7 +99,7 @@
 /***/ 0:
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';var _angular=__webpack_require__(25);var _angular2=_interopRequireDefault(_angular);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}/**
+	'use strict';var _angular=__webpack_require__(29);var _angular2=_interopRequireDefault(_angular);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}/**
 	 * jQuery 3.0
 	 * Библиотека необходима для работы Materialize
 	 * https://code.jquery.com/
@@ -107,7 +107,7 @@
 	 * Angular 1.5
 	 * Фреймворк для работы с MVC в нашем приложении
 	 * https://angularjs.org/
-	 *//** ngSanitize */__webpack_require__(27);
+	 *//** ngSanitize */__webpack_require__(31);
 
 /***/ },
 
@@ -10338,16 +10338,16 @@
 
 /***/ },
 
-/***/ 25:
+/***/ 29:
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(26);
+	__webpack_require__(30);
 	module.exports = angular;
 
 
 /***/ },
 
-/***/ 26:
+/***/ 30:
 /***/ function(module, exports) {
 
 	/**
@@ -43248,16 +43248,16 @@
 
 /***/ },
 
-/***/ 27:
+/***/ 31:
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(28);
+	__webpack_require__(32);
 	module.exports = 'ngSanitize';
 
 
 /***/ },
 
-/***/ 28:
+/***/ 32:
 /***/ function(module, exports) {
 
 	/**

@@ -499,7 +499,7 @@ nav ul li {
 }
 
 .dropdown-content {
-    min-width: 175px;
+    min-width: 190px;
 }
 
 .dropdown-content li > a, .dropdown-content li > span {
@@ -527,11 +527,56 @@ input#zoomer {
 
 .page-process {
     height: calc(100% - 60px);
-    width: calc(100% - 370px);
-    left: 370px;
+    width: 100%;
+    left: 0;
     top: 60px;
     padding: 30px;
     overflow: auto;
     position: absolute;
     display: block;
+}
+
+.mdl-layout--fixed-drawer.is-upgraded:not(.is-small-screen)  .page-process {
+    height: calc(100% - 60px);
+    width: calc(100% - 370px);
+    left: 370px;
+}
+
+table > tbody > tr, td {
+    text-align: center !important;
+}
+
+table {
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+    margin-top: 20px;
+}
+
+.slim-right {
+	border-right: 1px solid #000
+}
+
+.slim-left {
+	border-left: 1px solid #000
+}
+
+/* Let's get this party started */
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+ 
+/* Track */
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 2px rgba(0,0,0,0.3); 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgba(0,0,0,0.3); 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+
+::-webkit-scrollbar-thumb:window-inactive {
+	background: rgba(0,0,0,0.3); 
 }

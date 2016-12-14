@@ -1,4 +1,4 @@
-class PowerListController {
+class PowerListController  {
 
 	/**
 	 * [инициация структуры приложения]

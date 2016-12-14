@@ -1,7 +1,7 @@
 <div class="block idblock-{{$ctrl.index}}" 
      style="
         height: {{ ($ctrl.structure[$ctrl.index].A / $ctrl.structure[$ctrl.index].L) * $ctrl.storage.ye }}px;
-        width: {{ $ctrl.structure[$ctrl.index].L * $ctrl.storage.ye }}px;
+        width: {{ $ctrl.structure[$ctrl.index].L * ($ctrl.storage.ye < 5 ? 10 : $ctrl.storage.ye) }}px;
      "
      ng-class="{ 'arrow' : $ctrl.structure[$ctrl.index].q !== false ? 1 : 0, 'rotate' : $ctrl.structure[$ctrl.index].q < 0 ? 1:0 }">
 
