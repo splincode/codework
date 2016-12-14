@@ -29,7 +29,7 @@ function createWindow () {
   }))
 
   // Дебаг
-  //mainWindow.webContents.openDevTools()
+  mainWindow.webContents.openDevTools()
 
   // Событие, когда закрылось окно
   mainWindow.on('closed', function () {

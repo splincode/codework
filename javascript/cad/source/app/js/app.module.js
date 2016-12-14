@@ -15,6 +15,7 @@ import './plugins/materialize-plugins';
 import './plugins/elif';
 
 window.gauss = require('./plugins/gauss');
+window.math = require('./plugins/math');
 
 /*** Инициализация приложения */
 const app = angular.module('cad', ['elif']);

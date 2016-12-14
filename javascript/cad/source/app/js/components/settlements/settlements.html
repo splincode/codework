@@ -98,7 +98,20 @@
 	</table>
 	
 	<br>
-	<p>Учитываем кинематические граничные условия &Delta;<sub>1</sub> = &Delta;<sub>{{$ctrl.getNumberEdgeTo().length}}</sub> </p>
+	
+	<p>Учитываем кинематические граничные условия 
+		<span ng-if="$ctrl.storage.structure.leftSealing && $ctrl.storage.structure.rightSealing">
+			&Delta;<sub>1</sub> = &Delta;<sub>{{$ctrl.getNumberEdgeTo().length}}</sub> = 0
+		</span>
+
+		<span ng-if="$ctrl.storage.structure.leftSealing && !$ctrl.storage.structure.rightSealing">
+			&Delta;<sub>1</sub> = 0
+		</span>
+
+		<span ng-if="!$ctrl.storage.structure.leftSealing && $ctrl.storage.structure.rightSealing">
+			&Delta;<sub>{{$ctrl.getNumberEdgeTo().length}}</sub> = 0
+		</span>
+	</p>
 
 	{{ $ctrl.tempInto() }}
 
@@ -140,11 +153,92 @@
 	<br>
 	<p>Глобальный вектор перемещений:</p>
 
-	<span ng-repeat="i in $ctrl.getNumberEdgeTo() track by $index">
+	<span ng-if="$ctrl.notQInKernel()" ng-repeat="i in $ctrl.getNumberEdgeTo() track by $index">
 			&Delta;<sub>{{i}}</sub> = 
-			{{ $ctrl.gaussRound($ctrl.resultDelta[i-1], 4) }}
+			{{ $ctrl.gaussRound($ctrl.resultDelta[i-1], 4) }} 
+			<span ng-if="$ctrl.gaussRound($ctrl.resultDelta[i-1], 4) != 0">
+				FL/EA
+			</span>
 			<br>
-	</span>			
+			
+	</span>
 
+	<span ng-if="!$ctrl.notQInKernel()" ng-repeat="i in $ctrl.getNumberEdgeTo() track by $index">
+			&Delta;<sub>{{i}}</sub> = 
+			{{ $ctrl.gaussRound($ctrl.resultDelta[i-1], 4) }} 
+			<span ng-if="$ctrl.gaussRound($ctrl.resultDelta[i-1], 4) != 0">
+				qL<sup>2</sup>/EA
+			</span>
+			<br>
+	</span>				
+
+	<br>
+	<p>Усилия в стержнях находится по формулам:</p>
+	N<sub>x, p</sub> = (E<sub>p</sub>A<sub>p</sub>/L<sub>p</sub>)(U<sub>p, L</sub> - U<sub>p, 0</sub>) + (q<sub>p</sub>L<sub>p</sub>/2)(1 - 2 (x / L<sub>p</sub>)), <br> где p - номер стержня
+
+	<br>
+	<span ng-repeat="i in $ctrl.getNumberEdgeTo() track by $index">
+		<span ng-if="i == 1">
+			u<sub>1, 0</sub> = &Delta;<sub>{{i}}</sub>
+		</span>
+
+		<span ng-else>
+			u<sub>{{i-1}}, L</sub> = u<sub>{{i}}, 0</sub> = &Delta;<sub>{{i}}</sub>
+		</span>
+
+		<br>
+	</span>
+
+	<br>
+	<p>Усилия в стержнях:</p>
+	<table>
+		<tr ng-repeat="i in $ctrl.getNumberEdgeTo() track by $index" ng-if="i != $ctrl.getNumberEdgeTo().length">
+			<td>N<sub>x, {{i}}</sub>(x) = </td>
+			<td>{{$ctrl.Nx[i-1]}}</td>
+			<td>
+				N<sub>x, {{i}}</sub>(0) = 
+				{{$ctrl.resultMath(i-1, $ctrl.Nx[i-1], 0)}} 
+				<span ng-if="$ctrl.resultMath(i-1, $ctrl.Nx[i-1], 0) != $ctrl.ceil($ctrl.resultMath(i-1, $ctrl.Nx[i-1], 0))">
+					&asymp; {{$ctrl.ceil($ctrl.resultMath(i-1, $ctrl.Nx[i-1], 0))}}
+				</span>
+			</td>
+			<td>
+				N<sub>x, {{i}}</sub>({{$ctrl.storage.structure.item[i-1].L / $ctrl.storage.base.L }}L) =
+				{{$ctrl.resultMath(i-1, $ctrl.Nx[i-1], $ctrl.storage.structure.item[i-1].L / $ctrl.storage.base.L, 'L')}} 
+				<span ng-if="
+					$ctrl.resultMath(i-1, $ctrl.Nx[i-1], $ctrl.storage.structure.item[i-1].L / $ctrl.storage.base.L, 'L') != 
+					$ctrl.ceil($ctrl.resultMath(i-1, $ctrl.Nx[i-1], $ctrl.storage.structure.item[i-1].L / $ctrl.storage.base.L, 'L'))">
+					&asymp; {{$ctrl.ceil($ctrl.resultMath(i-1, $ctrl.Nx[i-1], $ctrl.storage.structure.item[i-1].L / $ctrl.storage.base.L, 'L'))}}
+				</span>
+			</td>
+		</tr>
+	</table>
+
+	<br><p>Напряжения находится по формулам:</p>
+	&sigma;<sub>p</sub> = N<sub>p</sub>/A<sub>p</sub>, <br> где p - номер стержня
+
+	<table>
+		<tr ng-repeat="i in $ctrl.getNumberEdgeTo() track by $index" ng-if="i != $ctrl.getNumberEdgeTo().length">
+			<td>&sigma;<sub>x, {{i}}</sub>(x) = </td>
+			<td>{{$ctrl.Sigmax[i-1]}}</td>
+			<td>
+				N<sub>x, {{i}}</sub>(0) = 
+				{{$ctrl.resultMath(i-1, $ctrl.Sigmax[i-1], 0)}} 
+				<span ng-if="$ctrl.resultMath(i-1, $ctrl.Sigmax[i-1], 0) != $ctrl.ceil($ctrl.resultMath(i-1, $ctrl.Sigmax[i-1], 0))">
+					&asymp; {{$ctrl.ceil($ctrl.resultMath(i-1, $ctrl.Sigmax[i-1], 0))}}
+				</span>
+			</td>
+			<td>
+				N<sub>x, {{i}}</sub>({{$ctrl.storage.structure.item[i-1].L / $ctrl.storage.base.L }}L) =
+				{{$ctrl.resultMath(i-1, $ctrl.Sigmax[i-1], $ctrl.storage.structure.item[i-1].L / $ctrl.storage.base.L, 'L')}} 
+				<span ng-if="
+					$ctrl.resultMath(i-1, $ctrl.Sigmax[i-1], $ctrl.storage.structure.item[i-1].L / $ctrl.storage.base.L, 'L') != 
+					$ctrl.ceil($ctrl.resultMath(i-1, $ctrl.Sigmax[i-1], $ctrl.storage.structure.item[i-1].L / $ctrl.storage.base.L, 'L'))">
+					&asymp; {{$ctrl.ceil($ctrl.resultMath(i-1, $ctrl.Sigmax[i-1], $ctrl.storage.structure.item[i-1].L / $ctrl.storage.base.L, 'L'))}}
+				</span>
+			</td>
+			
+		</tr>
+	</table>
 
 </div>

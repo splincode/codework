@@ -20,7 +20,7 @@ class SettlementsController {
 			}
 		}
 
-		this.tempQ = new Array(len).fill(0); ;
+		this.tempQ = new Array(len).fill(0);
 		for (let i = 0, setter = false; i < len; i++) {
 		
 			let F = storageService.structure.F[i];
@@ -83,13 +83,22 @@ class SettlementsController {
 			setter = false;
 		}
 
+		this.tempQ.forEach((el, i) => {
+			if (el == "") this.tempQ[i] = 0;
+		});
+
 		this.A = [];
-		this.Q = [];
+		this.Q = new Array(len).fill(0);
 
 		this.resultA = [];
-		this.resultQ = [];
+		this.resultQ = new Array(len).fill(0);
 
 		this.resultDelta = [];
+		this.UResultDelta = [];
+
+		this.Nx = [];
+		this.Sigmax = [];
+		this.Ux = [];
 	}
 
 	/**
@@ -102,6 +111,20 @@ class SettlementsController {
 	  let temp = [];
 	  for(let i = 0; i < len; i++) temp.push(1+i);
 	  return temp;
+	}
+
+	notQInKernel(){
+		let storageService = this.storage;
+		let len = storageService.structure.item.length;
+		let not = true;
+
+		for (let i = 0; i < len; i++) {
+			if(typeof storageService.structure.item[i].q == 'number') {
+				not = false; break;
+			}
+		}
+
+		return not;
 	}
 
 	appendToTempA(i, j, p, type){
@@ -170,23 +193,116 @@ class SettlementsController {
 		for (let i = 0; i < len; i++) {
 			for (let j = 0; j < len; j++) {
 				if (typeof(this.resultA[i][j]) == "string") {
-					this.resultA[i][j] = +(eval(this.resultA[i][j].replace(/F|q|L|E|A/g, ''))).toFixed(2);
+					try {
+						this.resultA[i][j] = +(eval(this.resultA[i][j].replace(/F|q|L|E|A/g, ''))).toFixed(2);
+					} catch(e){
+						console.log(e)
+					}
+					
 				}
 			}
 		}
 
 		for (let i = 0; i < len; i++) {
 			if (typeof(this.resultQ[i]) == "string") {
-				this.resultQ[i] = +(eval(this.resultQ[i].replace(/F|q|L|E|A/g, ''))).toFixed(2);
+				try {
+					this.resultQ[i] = +(eval(this.resultQ[i].replace(/F|q|L|E|A/g, ''))).toFixed(2);
+				} catch(e){
+					console.log(e)
+				}
 			}
 		}
-
-		console.log(this.resultA, this.resultQ)
 
 		let $A = angular.copy(this.resultA);
 		let $x = angular.copy(this.resultQ);
 		this.resultDelta = gauss($A, $x);
 
+		this.UResultDelta = angular.copy(this.resultDelta);
+
+		// если не имеет Q
+		let self = this;
+		if (this.notQInKernel()) {
+			this.UResultDelta.forEach((el, i) => {
+				if (self.gaussRound(self.resultDelta[i], 4) != 0){
+					self.UResultDelta[i] = `(` + self.gaussRound(this.resultDelta[i], 4) + ` * ((F*L)/(E*A)))`;
+				}
+			});
+		} else {
+			this.UResultDelta.forEach((el, i) => {
+				if (self.gaussRound(self.resultDelta[i], 4) != 0){
+					self.UResultDelta[i] = `(` + self.gaussRound(this.resultDelta[i], 4) + ` * ( (q*(L^2)) / (E*A) ))`;
+				}
+			});
+		}
+
+		for (let i = 0; i < len-1; i++ ) {
+
+			let kA = storageService.structure.item[i].A / storageService.base.A;
+			let kL = storageService.structure.item[i].L / storageService.base.L;
+			let kQ = storageService.structure.item[i].q;
+			let kq = storageService.kq;
+
+			let Up0 = this.UResultDelta[i];
+			let UpL = this.UResultDelta[i+1];
+
+			console.log('KQ / kq = ', kQ, kq , kQ / kq)
+
+			if (kQ) {
+				this.Nx[i] = `( (${kA} * E * A) / (${kL} * L)) * (${UpL} - ${Up0}) + ((${kQ/kq} * q * ${kL} * L) / 2) * (1 - (2*(x/(${kL} * L))))`;
+			} else {
+				this.Nx[i] = `( (${kA} * E * A) / (${kL} * L)) * (${UpL} - ${Up0})`;
+			}
+
+			
+		}
+
+		for (let i = 0; i < len-1; i++ ) {
+
+			let kA = storageService.structure.item[i].A / storageService.base.A;
+			let kL = storageService.structure.item[i].L / storageService.base.L;
+			let kQ = storageService.structure.item[i].q;
+			let kq = storageService.kq;
+
+			let Up0 = this.UResultDelta[i];
+			let UpL = this.UResultDelta[i+1];
+
+			if (kQ) {
+				this.Sigmax[i] = `(( (${kA} * E * A) / (${kL} * L)) * (${UpL} - ${Up0}) + ((${kQ/kq} * q * ${kL} * L) / 2) * (1 - 2 * (x/(${kL} * L)))) / (${kA} * A)`;
+			} else {
+				this.Sigmax[i] = `((${kA} * E * A / ${kL} * L) * (${UpL} - ${Up0})) / (${kA} * A)`;
+			}
+
+			
+		}
+		
+		
+
+	}
+
+
+	resultMath(i, formula, x, t){
+		if (i < 0) return ;
+
+		let storageService = this.storage;
+		let len = storageService.structure.item.length+1;
+
+		let A = storageService.base.A;
+		let L = storageService.base.L;
+
+		let X = t ? `${x} * ${t}` : x; 
+
+		X = X ? X : 0;
+
+		let E = storageService.structure.item[i].E;
+		let F = storageService.kF;
+		let q = storageService.kq;
+
+		let stackMath = `A = ${A}; L = ${L}; E = ${E}; F = ${F}; q = ${q}; x = ${X}; `;
+		console.log(stackMath)
+		let line = stackMath + formula;
+
+		let res = math.eval(line);
+		return this.gaussRound(res.entries[0], 2);
 	}
 
 	gaussRound(num, decimalPlaces) {
@@ -201,7 +317,16 @@ class SettlementsController {
 	}
 
 	ceil(i){
-		return Math.ceil(i);
+		return i > 0 ? Math.ceil(i) : Math.floor(i);
+	}
+
+	notQInKernelDelta(spl, i){
+		console.log(this.resultDelta);
+		console.log(this.UResultDelta, i-1, this.resultDelta[i-1])
+
+		if (this.resultDelta[i-1].toString() === 'NaN') return;
+
+		this.UResultDelta[i-1] = this.gaussRound(this.resultDelta[i-1], 4) + ` * ${spl}`;
 	}
 
 }

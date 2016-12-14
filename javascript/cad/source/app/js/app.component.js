@@ -67,6 +67,20 @@ class AppController {
               }
           });
 
+          $(document).bind('keydown', function(e) {
+
+              if (!self.page.preprocess) return;
+
+              if (e.shiftKey && e.which === 78) {
+
+                  self.addKernelBlock();
+                  self.reRender();
+
+                  e.preventDefault();
+                  return false;
+              }
+          });
+
           $('.mdl-layout__content').bind('mousewheel', function(e){
               if (!storageService.start) return;
               if (!self.page.preprocess) return;
@@ -153,6 +167,7 @@ class AppController {
      */
     openProject(){
       let $scope = this._$scope;
+      let page = this.page;
       let $rootScope = this._$rootScope;
       let storageService = this.storage;
 
@@ -170,6 +185,10 @@ class AppController {
               let project = JSON.parse(data);
               if (project.hasOwnProperty('spc_version')) {
                 angular.extend(storageService, project);
+                
+                for (let i in page) page[i] = false;
+                page.preprocess = true;
+
                 angular.element($( 'body' )).scope().$apply();
               } else {
                 dialog.showErrorBox("Данный файл не является файлом проекта", 'Отсутствует строка spc_version');
