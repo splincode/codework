@@ -7,8 +7,10 @@ import { KernelComponent } from './components/kernel/kernel.component';
 import { OptionListComponent } from './components/option-list/option-list.component';
 import { PowerListComponent } from './components/power-list/power-list.component';
 import { SettlementsComponent } from './components/settlements/settlements.component';
+import { DrawComponent } from './components/draw/draw.component';
 
 import  storageService  from './services/storageService';
+import  localService  from './services/localService';
 
 import './plugins/materialize';
 import './plugins/materialize-plugins';
@@ -25,10 +27,13 @@ app.component('kernel', KernelComponent);
 app.component('optionList', OptionListComponent);
 app.component('powerList', PowerListComponent);
 app.component('settlements', SettlementsComponent);
+app.component('draw', DrawComponent);
 
 /*** Инициализация директив и сервисов */
 
 app.service('storageService', storageService);
+app.service('localService', localService);
+
 app.directive('dropdown', function () {
   let directive = {
     restrict: 'A',

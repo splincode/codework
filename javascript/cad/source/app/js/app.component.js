@@ -5,16 +5,24 @@ class AppController {
   	 * @param  {Object} $rootScope     [глобальная область видимости приложения]
   	 * @param  {Object} storageService [хранимая информация о приложении]
   	 */
-  	constructor($rootScope, $scope, storageService){
+  	constructor($rootScope, $scope, storageService, localService){
           let self = this;
 
           this.storage = storageService;
+          this.localStorage = localService;
+
           this.Math = window.Math;
 
           this.page = {
             preprocess: true,
             process: false,
             postprocess: false
+          };
+
+          this.copyYE = angular.copy(storageService.ye);
+
+          this.dimension = {
+            setting: false
           };
 
           this._newProject = angular.copy(storageService); 
@@ -86,12 +94,12 @@ class AppController {
               if (!self.page.preprocess) return;
 
               if (e.originalEvent.wheelDelta /120 > 0 && event.ctrlKey == true) {
-                if (storageService.ye < 10) {
-                  storageService.ye += 1;
+                if (storageService.ye < self.copyYE) {
+                  storageService.ye += 10;
                 }
               } else if (e.originalEvent.wheelDelta /120 < 0 && event.ctrlKey == true) {
-                if (storageService.ye > 5) {
-                  storageService.ye -= 1;
+                if (storageService.ye > 10) {
+                  storageService.ye -= 10;
                 }
               }
               angular.element($( 'body' )).scope().$apply();
@@ -106,10 +114,8 @@ class AppController {
 
           $(window).keydown(function (e) {
             if (e.which == 32){//space bar
-
-                if (storageService.ye != 0) {
+                if (!storageService.minimal) {
                   storageService.minimal = true;
-                  storageService.ye = 0;
                   angular.element($( 'body' )).scope().$apply();
                 }  
             }
@@ -117,9 +123,7 @@ class AppController {
 
           $(window).keyup(function (e) {
             if (e.which == 32){//space bar
-
                 storageService.minimal = false;
-                storageService.ye = 10;
                 angular.element($( 'body' )).scope().$apply();
             }
           });
@@ -151,6 +155,14 @@ class AppController {
 
     }
 
+    openSettings(){
+      this.dimension.setting = true;
+    }
+
+    closeSettings(){
+      this.dimension.setting = false;
+    }
+
     /**
      * Количество узлов
      * @return {[type]} [description]
@@ -170,6 +182,8 @@ class AppController {
       let page = this.page;
       let $rootScope = this._$rootScope;
       let storageService = this.storage;
+
+      this.localStorage.itemNx = [];
 
       try {
 
@@ -256,6 +270,8 @@ class AppController {
       let storageService = this.storage;
       let startService = angular.copy(this._newProject);
 
+      this.localStorage.itemNx = [];
+
       let page = this.page;
       for (let i in page) page[i] = false;
       page.preprocess = true;
@@ -279,9 +295,15 @@ class AppController {
       page.preprocess = true;
     }
 
+    pagePostProcess(){
+      let page = this.page;
+      for (let i in page) page[i] = false;
+      page.postprocess = true;
+    }
+
 }
 
 export const AppComponent = {
   template: require("./app.html"),
-  controller: ['$rootScope', '$scope', 'storageService', AppController] 
+  controller: ['$rootScope', '$scope', 'storageService', 'localService', AppController] 
 };

@@ -5,8 +5,10 @@ class SettlementsController {
 	 * @param  {Object} $rootScope     [глобальная область видимости приложения]
 	 * @param  {Object} storageService [хранимая информация о приложении]
 	 */
-	constructor($rootScope, $scope, storageService){
+	constructor($rootScope, $scope, storageService, localService){
+
 		this.storage = storageService;
+		this.localStorage = localService;
 
 		// создаем матрицу реакций А
 		this.tempA = [];
@@ -96,9 +98,11 @@ class SettlementsController {
 		this.resultDelta = [];
 		this.UResultDelta = [];
 
-		this.Nx = [];
-		this.Sigmax = [];
-		this.Ux = [];
+		this.Nx = []; this.tempNx = [];
+		this.Sigmax = []; this.tempSigmax = [];
+		this.Ux = []; this.tempUx = [];
+
+		this.Math = window.Math;
 	}
 
 	/**
@@ -245,12 +249,32 @@ class SettlementsController {
 			let Up0 = this.UResultDelta[i];
 			let UpL = this.UResultDelta[i+1];
 
-			console.log('KQ / kq = ', kQ, kq , kQ / kq)
-
 			if (kQ) {
 				this.Nx[i] = `( (${kA} * E * A) / (${kL} * L)) * (${UpL} - ${Up0}) + ((${kQ/kq} * q * ${kL} * L) / 2) * (1 - (2*(x/(${kL} * L))))`;
+				this.tempNx[i] = `${kA}EA/${kL}L * (${UpL} - ${Up0}) + (${kQ/kq} * ${kL} qL/2)(1 - 2x/${kL}L)`;
 			} else {
 				this.Nx[i] = `( (${kA} * E * A) / (${kL} * L)) * (${UpL} - ${Up0})`;
+				this.tempNx[i] = `${kA}EA/${kL}L * (${UpL} - ${Up0})`;
+			}
+
+		}
+
+		for (let i = 0; i < len-1; i++ ) {
+
+			let kA = storageService.structure.item[i].A / storageService.base.A;
+			let kL = storageService.structure.item[i].L / storageService.base.L;
+			let kQ = storageService.structure.item[i].q;
+			let kq = storageService.kq;
+
+			let Up0 = this.UResultDelta[i];
+			let UpL = this.UResultDelta[i+1];
+
+			if (kQ) {
+				this.Sigmax[i] = `(( (${kA} * E * A) / (${kL} * L)) * (${UpL} - ${Up0}) + ((${kQ/kq} * q * ${kL} * L) / 2) * (1 - 2 * (x/(${kL} * L)))) / (${kA} * A)`;
+				this.tempSigmax[i] = `(${kA}EA/${kL}L * (${UpL} - ${Up0}) + (${kQ/kq} * ${kL}qL)/2)(1 - 2x/${kL}L)) / ${kA}A`;
+			} else {
+				this.Sigmax[i] = `((${kA} * E * A / ${kL} * L) * (${UpL} - ${Up0})) / (${kA} * A)`;
+				this.tempSigmax[i] = `(${kA}EA/${kL}L * (${UpL} - ${Up0})) / ${kA}A`;
 			}
 
 			
@@ -267,15 +291,17 @@ class SettlementsController {
 			let UpL = this.UResultDelta[i+1];
 
 			if (kQ) {
-				this.Sigmax[i] = `(( (${kA} * E * A) / (${kL} * L)) * (${UpL} - ${Up0}) + ((${kQ/kq} * q * ${kL} * L) / 2) * (1 - 2 * (x/(${kL} * L)))) / (${kA} * A)`;
+				this.Ux[i] = `${Up0} + ((x/(${kL} * L)) * (${UpL} - ${Up0})) + ((${kQ/kq} * q * ((${kL} * L)^2) * x)/(2 * ${kA} * E * A * ${kL} * L))*(1 - (x/(${kL} * L)))`;
+				this.tempUx[i] = `${Up0} + x/${kL}L * (${UpL} - ${Up0}) + (${kQ/kq}q${kL}L^2x) / (2 * ${kA}EA * ${kL}L) * (1 - x/(${kL}L)`;
 			} else {
-				this.Sigmax[i] = `((${kA} * E * A / ${kL} * L) * (${UpL} - ${Up0})) / (${kA} * A)`;
+				this.Ux[i] = `${Up0} + ((x/(${kL} * L)) * (${UpL} - ${Up0}))`;
+				this.tempUx[i] = `${Up0} + x/${kL}L * (${UpL} - ${Up0})`;
 			}
 
 			
 		}
 		
-		
+		this.localStorage.exec = true;
 
 	}
 
@@ -298,11 +324,35 @@ class SettlementsController {
 		let q = storageService.kq;
 
 		let stackMath = `A = ${A}; L = ${L}; E = ${E}; F = ${F}; q = ${q}; x = ${X}; `;
-		console.log(stackMath)
 		let line = stackMath + formula;
+		let res = 0;
+		let result = 0;
 
-		let res = math.eval(line);
-		return this.gaussRound(res.entries[0], 2);
+		try {
+			res = math.eval(line);
+			result = (Math.abs(res.entries[0]) > 0.9) ? this.gaussRound(res.entries[0], 2) : res.entries[0];
+		} catch (e){
+			console.log(e)
+		}
+
+		return result;
+	}
+
+	setItemNx(i, j, res){
+	
+		if (!Array.isArray(this.localStorage.itemNx[i])) {
+			this.localStorage.itemNx[i] = [];
+		}
+
+		this.localStorage.itemNx[i][j] = res;
+	}
+
+	setItemSx(i, res){
+		this.localStorage.itemSx[i] = res;
+	}
+
+	setItemUx(i, res){
+		this.localStorage.itemUx[i] = res;
 	}
 
 	gaussRound(num, decimalPlaces) {
@@ -316,14 +366,22 @@ class SettlementsController {
 	    return d ? r / m : r;
 	}
 
+	getDecimal(num) {
+	  return num > 0 ? num - Math.floor(num) : Math.ceil(num) - num;
+	}
+
 	ceil(i){
-		return i > 0 ? Math.ceil(i) : Math.floor(i);
+
+		let round = false;
+		if (this.getDecimal(i) > 0.8) round = true;
+
+		return i > 0 ? (round ? Math.ceil(i) : i) : ( round ? Math.floor(i) : i);
 	}
 
 	notQInKernelDelta(spl, i){
-		console.log(this.resultDelta);
+	/*	console.log(this.resultDelta);
 		console.log(this.UResultDelta, i-1, this.resultDelta[i-1])
-
+*/
 		if (this.resultDelta[i-1].toString() === 'NaN') return;
 
 		this.UResultDelta[i-1] = this.gaussRound(this.resultDelta[i-1], 4) + ` * ${spl}`;
@@ -335,5 +393,5 @@ class SettlementsController {
 
 export const SettlementsComponent = {
   template: require("./settlements.html"),
-  controller: ['$rootScope', '$scope', 'storageService', SettlementsController] 
+  controller: ['$rootScope', '$scope', 'storageService', 'localService', SettlementsController] 
 };

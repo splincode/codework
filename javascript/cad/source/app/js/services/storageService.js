@@ -4,14 +4,14 @@ export default function (){
 
 		start: false, // запущена ли отрисовка
 		minimal: false, // масштабирование с коэффициент 0
-		ye: 10, // условные единицы
+		ye: 100, // условные единицы
 		kq: 1,
 		kF: 1,
 
 		base: {
-			A: 100, // A
-			L: 10, // L
-			E: 10e5.toExponential(),
+			A: 1, // A
+			L: 1, // L
+			E: 1, // E
 			sigma: '', // допускаемое напряжене
 			q: false
 		},

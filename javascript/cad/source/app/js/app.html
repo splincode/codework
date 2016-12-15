@@ -1,5 +1,80 @@
  <div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
-      
+  
+  <!-- Настройки -->
+  <div id="modalOption" class="modal" ng-class="{ 'modal-open': $ctrl.dimension.setting ? 1:0 }">
+    <div class="modal-content">
+      <h4>Основные настройки</h4>
+      <p>Параметры коэффициентов для правильной отрисовки конструкции: </p>
+
+      <div class="">
+           <input placeholder="30"
+                  type="number" 
+                  ng-model="$ctrl.storage.kq" 
+                  value="{{$ctrl.storage.kq}}" 
+                  ng-minlength="0"
+                  min="0"
+                  class="validate Lchange">
+
+           <label>Коэффициент q</label>
+      </div>
+
+      <div class="">
+           <input placeholder="30"
+                  type="number" 
+                  ng-model="$ctrl.storage.kF" 
+                  value="{{$ctrl.storage.kF}}" 
+                  ng-minlength="0"
+                  min="0"
+                  class="validate Lchange">
+
+           <label>Коэффициент F</label>
+      </div>
+
+      <div class="">
+           <input placeholder="100"
+                  type="number" 
+                  ng-model="$ctrl.storage.ye" 
+                  value="{{$ctrl.storage.ye}}" 
+                  ng-minlength="0"
+                  min="0"
+                  class="validate Lchange">
+
+           <label>Коэффициент отрисовки (%)</label>
+      </div>
+
+      <div class="">
+           <input placeholder="30"
+                  type="number" 
+                  ng-model="$ctrl.storage.base.A" 
+                  value="{{$ctrl.storage.base.A}}" 
+                  ng-minlength="0"
+                  min="0"
+                  class="validate Lchange">
+
+           <label>Коэффициент A<sup>*</sup></label>
+      </div>
+
+      <div class="">
+           <input placeholder="30"
+                  type="number" 
+                  ng-model="$ctrl.storage.base.L" 
+                  value="{{$ctrl.storage.base.L}}" 
+                  ng-minlength="0"
+                  min="0"
+                  class="validate Lchange">
+
+           <label>Коэффициент L<sup>*</sup></label>
+      </div>
+
+      <br><p>После внесения изменений следует создать новый проект для отрисовки конструкции с новыми параметрами,
+         так как коэффициенты со зведочкой динамически не влияют на отрисовку</p>
+
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat" ng-click="$ctrl.closeSettings()">Закрыть</a>
+    </div>
+  </div>
+
   <header class="demo-header mdl-layout__header mdl-color--grey-100 mdl-color-text--grey-600">
     <div class="mdl-layout__header-row">
       <div class="closemenu" closemenu></div>
@@ -29,15 +104,18 @@
         <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="accbtn">
           <li class="mdl-menu__item new-project" ng-click="$ctrl.newProject()">
           	<i class="Tiny-my material-icons">mode_edit</i>Новый
-			<span class="key">Ctrl+N</span>
+			       <span class="key">Ctrl+N</span>
           </li>
           <li class="mdl-menu__item open-project" ng-click="$ctrl.openProject()">
           	Открыть проект
-			<span class="key">Ctrl+O</span>
+			       <span class="key">Ctrl+O</span>
           </li>
           <li class="mdl-menu__item save-project" ng-click="$ctrl.saveProject()">
           	Сохранить проект
-			<span class="key">Ctrl+S</span>
+			       <span class="key">Ctrl+S</span>
+          </li>
+          <li class="mdl-menu__item save-project" ng-click="$ctrl.openSettings()">
+            Основные настройки
           </li>
           <li class="mdl-menu__item" ng-click="$ctrl.appQuit()">Выход</li>
           
@@ -91,7 +169,13 @@
 
         <div id="graphs" ng-if="$ctrl.storage.start">
 		  
-		  <input ng-if="!$ctrl.storage.minimal" id="zoomer" type ="range" min ="5.0" max="10.0" step ="1.0" value ="10" ng-model="$ctrl.storage.ye" />
+		    <input ng-if="!$ctrl.storage.minimal" 
+              id="zoomer" 
+              type ="range" 
+              min="40" 
+              step ="1" 
+              value ="{{$ctrl.storage.ye}}" 
+              ng-model="$ctrl.storage.ye" />
 
           <kernel ng-repeat="kernel in $ctrl.storage.structure.item track by $index" 
           		  index="$index" 
@@ -102,8 +186,12 @@
   	</div>
 
   	<div id="outer" ng-if="$ctrl.page.process">
-		<settlements></settlements>
+		  <settlements></settlements>
   	</div>
+
+    <div id="outer" ng-if="$ctrl.page.postprocess">
+      <draw></draw>
+    </div>
 
   </main>
 
@@ -114,6 +202,10 @@
   	 ng-click=" !($ctrl.storage.structure.leftSealing + $ctrl.storage.structure.rightSealing) ? '': $ctrl.pageProcess() "
   	 ng-class="{ 'diactivate' : !($ctrl.storage.structure.leftSealing + $ctrl.storage.structure.rightSealing) ? 1:0}">Расчеты</a>
 
-  <a target="_blank" id="view-source3" class="waves-effect waves-light btn diactivate">Графики</a>
+  <a target="_blank" id="view-source3" 
+     class="waves-effect waves-light btn"
+     ng-click=" !($ctrl.localStorage.exec) ? '': $ctrl.pagePostProcess() "
+     ng-class="{ 'diactivate' : !$ctrl.localStorage.exec ? 1:0}"
+  >Графики</a>
 
 </div>

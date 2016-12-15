@@ -194,17 +194,21 @@
 	<table>
 		<tr ng-repeat="i in $ctrl.getNumberEdgeTo() track by $index" ng-if="i != $ctrl.getNumberEdgeTo().length">
 			<td>N<sub>x, {{i}}</sub>(x) = </td>
-			<td>{{$ctrl.Nx[i-1]}}</td>
+			<td>{{$ctrl.tempNx[i-1]}}</td>
+			
 			<td>
 				N<sub>x, {{i}}</sub>(0) = 
 				{{$ctrl.resultMath(i-1, $ctrl.Nx[i-1], 0)}} 
+				{{$ctrl.setItemNx(i-1, 0, $ctrl.resultMath(i-1, $ctrl.Nx[i-1], 0))}}
 				<span ng-if="$ctrl.resultMath(i-1, $ctrl.Nx[i-1], 0) != $ctrl.ceil($ctrl.resultMath(i-1, $ctrl.Nx[i-1], 0))">
 					&asymp; {{$ctrl.ceil($ctrl.resultMath(i-1, $ctrl.Nx[i-1], 0))}}
 				</span>
 			</td>
+
 			<td>
 				N<sub>x, {{i}}</sub>({{$ctrl.storage.structure.item[i-1].L / $ctrl.storage.base.L }}L) =
 				{{$ctrl.resultMath(i-1, $ctrl.Nx[i-1], $ctrl.storage.structure.item[i-1].L / $ctrl.storage.base.L, 'L')}} 
+				{{$ctrl.setItemNx(i-1, 1, $ctrl.resultMath(i-1, $ctrl.Nx[i-1], $ctrl.storage.structure.item[i-1].L / $ctrl.storage.base.L, 'L'))}}
 				<span ng-if="
 					$ctrl.resultMath(i-1, $ctrl.Nx[i-1], $ctrl.storage.structure.item[i-1].L / $ctrl.storage.base.L, 'L') != 
 					$ctrl.ceil($ctrl.resultMath(i-1, $ctrl.Nx[i-1], $ctrl.storage.structure.item[i-1].L / $ctrl.storage.base.L, 'L'))">
@@ -220,25 +224,65 @@
 	<table>
 		<tr ng-repeat="i in $ctrl.getNumberEdgeTo() track by $index" ng-if="i != $ctrl.getNumberEdgeTo().length">
 			<td>&sigma;<sub>x, {{i}}</sub>(x) = </td>
-			<td>{{$ctrl.Sigmax[i-1]}}</td>
-			<td>
-				N<sub>x, {{i}}</sub>(0) = 
+			<td>{{$ctrl.tempSigmax[i-1]}}</td>
+			<td ng-class="{ 'fred' : 
+							$ctrl.storage.structure.item[i-1].sigma < 
+							$ctrl.Math.abs($ctrl.resultMath(i-1, $ctrl.Sigmax[i-1], 0))
+						  }">
+				&sigma;<sub>x, {{i}}</sub>(0) = 
 				{{$ctrl.resultMath(i-1, $ctrl.Sigmax[i-1], 0)}} 
+				{{$ctrl.setItemSx(i-1, $ctrl.resultMath(i-1, $ctrl.Sx[i-1], 0))}}
 				<span ng-if="$ctrl.resultMath(i-1, $ctrl.Sigmax[i-1], 0) != $ctrl.ceil($ctrl.resultMath(i-1, $ctrl.Sigmax[i-1], 0))">
 					&asymp; {{$ctrl.ceil($ctrl.resultMath(i-1, $ctrl.Sigmax[i-1], 0))}}
 				</span>
 			</td>
-			<td>
-				N<sub>x, {{i}}</sub>({{$ctrl.storage.structure.item[i-1].L / $ctrl.storage.base.L }}L) =
+
+			<td ng-class="{ 'fred' : 
+							$ctrl.storage.structure.item[i-1].sigma < 
+							$ctrl.Math.abs($ctrl.resultMath(i-1, $ctrl.Sigmax[i-1], $ctrl.storage.structure.item[i-1].L / $ctrl.storage.base.L, 'L'))
+						  }">
+
+				&sigma;<sub>x, {{i}}</sub>({{$ctrl.storage.structure.item[i-1].L / $ctrl.storage.base.L }}L) =
 				{{$ctrl.resultMath(i-1, $ctrl.Sigmax[i-1], $ctrl.storage.structure.item[i-1].L / $ctrl.storage.base.L, 'L')}} 
+				{{$ctrl.setItemSx(i-1, $ctrl.resultMath(i-1, $ctrl.Sigmax[i-1], $ctrl.storage.structure.item[i-1].L / $ctrl.storage.base.L, 'L') )}}
 				<span ng-if="
 					$ctrl.resultMath(i-1, $ctrl.Sigmax[i-1], $ctrl.storage.structure.item[i-1].L / $ctrl.storage.base.L, 'L') != 
 					$ctrl.ceil($ctrl.resultMath(i-1, $ctrl.Sigmax[i-1], $ctrl.storage.structure.item[i-1].L / $ctrl.storage.base.L, 'L'))">
 					&asymp; {{$ctrl.ceil($ctrl.resultMath(i-1, $ctrl.Sigmax[i-1], $ctrl.storage.structure.item[i-1].L / $ctrl.storage.base.L, 'L'))}}
 				</span>
 			</td>
-			
+
 		</tr>
 	</table>
+
+	<br><p>Перемещение находится по формулам:</p>
+	u<sub>x, p</sub> = U<sub>p, 0</sub> +  x/L<sub>p</sub>(U<sub>p, L</sub> - U<sub>p, 0</sub>) + ((q<sub>p</sub>L<sup>2</sup><sub>p</sub>x)/(2E<sub>p</sub>A<sub>p</sub>L<sub>p</sub>))(1 - 2 (x / L<sub>p</sub>)), <br> где p - номер стержня
+	
+	<table>
+		<tr ng-repeat="i in $ctrl.getNumberEdgeTo() track by $index" ng-if="i != $ctrl.getNumberEdgeTo().length">
+			<td>u<sub>x, {{i}}</sub>(x) = </td>
+			<td>{{$ctrl.tempUx[i-1]}}</td>
+			<td>
+				u<sub>x, {{i}}</sub>(0) = 
+				{{$ctrl.resultMath(i-1, $ctrl.Ux[i-1], 0)}} 
+				{{$ctrl.setItemUx(i-1, $ctrl.resultMath(i-1, $ctrl.Ux[i-1], 0))}}
+				<span ng-if="$ctrl.resultMath(i-1, $ctrl.Ux[i-1], 0) != $ctrl.ceil($ctrl.resultMath(i-1, $ctrl.Ux[i-1], 0))">
+					&asymp; {{$ctrl.ceil($ctrl.resultMath(i-1, $ctrl.Ux[i-1], 0))}}
+				</span>
+			</td>
+			<td>
+				u<sub>x, {{i}}</sub>({{$ctrl.storage.structure.item[i-1].L / $ctrl.storage.base.L }}L) =
+				{{$ctrl.resultMath(i-1, $ctrl.Ux[i-1], $ctrl.storage.structure.item[i-1].L / $ctrl.storage.base.L, 'L')}} 
+				{{$ctrl.setItemUx(i-1, $ctrl.resultMath(i-1, $ctrl.Ux[i-1], $ctrl.storage.structure.item[i-1].L / $ctrl.storage.base.L, 'L') )}}
+				<span ng-if="
+					$ctrl.resultMath(i-1, $ctrl.Ux[i-1], $ctrl.storage.structure.item[i-1].L / $ctrl.storage.base.L, 'L') != 
+					$ctrl.ceil($ctrl.resultMath(i-1, $ctrl.Ux[i-1], $ctrl.storage.structure.item[i-1].L / $ctrl.storage.base.L, 'L'))">
+					&asymp; {{$ctrl.ceil($ctrl.resultMath(i-1, $ctrl.Ux[i-1], $ctrl.storage.structure.item[i-1].L / $ctrl.storage.base.L, 'L'))}}
+				</span>
+			</td>
+
+		</tr>
+	</table>
+	
 
 </div>
