@@ -184,6 +184,7 @@ class AppController {
       let storageService = this.storage;
 
       this.localStorage.itemNx = [];
+      this.localStorage.exec = false;
 
       try {
 
@@ -271,6 +272,7 @@ class AppController {
       let startService = angular.copy(this._newProject);
 
       this.localStorage.itemNx = [];
+      this.localStorage.exec = false;
 
       let page = this.page;
       for (let i in page) page[i] = false;
