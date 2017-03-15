@@ -49,16 +49,16 @@
 		JS-фреймворк для работы с css классами dom элементов</a>
 	</li>
 	<li>
-		<a href="https://github.com/splincode/codework/tree/master/javascript/maker">
-		Сверстайте телепрограмму</a> <sup> незакончено</sup>
+		<a href="https://github.com/splincode/codework/tree/master/javascript/mobilization">
+		Cверстать расписание лекций проекта «Мобилизация»</a> <sup> незакончено</sup>
 	</li>
 	<li>
-		<a href="https://github.com/splincode/codework/tree/master/javascript/libya">
-		Создайте библиотеку</a> <sup> незакончено</sup>
+		<a href="https://github.com/splincode/codework/tree/master/javascript/mobilization-api">
+		Напишите библиотеку, предоставляющую API для работы с расписанием лекций</a> <sup> незакончено</sup>
 	</li>
 	<li>
-		<a href="https://github.com/splincode/codework/tree/master/javascript/error">
-		Найдите и исправьте ошибки</a> <sup> незакончено</sup>
+		<a href="https://github.com/splincode/codework/tree/master/javascript/fetch-error">
+		Исправить неработающий код</a> <sup> незакончено</sup>
 	</li>
 </ul><br>
 
