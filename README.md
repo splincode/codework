@@ -130,6 +130,13 @@
 	</li>
 </ul>
 
+<h4>Visual C++</h4>
+<ul>
+	<li>
+		<a href="https://github.com/splincode/codework/tree/master/vc/lab1">Типичный каркас Win32 приложения</a>
+	</li>
+</ul>
+
 <h4>JavaScript</h4>
 <ul>
 	<li>
