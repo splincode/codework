@@ -133,7 +133,15 @@
 <h4>Visual C++</h4>
 <ul>
 	<li>
-		<a href="https://github.com/splincode/codework/tree/master/vc/lab1">Типичный каркас Win32 приложения</a>
+		<a href="https://github.com/splincode/codework/tree/master/vc/lab1/WinMain.cpp">Типичный каркас Win32 приложения</a>
+	</li>
+	
+	<li>
+		<a href="https://github.com/splincode/codework/tree/master/vc/lab1/grid.cpp">Отрисовка сетки</a>
+	</li>
+		
+	<li>
+		<a href="https://github.com/splincode/codework/tree/master/vc/lab1/sun.cpp">Отрисовка Солнца</a>
 	</li>
 </ul>
 
