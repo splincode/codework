@@ -100,7 +100,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam) 
 			}
 
 			MoveToEx(hdc, a, b, NULL);
-	        for (x = 0; x <= 100; x++) {
+			for (x = 0; x <= 100; x++) {
 				LineTo(hdc, a - x, b - 0.1*x*x); 
 			}
 
