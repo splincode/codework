@@ -58,7 +58,6 @@ int APIENTRY WinMain(HINSTANCE This, HINSTANCE Prev, LPSTR cmd, int mode) {
 }
 
 LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam) {
-
 	PAINTSTRUCT ps;
 	HDC hdc;
 	
@@ -67,58 +66,55 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam) 
 	int a, b, x_scr, y_scr;
 	double x, y, h;
 
-
 	switch(message){
 
-	case WM_CREATE:
-		hpen1 = CreatePen(PS_SOLID, 2, RGB(0, 0, 255));
-		hpen2 = CreatePen(PS_SOLID, 2, RGB(255, 0, 0));
+		case WM_CREATE:
+			hpen1 = CreatePen(PS_SOLID, 2, RGB(0, 0, 255));
+			hpen2 = CreatePen(PS_SOLID, 2, RGB(255, 0, 0));
 		break;
 
-	case WM_SIZE:
-		sx = LOWORD(lParam);
-		sy = HIWORD(lParam);
+		case WM_SIZE:
+			sx = LOWORD(lParam);
+			sy = HIWORD(lParam);
 		break;
 
-	case WM_PAINT:
-		hdc = BeginPaint(hWnd, &ps);
-		a = sx/2;
-		b = sy/2;
+		case WM_PAINT:
+			hdc = BeginPaint(hWnd, &ps);
+			a = sx/2;
+			b = sy/2;
 
-		SelectObject(hdc, hpen1);
-		MoveToEx(hdc, 0, b, NULL);
+			SelectObject(hdc, hpen1);
+			MoveToEx(hdc, 0, b, NULL);
 
-		LineTo(hdc, sx, b);
-		MoveToEx(hdc, a, 0, NULL);
+			LineTo(hdc, sx, b);
+			MoveToEx(hdc, a, 0, NULL);
 
-		LineTo(hdc, a, sy);
-		MoveToEx(hdc, 0, b, NULL);
+			LineTo(hdc, a, sy);
+			MoveToEx(hdc, 0, b, NULL);
 
-		SelectObject(hdc, hpen2);
+			SelectObject(hdc, hpen2);
 
-		MoveToEx(hdc, a, b, NULL);
-		for (x = 0; x <= 100; x++) {
-			LineTo(hdc, a + x, b - 0.1*x*x); 
-		}
+			MoveToEx(hdc, a, b, NULL);
+			for (x = 0; x <= 100; x++) {
+				LineTo(hdc, a + x, b - 0.1*x*x); 
+			}
 
-		MoveToEx(hdc, a, b, NULL);
-    for (x = 0; x <= 100; x++) {
-			LineTo(hdc, a - x, b - 0.1*x*x); 
-		}
+			MoveToEx(hdc, a, b, NULL);
+	        for (x = 0; x <= 100; x++) {
+				LineTo(hdc, a - x, b - 0.1*x*x); 
+			}
 
-		EndPaint(hWnd, &ps);
+			EndPaint(hWnd, &ps);
 		break;
 
-	case WM_DESTROY:
-		DeleteObject(hpen1);
-		DeleteObject(hpen2);
-		PostQuitMessage(0);
+		case WM_DESTROY:
+			DeleteObject(hpen1);
+			DeleteObject(hpen2);
+			PostQuitMessage(0);
 		break;
 
-	default: return DefWindowProc(hWnd, message, wParam, lParam);
+		default: return DefWindowProc(hWnd, message, wParam, lParam);
 	
 	}
-
 	return 0;
-
 }
