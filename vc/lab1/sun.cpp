@@ -14,21 +14,21 @@ int APIENTRY WinMain(HINSTANCE This, HINSTANCE Prev, LPSTR cmd, int mode) {
 	wc.lpszClassName = WinName; // имя класса окна
 	wc.lpfnWndProc = WndProc; // функция окна
 	wc.style = CS_HREDRAW / CS_VREDRAW; // cтиль окна
-	wc.hIcon = LoadIcon(NULL, IDC_ARROW); // cтандартный курсор
+	wc.hIcon = LoadIcon(NULL, IDC_ARROW); // иконка
+	wc.hCursor = LoadCursor(NULL, IDC_ARROW); //  cтандартный курсор
 	wc.lpszMenuName = NULL; // отключение меню
-	wc.cbClsExtra = 0;
 	wc.cbClsExtra = 0;
 	wc.cbWndExtra = 0;
 
 	// заполнение окна белым цветом
-	wc.hbrBackground = (HBRUSH)(COLOR_WINDOW+1); // установка цвета
+	wc.hbrBackground = (HBRUSH)(COLOR_WINDOW + 1); // установка цвета
 
 	if (!RegisterClass(&wc)) return 0;
 
 	// Создание окна
 	hWnd = CreateWindow(
 		WinName,
-		_T("Каркас Windows-приложения"),
+		_T("Солнце"),
 		WS_OVERLAPPEDWINDOW,
 		CW_USEDEFAULT, // x
 		CW_USEDEFAULT, // y
@@ -61,14 +61,14 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam) 
 	HDC hdc;
 
 	static int sx, sy;
-	
+
 	int sizeCircle = 100;
 	int x1Circle = (sx / 2) - sizeCircle;
 	int y1Circle = (sy / 2) - sizeCircle;
 	int x2Circle = (sx / 2) + sizeCircle;
 	int y2Circle = (sy / 2) + sizeCircle;
 
-	switch(message){
+	switch (message) {
 
 	case WM_SIZE:
 		sx = LOWORD(lParam);
@@ -88,15 +88,14 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam) 
 
 		EndPaint(hWnd, &ps);
 		break;
-		
+
 	case WM_DESTROY: PostQuitMessage(0);
 		break;
 
-		default: return DefWindowProc(hWnd, message, wParam, lParam);
-	
+	default: return DefWindowProc(hWnd, message, wParam, lParam);
+
 	}
 
 	return 0;
 
 }
-
