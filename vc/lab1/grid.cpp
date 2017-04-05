@@ -29,7 +29,7 @@ int APIENTRY WinMain(HINSTANCE This, HINSTANCE Prev, LPSTR cmd, int mode) {
 	// Создание окна
 	hWnd = CreateWindow(
 		WinName,
-		_T("Каркас Windows-приложения"),
+		_T("Сетка"),
 		WS_OVERLAPPEDWINDOW,
 		CW_USEDEFAULT, // x
 		CW_USEDEFAULT, // y
