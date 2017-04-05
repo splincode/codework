@@ -14,10 +14,11 @@ int APIENTRY WinMain(HINSTANCE This, HINSTANCE Prev, LPSTR cmd, int mode) {
 	wc.lpszClassName = WinName; // имя класса окна
 	wc.lpfnWndProc = WndProc; // функция окна
 	wc.style = CS_HREDRAW / CS_VREDRAW; // cтиль окна
-	wc.hIcon = LoadIcon(NULL, IDC_ARROW); // cтандартный курсор
+	wc.hIcon = LoadIcon(NULL, IDC_ARROW); // иконка
+	wc.hCursor = LoadCursor(NULL, IDC_ARROW); //  cтандартный курсор
 	wc.lpszMenuName = NULL; // отключение меню
 	wc.cbClsExtra = 0;
-	wc.cbClsExtra = 0;
+	wc.cbWndExtra = 0;
 	wc.cbWndExtra = 0;
 
 	// заполнение окна белым цветом
@@ -103,4 +104,3 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam) 
 
 
 }
-
