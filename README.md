@@ -132,9 +132,13 @@
 
 <h4>Visual C++</h4>
 <ul>
-	<li><a href="https://github.com/splincode/codework/tree/master/vc/lab1/WinMain.cpp">Типичный каркас Win32 приложения</a></li>
+	<li><a href="https://github.com/splincode/codework/tree/master/vc/lab1/base.cpp">Типичный каркас Win32 приложения</a></li>
 	<li><a href="https://github.com/splincode/codework/tree/master/vc/lab1/grid.cpp">Отрисовка сетки</a></li>
 	<li><a href="https://github.com/splincode/codework/tree/master/vc/lab1/sun.cpp">Отрисовка Солнца</a></li>
+	<li><a href="https://github.com/splincode/codework/tree/master/vc/lab2/sin.cpp">Отображение синуса</a></li>
+	<li><a href="https://github.com/splincode/codework/tree/master/vc/lab2/parabola.cpp">Отображение параболы</a></li>
+	<li><a href="https://github.com/splincode/codework/tree/master/vc/lab2/surface.cpp">Отображение плоскости поверхности</a></li>
+	<li><a href="https://github.com/splincode/codework/tree/master/vc/lab2/graphs3th.cpp">Линия в 3ей четверти</a></li>
 </ul>
 
 <h4>JavaScript</h4>
