@@ -138,7 +138,7 @@
 	<li><a href="https://github.com/splincode/codework/tree/master/vc/lab2/sin.cpp">Отображение синуса</a></li>
 	<li><a href="https://github.com/splincode/codework/tree/master/vc/lab2/parabola.cpp">Отображение параболы</a></li>
 	<li><a href="https://github.com/splincode/codework/tree/master/vc/lab2/surface.cpp">Отображение плоскости поверхности</a></li>
-	<li><a href="https://github.com/splincode/codework/tree/master/vc/lab2/graphs3th.cpp">Линия в 3ей четверти</a></li>
+	<li><a href="https://github.com/splincode/codework/blob/master/vc/lab2/graphs3th.cpp">Линия в 3ей четверти</a></li>
 </ul>
 
 <h4>JavaScript</h4>
