@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Графический редактор</title>
+    <link rel="stylesheet" type="text/css" href="source/style.css">
+  </head>
+  <body>
+
+
+    <div class="nav-top clearfix">
+      <ul>
+        <li id="openFile" onclick="openFile();">Открыть изображение</li>
+      </ul>
+    </div>
+
+    <div class="editor-img"  id="editor">
+
+      <img id="editor-img-checked" src="">
+      
+    </div>
+
+    <div class="property-img">
+      <p class="title">Параметры изображения</p>
+
+      <div class="info clearfix">
+        <div class="left">
+          <label>Ширина</label>
+          <select id="dropdown" name="size" onchange="onChangeMetrics(this.value)">
+            <option value="px" selected>px</option>
+            <option value="cm">cm</option>
+            <option value="percent">%</option>
+          </select>
+          <input id="info-img-width" type="number" onchange="onChangeWidth(this.value)" placeholder="0" min="0" name="">
+
+          <label>Высота</label>
+          <input type="number" id="info-img-height" onchange="onChangeHeight(this.value)" placeholder="0" min="0" name="">
+
+          <label>Повернуть изображение</label>
+          <input type="number" placeholder="0" onchange="onChangeDegree(this.value)" name="">
+
+          <label>Первоначальный размер</label>
+          <button class="btn" onclick="setDefault()">Восстановить размер</button>
+
+        </div>
+
+      </div>
+    </div>
+
+    <script src="source/app.js"></script>
+
+
+  </body>
+</html>
