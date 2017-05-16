@@ -1,6 +1,6 @@
 # Задачи по программированию
 
-<img src="https://habrastorage.org/web/1a3/952/369/1a3952369d664644b2b1e3abc44f4861.png" width="18%" height="10%" alt=""/>
+<img src="https://habrastorage.org/web/bbd/613/c21/bbd613c2128144bbae24e0cda4b412ef.png" width="10%" height="10%" alt=""/>
 <h4>Typescript</h4>
 <ul>
 	<li>
