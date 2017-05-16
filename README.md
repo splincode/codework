@@ -1,5 +1,13 @@
 # Задачи по программированию
 
+<img src="https://habrastorage.org/web/1a3/952/369/1a3952369d664644b2b1e3abc44f4861.png"/>
+<h4>Typescript</h4>
+<ul>
+	<li>
+		<a href="https://github.com/splincode/codework/tree/master/typescript/angular/dynamic.ts">Динамическая загрузка компонентов в Angular 4</a>
+	</li>
+</ul><br>
+
 <img src="http://json.tv/images/general/2014/12/09/20141209192310-1292.png" width="18%" height="10%" alt="">
 <h4>JavaScript</h4>
 <ul>
