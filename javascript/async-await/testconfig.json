@@ -1,0 +1,9 @@
+{
+	"host": "http://localhost:8282",
+	"user": {
+		"name": "admin",
+		"password": "12345"
+	},
+	"startEventId": 39,
+	"wait": 1000
+}
