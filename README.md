@@ -8,6 +8,17 @@
 	</li>
 </ul><br>
 
+
+<h4>JavaScript</h4>
+<ul>
+	<li>
+		<a href="https://github.com/splincode/codework/tree/master/javascript/async-await">Написание автоматизированного скрипта для заполнения сущностей в базе по цепочке связей с использованием асинхронных функций (async/await)</a>
+	</li>
+</ul><br>
+
+
+
+
 <img src="http://json.tv/images/general/2014/12/09/20141209192310-1292.png" width="18%" height="10%" alt="">
 <h4>JavaScript</h4>
 <ul>
