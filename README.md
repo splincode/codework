@@ -8,6 +8,13 @@
 	</li>
 </ul><br>
 
+<h4>JavaScript with NodeJS</h4>
+<ul>
+	<li>
+		<a href="https://github.com/splincode/recursive-phantomjs">Сетевой анализ рендеринга страницы</a>
+	</li>
+</ul><br>
+
 
 <h4>JavaScript</h4>
 <ul>
