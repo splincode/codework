@@ -7,7 +7,7 @@
 		<a href="https://github.com/splincode/codework/tree/master/typescript/angular/dynamic.ts">Динамическая загрузка компонентов в Angular 4</a>
 	</li>
 	<li>
-		<a href="https://github.com/splincode/codework/tree/master/typescript/angular/dynamic.ts">Системный анализатор</a>
+		<a href="https://github.com/splincode/unix-machine-analyze">Системный анализатор</a>
 	</li>
 </ul><br>
 
