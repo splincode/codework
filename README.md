@@ -6,7 +6,11 @@
 	<li>
 		<a href="https://github.com/splincode/codework/tree/master/typescript/angular/dynamic.ts">Динамическая загрузка компонентов в Angular 4</a>
 	</li>
+	<li>
+		<a href="https://github.com/splincode/codework/tree/master/typescript/angular/dynamic.ts">Системный анализатор</a>
+	</li>
 </ul><br>
+
 <h4>JavaScript with NodeJS</h4>
 <ul>
 	<li>
