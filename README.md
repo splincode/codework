@@ -1,15 +1,10 @@
 # Задачи по программированию
 
 <img src="https://habrastorage.org/web/bbd/613/c21/bbd613c2128144bbae24e0cda4b412ef.png" width="10%" alt=""/>
+
 #### Typescript
-1. [Динамическая загрузка компонентов в Angular 4](https://github.com/splincode/codework/tree/master/typescript/angular/dynamic.ts)
 
-
-<ul>
-	<li>
-		<a href="https://github.com/splincode/codework/tree/master/typescript/angular/dynamic.ts">Динамическая загрузка компонентов в Angular 4</a>
-	</li>
-</ul><br>
+1.[Динамическая загрузка компонентов в Angular 4](https://github.com/splincode/codework/tree/master/typescript/angular/dynamic.ts)
 
 <h4>Shell</h4>
 <ul>
