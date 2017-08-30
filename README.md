@@ -1,6 +1,8 @@
 # Задачи по программированию
 
-<img src="https://habrastorage.org/web/bbd/613/c21/bbd613c2128144bbae24e0cda4b412ef.png" width="10%" alt=""/>
+--------------
+
+<img src="https://habrastorage.org/web/bbd/613/c21/bbd613c2128144bbae24e0cda4b412ef.png" width="10%" alt="" />
 
 #### Typescript
 - [Динамическая загрузка компонентов в Angular 4](https://github.com/splincode/codework/tree/master/typescript/angular/dynamic.ts)
@@ -48,6 +50,8 @@
 	</li>
 </ul><br>
 
+--------------
+
 <img src="https://avatars.yandex.net/get-bunker/7dab1734c4d1632185bd09b2d8e6b66e8cafb732/normal/7dab17.png" width="10%" height="10%" alt="">
 <h4>JavaScript</h4>
 <ul>
@@ -72,6 +76,8 @@
 		Исправить неработающий код</a> <sup> незакончено</sup>
 	</li>
 </ul><br>
+
+--------------
 
 <img src="https://upload.wikimedia.org/wikipedia/ru/8/8a/Stankin.gif" width="10%" height="10%" alt="">
 <h4>C++</h4>
