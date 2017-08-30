@@ -6,12 +6,16 @@
 	<li>
 		<a href="https://github.com/splincode/codework/tree/master/typescript/angular/dynamic.ts">Динамическая загрузка компонентов в Angular 4</a>
 	</li>
+</ul><br>
+
+<h4>Shell</h4>
+<ul>
 	<li>
 		<a href="https://github.com/splincode/system-monitor">Системный монитор</a>
 	</li>
 </ul><br>
-
-<h4>JavaScript with NodeJS</h4>
+	
+<h4>JavaScript / NodeJS</h4>
 <ul>
 	<li>
 		<a href="https://github.com/splincode/recursive-phantomjs">Сетевой анализ рендеринга страницы</a>
