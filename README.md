@@ -21,7 +21,7 @@
 		<a href="https://github.com/splincode/recursive-phantomjs">Сетевой анализ рендеринга страницы</a>
 	</li>
 	<li>
-		<a href="https://github.com/splincode/codework/tree/master/javascript/async-await">Написание автоматизированного скрипта для заполнения сущностей в базе по цепочке связей с использованием асинхронных функций (async/await)</a>
+		<a href="https://github.com/splincode/codework/tree/master/javascript/async-await">Заполнения сущностей в базе по цепочке связей (async/await)</a>
 	</li>
 </ul><br>
 
