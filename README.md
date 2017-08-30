@@ -3,19 +3,19 @@
 <img src="https://habrastorage.org/web/bbd/613/c21/bbd613c2128144bbae24e0cda4b412ef.png" width="10%" alt=""/>
 
 #### Typescript
-1. [Динамическая загрузка компонентов в Angular 4](https://github.com/splincode/codework/tree/master/typescript/angular/dynamic.ts)
+- [Динамическая загрузка компонентов в Angular 4](https://github.com/splincode/codework/tree/master/typescript/angular/dynamic.ts)
 
 #### Shell
-1. [Системный монитор](https://github.com/splincode/system-monitor)
+- [Системный монитор](https://github.com/splincode/system-monitor)
 
 #### JavaScript
-1. [Сетевой анализ рендеринга страницы](https://github.com/splincode/recursive-phantomjs)
-2. [Заполнения сущностей в базе по цепочке связей (async/await)](https://github.com/splincode/codework/tree/master/javascript/async-await)
+- [Сетевой анализ рендеринга страницы](https://github.com/splincode/recursive-phantomjs)
+- [Заполнения сущностей в базе по цепочке связей (async/await)](https://github.com/splincode/codework/tree/master/javascript/async-await)
 
 <img src="http://json.tv/images/general/2014/12/09/20141209192310-1292.png" width="18%" height="10%" alt="">
 
 #### JavaScript
-1. [Проверка теоретических знаний](https://github.com/splincode/codework/tree/master/javascript/theory)
+- [Проверка теоретических знаний](https://github.com/splincode/codework/tree/master/javascript/theory)
 
 <img src="http://www.spomoni.com/wp-content/uploads/2013/04/2013-3-18-11-32-34-759.png" width="18%" height="10%" alt="">
 <h4>PHP</h4>
