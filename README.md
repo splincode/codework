@@ -6,6 +6,7 @@
 
 #### Typescript
 - [Динамическая загрузка компонентов в Angular 4](https://github.com/splincode/codework/tree/master/typescript/angular/dynamic.ts)
+- Написание обработчика КриптоПро ЭЦП Browser plug-in для веб-компонентов на Angular
 
 #### Shell
 - [Системный монитор](https://github.com/splincode/system-monitor)
