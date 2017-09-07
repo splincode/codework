@@ -14,6 +14,7 @@
 #### JavaScript
 - [Сетевой анализ рендеринга страницы](https://github.com/splincode/recursive-phantomjs)
 - [Заполнения сущностей в базе по цепочке связей (async/await)](https://github.com/splincode/codework/tree/master/javascript/async-await)
+- [Интеграция с устройствами и управление через веб-интерфейс](https://github.com/splincode/ihardware/tree/master/omron)
 
 --------------
 
