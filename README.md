@@ -26,62 +26,32 @@
 --------------
 
 <img src="http://www.spomoni.com/wp-content/uploads/2013/04/2013-3-18-11-32-34-759.png" width="18%" height="10%" alt="">
-<h4>PHP</h4>
-<ul>
-	<li>
-		<a href="https://github.com/splincode/codework/tree/master/php/theory">Теория</a>
-	</li>
-	<li>
-		<a href="https://github.com/splincode/codework/tree/master/php/sort">
-		Отсортировать все слова по количеству вхождений</a>
-	</li>
-	<li>
-		<a href="https://github.com/splincode/codework/tree/master/php/sql">Пример производительной SQL-выборки</a>
-	</li>
-</ul><br>
+
+#### PHP
+- [Теория](https://github.com/splincode/codework/tree/master/php/theory)
+- [Отсортировать все слова по количеству вхождений](https://github.com/splincode/codework/tree/master/php/sort)
+- [Пример производительной SQL-выборки](https://github.com/splincode/codework/tree/master/php/sql)
 
 --------------
 
 <img src="https://habrastorage.org/files/bf3/57e/832/bf357e832ba24e69b4182efc56d07283.jpg" width="18%" height="10%" alt="">
-<h4>C++</h4>
-<ul>
-	<li>
-		<a href="https://github.com/splincode/codework/tree/master/cpp/prime">Тест на простоту числа</a>
-	</li>
-	<li>
-		<a href="https://github.com/splincode/codework/tree/master/cpp/memory">Библиотека для работы с памятью</a>
-	</li>
-	<li>
-		<a href="https://github.com/splincode/codework/tree/master/cpp/link">Ссылка возврата</a>
-	</li>
-</ul><br>
+
+#### C++
+- [Тест на простоту числа](https://github.com/splincode/codework/tree/master/cpp/prime)
+- [Библиотека для работы с памятью](https://github.com/splincode/codework/tree/master/cpp/memory)
+- [Ссылка возврата](https://github.com/splincode/codework/tree/master/cpp/link)
 
 --------------
 
 <img src="https://avatars.yandex.net/get-bunker/7dab1734c4d1632185bd09b2d8e6b66e8cafb732/normal/7dab17.png" width="10%" height="10%" alt="">
-<h4>JavaScript</h4>
-<ul>
-	<li>
-		<a href="https://github.com/splincode/codework/tree/master/javascript/travels">
-		Сортировщик карточек путешественника</a>
-	</li>
-	<li>
-		<a href="https://github.com/splincode/codework/tree/master/javascript/framework">
-		JS-фреймворк для работы с css классами dom элементов</a>
-	</li>
-	<li>
-		<a href="https://github.com/splincode/codework/tree/master/javascript/mobilization">
-		Cверстать расписание лекций проекта «Мобилизация»</a> <sup> незакончено</sup>
-	</li>
-	<li>
-		<a href="https://github.com/splincode/codework/tree/master/javascript/mobilization-api">
-		Напишите библиотеку, предоставляющую API для работы с расписанием лекций</a> <sup> незакончено</sup>
-	</li>
-	<li>
-		<a href="https://github.com/splincode/codework/tree/master/javascript/fetch-error">
-		Исправить неработающий код</a> <sup> незакончено</sup>
-	</li>
-</ul><br>
+
+#### JavaScript
+
+- [Сортировщик карточек путешественника](https://github.com/splincode/codework/tree/master/javascript/travels)
+- [JS-фреймворк для работы с css классами dom элементов](https://github.com/splincode/codework/tree/master/javascript/framework)
+- [Cверстать расписание лекций проекта «Мобилизация» (незакончено)](https://github.com/splincode/codework/tree/master/javascript/mobilization)
+- [Напишите библиотеку, предоставляющую API для работы с расписанием лекций (незакончено)](Напишите библиотеку, предоставляющую API для работы с расписанием лекций)
+- [Исправить неработающий код (незакончено)](https://github.com/splincode/codework/tree/master/javascript/fetch-error)
 
 --------------
 
