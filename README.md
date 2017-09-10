@@ -50,7 +50,7 @@
 - [Сортировщик карточек путешественника](https://github.com/splincode/codework/tree/master/javascript/travels)
 - [JS-фреймворк для работы с css классами dom элементов](https://github.com/splincode/codework/tree/master/javascript/framework)
 - [Cверстать расписание лекций проекта «Мобилизация» (незакончено)](https://github.com/splincode/codework/tree/master/javascript/mobilization)
-- [Напишите библиотеку, предоставляющую API для работы с расписанием лекций (незакончено)](Напишите библиотеку, предоставляющую API для работы с расписанием лекций)
+- [Напишите библиотеку, предоставляющую API для работы с расписанием лекций (незакончено)](https://github.com/splincode/codework/tree/master/javascript/mobilization-api)
 - [Исправить неработающий код (незакончено)](https://github.com/splincode/codework/tree/master/javascript/fetch-error)
 
 --------------
