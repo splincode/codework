@@ -56,11 +56,13 @@
 --------------
 
 <img src="https://upload.wikimedia.org/wikipedia/ru/8/8a/Stankin.gif" width="10%" height="10%" alt="">
-<h4>C++</h4>
+
+#### C++
+- [Функции для работы с файлами](https://github.com/splincode/codework/tree/master/cpp/fs)
+
+
 <ul>
-	<li>
-		<a href="https://github.com/splincode/codework/tree/master/cpp/fso">Функции для работы с файлами</a>
-	</li>
+
 	<li>
 		<a href="https://github.com/splincode/codework/tree/master/cpp/associative">
 		Статичный ассоциативный массив</a>
