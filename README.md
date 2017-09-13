@@ -59,71 +59,25 @@
 
 #### C++
 - [Функции для работы с файлами](https://github.com/splincode/codework/tree/master/cpp/fs)
+- [Статичный ассоциативный массив](https://github.com/splincode/codework/tree/master/cpp/associative)
+- [Электронные часы (GUI)](https://github.com/splincode/codework/tree/master/cpp/gui)
+- [Библиотеки (dll, so)](https://github.com/splincode/codework/tree/master/cpp/dll)
+- [Структура данных - вектор](https://github.com/splincode/codework/tree/master/cpp/vector)
+- [Структура данных - матрица](https://github.com/splincode/codework/tree/master/cpp/matrix)
+- [Структура данных - граф](https://github.com/splincode/codework/tree/master/cpp/graph)
+- [Структура данных - дерево](https://github.com/splincode/codework/tree/master/cpp/tree)
+- [Универсальный скалярный тип](https://github.com/splincode/codework/tree/master/cpp/var)
+- [Игра «Жизнь» на WebView](https://github.com/splincode/codework/tree/master/cpp/gamelife)
+- [Компилятор](https://github.com/splincode/codework/tree/master/cpp/compiler)
+- [Транслятор](https://github.com/splincode/codework/tree/master/cpp/translater)
+- [Мультитранслятор](https://github.com/splincode/codework/tree/master/cpp/multitranslater)
+- [Интерпретатор лямбда-исчислений](https://github.com/splincode/codework/tree/master/cpp/lambda)
+- [Решатель судоку](https://github.com/splincode/codework/tree/master/cpp/sudoku)
+- [Метод сопряженных градиентов](https://github.com/splincode/codework/blob/master/cpp/nonlinear_conjugate_gradient_method/)
 
 
-<ul>
+--------------
 
-	<li>
-		<a href="https://github.com/splincode/codework/tree/master/cpp/associative">
-		Статичный ассоциативный массив</a>
-	</li>
-	<li>
-		<a href="https://github.com/splincode/codework/tree/master/cpp/gui">
-		Электронные часы (GUI)</a>
-	</li>
-	<li>
-		<a href="https://github.com/splincode/codework/tree/master/cpp/dll">
-		Библиотеки (dll, so)</a>
-	</li>
-	<li>
-		<a href="https://github.com/splincode/codework/tree/master/cpp/vector">
-		Структура данных - вектор</a>
-	</li>
-	<li>
-		<a href="https://github.com/splincode/codework/tree/master/cpp/matrix">
-		Структура данных - матрица</a>
-	</li>
-	<li>
-		<a href="https://github.com/splincode/codework/tree/master/cpp/graph">
-		Структура данных - граф</a>
-	</li>
-	<li>
-		<a href="https://github.com/splincode/codework/tree/master/cpp/tree">
-		Структура данных - дерево</a>
-	</li>
-	<li>
-		<a href="https://github.com/splincode/codework/tree/master/cpp/var">
-		Универсальный скалярный тип</a>
-	</li>
-	<li>
-		<a href="https://github.com/splincode/codework/tree/master/cpp/gamelife">
-		Игра «Жизнь»</a>
-	</li>
-	<li>
-		<a href="https://github.com/splincode/codework/tree/master/cpp/compiler">
-		Компилятор</a>
-	</li>
-	<li>
-		<a href="https://github.com/splincode/codework/tree/master/cpp/translater">
-		Транслятор</a>
-	</li>
-	<li>
-		<a href="https://github.com/splincode/codework/tree/master/cpp/multitranslater">
-		Мультитранслятор</a>
-	</li>
-	<li>
-		<a href="https://github.com/splincode/codework/tree/master/cpp/lambda">
-		Интерпретатор лямбда-исчислений</a>
-	</li>
-	<li>
-		<a href="https://github.com/splincode/codework/tree/master/cpp/sudoku">
-		Решатель судоку</a>
-	</li>
-	<li>
-		<a href="https://github.com/splincode/codework/blob/master/cpp/nonlinear_conjugate_gradient_method/">
-		Метод сопряженных градиентов</a>
-	</li>
-</ul>
 
 <h4>Visual C++</h4>
 <ul>
