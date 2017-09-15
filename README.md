@@ -4,6 +4,9 @@
 
 <img src="https://habrastorage.org/web/bbd/613/c21/bbd613c2128144bbae24e0cda4b412ef.png" width="10%" alt="" />
 
+#### Публикации
+- [Перевод Chromium архитектуры](https://github.com/splincode/chromium-architecture)
+
 #### Typescript
 - [Динамическая загрузка компонентов в Angular 4](https://github.com/splincode/codework/tree/master/typescript/angular/dynamic.ts)
 - [Написание обработчика КриптоПро ЭЦП Browser plug-in для веб-компонентов на Angular](https://github.com/splincode/cryptopro-browser-plugin)
