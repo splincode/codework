@@ -6,8 +6,11 @@ import java.util.InputMismatchException;
 class NumeralSystemUtil {
 
 	static class Convert {
+
+		public static String digits = "0123456789ABCDEF";
+
 		public static String convertDecToBaseNumber(int decimacal, int scaleBase) {
-    		String digits = "0123456789ABCDEF";
+
 		    if (decimacal <= 0) return "0";
 
 		    int base = scaleBase;
@@ -15,7 +18,7 @@ class NumeralSystemUtil {
 
 		    while (decimacal > 0) {
 		        int digit = decimacal % base;             
-		        result = digits.charAt(digit) + result; 
+		        result = Convert.digits.charAt(digit) + result; 
 		        decimacal = decimacal / base;
 		    }
 
