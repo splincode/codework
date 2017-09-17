@@ -3,7 +3,7 @@ package NumeralSystem;
 import java.util.Scanner;
 import java.util.InputMismatchException;
 
-class NumeralSystemUtil {
+class Util {
 
  static class Convert {
 
