@@ -5,7 +5,7 @@
 ### Compile class
 
 ```bash
-$ javac NumeralSystem/Main.java
+$ javac ru/splincode/numeralsystem/Main.java
 ```
 
 Будет сгенерирован Main.class в директории NumeralSystem.
@@ -13,7 +13,7 @@ $ javac NumeralSystem/Main.java
 ### Run class
 
 ```bash
-$ java -cp . NumeralSystem.Main
+$ java -cp . ru.splincode.numeralsystem.Main
 ```
 
 Output:
@@ -24,11 +24,4 @@ Enter decimacal number (integer): 1024
 Dec: 1024
 Hex: 400
 Bin: 10000000000
-```
-
-### Create and run a JAR file
-
-```bash
-$ jar cfme Main.jar Manifest.txt NumeralSystem.Main NumeralSystem/Main.class
-$ java -jar Main.jar
 ```

@@ -1,5 +1,4 @@
-package NumeralSystem;
-
+package ru.splincode.numeralsystem;
 import java.util.Scanner;
 import java.util.InputMismatchException;
 
@@ -47,11 +46,11 @@ class Util {
   }
 
   public static String toBinary(int decimacal) {
-   return NumeralSystemUtil.Convert.convertDecToBaseNumber(decimacal, 2);
+   return Util.Convert.convertDecToBaseNumber(decimacal, 2);
   }
 
   public static String toHex(int decimacal) {
-   return NumeralSystemUtil.Convert.convertDecToBaseNumber(decimacal, 16);
+   return Util.Convert.convertDecToBaseNumber(decimacal, 16);
   }
 
  }
