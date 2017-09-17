@@ -3,14 +3,14 @@ package ru.splincode.numeralsystem;
 public class Main {
  public static void main(String[] args) {
 
-  int decimacal = Util.Dec.getNumberFromLine();
-  String hexdecimal = Util.Dec.toHex(decimacal);
-  String binary = Util.Dec.toBinary(decimacal);
+  int decimalValue = Util.Dec.getNumberFromLine();
+  String hexdecimalValue = Util.Dec.toHex(decimalValue);
+  String binaryValue = Util.Dec.toBinary(decimalValue);
 
   System.out.println("==================");
-  System.out.println("Dec: " + decimacal);
-  System.out.println("Hex: " + hexdecimal);
-  System.out.println("Bin: " + binary);
+  System.out.println("Dec: " + decimalValue);
+  System.out.println("Hex: " + hexdecimalValue);
+  System.out.println("Bin: " + binaryValue);
 
  }
 }
