@@ -1,5 +1,7 @@
 # Задачи по программированию
 
+Примеры задач с моим собственным решением или описанием.
+
 --------------
 
 <img src="https://habrastorage.org/web/bbd/613/c21/bbd613c2128144bbae24e0cda4b412ef.png" width="10%" alt="" />
@@ -81,50 +83,28 @@
 
 --------------
 
+#### Visual C++
+- [Типичный каркас Win32 приложения](https://github.com/splincode/codework/tree/master/vc/lab1/base.cpp)
+- [Отрисовка сетки](https://github.com/splincode/codework/tree/master/vc/lab1/grid.cpp)
+- [Отрисовка Солнца](https://github.com/splincode/codework/tree/master/vc/lab1/sun.cpp)
+- [Отображение синуса](https://github.com/splincode/codework/tree/master/vc/lab2/sin.cpp)
+- [Отображение параболы](https://github.com/splincode/codework/tree/master/vc/lab2/parabola.cpp)
+- [Отображение плоскости поверхности](https://github.com/splincode/codework/tree/master/vc/lab2/surface.cpp)
+- [Линия в 3ей четверти](https://github.com/splincode/codework/blob/master/vc/lab2/graphs3th.cpp)
 
-<h4>Visual C++</h4>
-<ul>
-	<li><a href="https://github.com/splincode/codework/tree/master/vc/lab1/base.cpp">Типичный каркас Win32 приложения</a></li>
-	<li><a href="https://github.com/splincode/codework/tree/master/vc/lab1/grid.cpp">Отрисовка сетки</a></li>
-	<li><a href="https://github.com/splincode/codework/tree/master/vc/lab1/sun.cpp">Отрисовка Солнца</a></li>
-	<li><a href="https://github.com/splincode/codework/tree/master/vc/lab2/sin.cpp">Отображение синуса</a></li>
-	<li><a href="https://github.com/splincode/codework/tree/master/vc/lab2/parabola.cpp">Отображение параболы</a></li>
-	<li><a href="https://github.com/splincode/codework/tree/master/vc/lab2/surface.cpp">Отображение плоскости поверхности</a></li>
-	<li><a href="https://github.com/splincode/codework/blob/master/vc/lab2/graphs3th.cpp">Линия в 3ей четверти</a></li>
-</ul>
+--------------
 
-<h4>JavaScript</h4>
-<ul>
-	<li>
-		<a href="https://github.com/splincode/codework/tree/master/javascript/transcalency">
-		Уравнение теплопроводности</a>
-	</li>
-	<li>
-		<a href="https://github.com/splincode/codework/tree/master/javascript/wave">
-		Волновое уравнение</a>
-	</li>
-	<li>
-		<a href="https://github.com/splincode/codework/tree/master/javascript/golden_section_method">
-		Метод золотого сечения</a>
-	</li>
-	<li>
-		<a href="https://github.com/splincode/codework/tree/master/javascript/dichotomy_method">
-		Метод дихотомии</a>
-	</li>
-	<li>
-		<a href="https://github.com/splincode/codework/blob/master/javascript/pattern_search/">
-		Метод Хука-Дживса (прямой поиск)</a>
-	</li>
-	<li>
-		<a href="https://github.com/splincode/codework/blob/master/javascript/production_system/">
-		Продукционная модель</a>
-	</li>
-	<li>
-		<a href="https://github.com/splincode/codework/blob/master/javascript/cad/">
-		Система решения задач теоретической механики методом сил</a>
-	</li>
-	<li>
-		<a href="https://github.com/splincode/codework/tree/master/javascript/grapheditor/">
-		Графический редактор</a>
-	</li>
-</ul>
+#### Java
+- [Перевод из одной системы счисления в другую](https://github.com/splincode/codework/tree/master/java/notation)
+
+--------------
+
+#### JavaScript
+- [Уравнение теплопроводности](https://github.com/splincode/codework/tree/master/javascript/transcalency)
+- [Волновое уравнение](https://github.com/splincode/codework/tree/master/javascript/transcalency)
+- [Метод золотого сечения](https://github.com/splincode/codework/tree/master/javascript/golden_section_method)
+- [Метод дихотомии](https://github.com/splincode/codework/tree/master/javascript/dichotomy_method)
+- [Метод Хука-Дживса (прямой поиск)](https://github.com/splincode/codework/blob/master/javascript/pattern_search/)
+- [Продукционная модель](https://github.com/splincode/codework/blob/master/javascript/production_system/)
+- [Система решения задач теоретической механики методом сил](https://github.com/splincode/codework/blob/master/javascript/cad/)
+- [Графический редактор](https://github.com/splincode/codework/tree/master/javascript/grapheditor/)
