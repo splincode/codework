@@ -5,7 +5,7 @@ public class Main {
 
  	int maxTreeInGarden = 20;
  	GardenTree gardenTrees[] = getGardenTrees(maxTreeInGarden);
- 	showInformationByTree(gardenTrees);
+ 	showInformationByGardenTrees(gardenTrees);
  	
  }
 
@@ -37,7 +37,7 @@ public class Main {
 
  }
 
- public static void showInformationByTree(GardenTree gardenTrees[]) {
+ public static void showInformationByGardenTrees(GardenTree gardenTrees[]) {
 
  	int index = 1;
 

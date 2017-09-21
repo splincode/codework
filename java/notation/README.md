@@ -8,8 +8,6 @@
 $ javac ru/splincode/numeralsystem/Main.java
 ```
 
-Будет сгенерирован Main.class в директории NumeralSystem.
-
 ### Run class
 
 ```bash
