@@ -96,6 +96,7 @@
 
 #### Java
 - [Перевод из одной системы счисления в другую](https://github.com/splincode/codework/tree/master/java/notation)
+- [Фабричный метод](https://github.com/splincode/codework/tree/master/java/garden)
 
 --------------
 
