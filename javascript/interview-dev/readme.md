@@ -126,18 +126,18 @@ var rle = {};
 var rleOutput = "";
 
 for (let i = 0; symbol = input[i]; ++i) {
-	if (!rle[symbol]) {
-		rle[symbol] = 1;
-	} else {
-		rle[symbol]++;
-	}
+    if (!rle[symbol]) {
+        rle[symbol] = 1;
+    } else {
+        rle[symbol]++;
+    }
 
-	var nextValue = input[i+1];
-	if (nextValue !== symbol) {
-		var countSymbol = rle[symbol] > 1 ? String(rle[symbol]) : '';
-		rleOutput = rleOutput + symbol + countSymbol;
-		delete rle[symbol];
-	}
+    var nextValue = input[i + 1];
+    if (nextValue !== symbol) {
+        var countSymbol = rle[symbol] > 1 ? String(rle[symbol]) : '';
+        rleOutput = rleOutput + symbol + countSymbol;
+        delete rle[symbol];
+    }
 
 }
 
