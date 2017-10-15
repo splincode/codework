@@ -52,6 +52,7 @@
 
 #### JavaScript
 
+- [Собеседование и подготовка](https://github.com/splincode/codework/tree/master/javascript/interview-dev)
 - [Сортировщик карточек путешественника](https://github.com/splincode/codework/tree/master/javascript/travels)
 - [JS-фреймворк для работы с css классами dom элементов](https://github.com/splincode/codework/tree/master/javascript/framework)
 - [Cверстать расписание лекций проекта «Мобилизация» (незакончено)](https://github.com/splincode/codework/tree/master/javascript/mobilization)
