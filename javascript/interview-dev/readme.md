@@ -118,6 +118,32 @@ AAAABBBCCXYZDDDDEEEFFFAAAAAABBBBBBBBBBBBBBBBBBBBBBBBBBBB
 A4B3C2XYZD4E3F3A6B28
 ````
 
+
+**Решение**
+````js
+var input = "AAAABBBCCXYZDDDDEEEFFFAAAAAABBBBBBBBBBBBBBBBBBBBBBBBBBBB";
+var rle = {};
+var rleOutput = "";
+
+for (let i = 0; symbol = input[i]; ++i) {
+	if (!rle[symbol]) {
+		rle[symbol] = 1;
+	} else {
+		rle[symbol]++;
+	}
+
+	var nextValue = input[i+1];
+	if (nextValue !== symbol) {
+		var countSymbol = rle[symbol] > 1 ? String(rle[symbol]) : '';
+		rleOutput = rleOutput + symbol + countSymbol;
+		delete rle[symbol];
+	}
+
+}
+
+console.log(rleOutput === "A4B3C2XYZD4E3F3A6B28"); // true
+````
+
 Пояснение:
 - если символ встречается 1 раз, он остается без изменений
 - если символ повторяется более 1 раза, к нему добавляется количество повторений
