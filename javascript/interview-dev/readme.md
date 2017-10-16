@@ -160,3 +160,34 @@ console.log(rleOutput === "A4B3C2XYZD4E3F3A6B28"); // true
   }
 }).method();
 ````
+
+13. Проверка растановки скобок в строке
+
+````js
+function check(string) {
+ 
+    var stack = [];
+    var table = {
+     "{": "}",
+     "(": ")",
+     "[": "]"
+    };
+
+    for (let i = 0; string[i]; i++) {
+     let lastElement = stack.slice(-1)[0];
+     if (table[lastElement] == string[i]) {
+       stack.pop();
+     } else {
+       stack.push(string[i]);
+     }
+    }
+
+    return stack.length > 0 ? false : true;
+
+}
+
+
+check("({})({[]})"); // true
+check("({)}"); // false
+
+````
