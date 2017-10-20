@@ -18,7 +18,7 @@ ___
 
 ### Angular Meetup — встреча для профессионалов фронтэнда
 
-> **Angular** — один из немногих фреймворков без обёрток и костылей. В нём учтены ошибки AngularJS, React, Ember. Мы расскажем о своём опыте использования Angular, обсудим актуальные проблемы и попробуем разобраться, какие тренды ожидают нас в ближайшем будущем.
+**Angular** — один из немногих фреймворков без обёрток и костылей. В нём учтены ошибки AngularJS, React, Ember. Мы расскажем о своём опыте использования Angular, обсудим актуальные проблемы и попробуем разобраться, какие тренды ожидают нас в ближайшем будущем.
 
 ___
 
@@ -28,8 +28,9 @@ ___
 
 <details>
   <summary><b>Angular Router вдоль и поперек</b> - Юлия Царева [version 4.x]</summary>
-<br>
-[![youtube](https://www.youtube.com/watch?v=ovsBd6Y5DN0&feature=youtu.be)
+
+  [![Little red ridning hood](http://i.imgur.com/7YTMFQp.png)](https://vimeo.com/3514904 "Little red riding hood - Click to Watch!")
+
 <details>
 
 ___
