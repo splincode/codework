@@ -1,8 +1,6 @@
-<h1> 
- <img src="https://meetup.tinkoff.ru/assets/images/event/logo_angular.svg" 
-      width="45" 
-      height="45" 
-      style="float:left; margin-bottom: -10px;" />
- Angular Meetup by Tinkoff
-</h1>
-    
+<div style="float: left;">
+  <img src="https://meetup.tinkoff.ru/assets/images/event/logo_angular.svg" width="128" height="128"/>
+</div> 
+
+# Angular Meetup by Tinkoff
+## Angular Meetup by Tinkoff
