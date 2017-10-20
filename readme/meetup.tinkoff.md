@@ -28,7 +28,7 @@ ___
 
 <details>
   <summary><b>Unit-тестирование форм в Angular</b> - Павел Пилипчак [version 4.x]</summary>
-  [![Watch the video](https://img.youtube.com/vi/Tpb3DRsjQFI/0.jpg)](https://www.youtube.com/watch?v=Tpb3DRsjQFI)
+  <a href="https://www.youtube.com/watch?v=Tpb3DRsjQFI"><img src="https://img.youtube.com/vi/Tpb3DRsjQFI/0.jpg" width="100%"/></a>
 </details>
 
 <details>
