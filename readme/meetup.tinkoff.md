@@ -6,3 +6,8 @@
 ### Angular Meetup — встреча для профессионалов фронтэнда.
 
 Angular — один из немногих фреймворков без обёрток и костылей. В нём учтены ошибки AngularJS, React, Ember. Мы расскажем о своём опыте использования Angular, обсудим актуальные проблемы и попробуем разобраться, какие тренды ожидают нас в ближайшем будущем.
+
+
+<div style="float:left;margin:0 10px 10px 0" markdown="1">
+    ![book](https://meetup.tinkoff.ru/assets/images/event/logo_angular.svg)
+</div>Angular Meetup — встреча для профессионалов фронтэнда.
