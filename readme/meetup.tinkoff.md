@@ -2,9 +2,10 @@
   Angular Meetup by Tinkoff
   <img src="https://meetup.tinkoff.ru/assets/images/event/logo_angular.svg" width="30" height="20" style="float: right" />
 </h1>
-<a href="https://meetup.tinkoff.ru/#subscription" target="_blank" style="float: left">Подписка</a>
-<a href="https://meetup.tinkoff.ru/#archive" target="_blank" style="float: left">Архив</a>
-Москва, БЦ Водный, Головинское шоссе, д. 5
+<p style="float: left"><b>Место проведения</b>: Москва, БЦ Водный, Головинское шоссе, д. 5</p>
+<a href="https://meetup.tinkoff.ru/#subscription" target="_blank" style="float: left">&#10096;Подписка&#10097;</a>
+<a href="https://meetup.tinkoff.ru/#archive" target="_blank" style="float: left">&#10096;Архив&#10097;</a>
+
 
 ### Angular Meetup — встреча для профессионалов фронтэнда
 
