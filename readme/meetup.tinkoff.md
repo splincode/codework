@@ -9,5 +9,5 @@ Angular — один из немногих фреймворков без обё�
 
 
 <div style="float:left;margin:0 10px 10px 0" markdown="1">
-    ![book](https://meetup.tinkoff.ru/assets/images/event/logo_angular.svg)
+    <img src="https://meetup.tinkoff.ru/assets/images/event/logo_angular.svg" width="45" height="30" />
 </div>Angular Meetup — встреча для профессионалов фронтэнда.
