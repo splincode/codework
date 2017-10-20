@@ -161,7 +161,7 @@ console.log(rleOutput === "A4B3C2XYZD4E3F3A6B28"); // true
 }).method();
 ````
 
-13. Проверка растановки скобок в строке
+13. Проверка расстановки скобок в строке
 
 ````js
 function check(string) {
