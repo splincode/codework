@@ -1,9 +1,5 @@
 # Задачи по программированию
 
-Примеры задач с моим собственным решением или описанием.
-
---------------
-
 <img src="https://habrastorage.org/web/bbd/613/c21/bbd613c2128144bbae24e0cda4b412ef.png" width="10%" alt="" />
 
 #### Публикации
@@ -55,9 +51,9 @@
 - [Собеседование и подготовка](https://github.com/splincode/codework/tree/master/javascript/interview-dev)
 - [Сортировщик карточек путешественника](https://github.com/splincode/codework/tree/master/javascript/travels)
 - [JS-фреймворк для работы с css классами dom элементов](https://github.com/splincode/codework/tree/master/javascript/framework)
-- [Cверстать расписание лекций проекта «Мобилизация» (незакончено)](https://github.com/splincode/codework/tree/master/javascript/mobilization)
-- [Напишите библиотеку, предоставляющую API для работы с расписанием лекций (незакончено)](https://github.com/splincode/codework/tree/master/javascript/mobilization-api)
-- [Исправить неработающий код (незакончено)](https://github.com/splincode/codework/tree/master/javascript/fetch-error)
+- [Cверстать расписание лекций проекта «Мобилизация»](https://github.com/splincode/codework/tree/master/javascript/mobilization)
+- [Напишите библиотеку, предоставляющую API для работы с расписанием лекций](https://github.com/splincode/codework/tree/master/javascript/mobilization-api)
+- [Исправить неработающий код](https://github.com/splincode/codework/tree/master/javascript/fetch-error)
 
 --------------
 
