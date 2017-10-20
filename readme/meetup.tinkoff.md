@@ -26,50 +26,52 @@ ___
 
 Не факт, что тема была освещена полностью. Поэтому если есть, что добавить или сказать, не стесняйтесь предлагать.
 
+[version 4.x]
 <details>
-  <summary><b>Unit-тестирование форм в Angular</b> - Павел Пилипчак [version 4.x]</summary>
+  <summary><b>Unit-тестирование форм в Angular</b> - Павел Пилипчак</summary>
   <a href="https://www.youtube.com/watch?v=Tpb3DRsjQFI">
     <br><img src="https://img.youtube.com/vi/Tpb3DRsjQFI/0.jpg" align="center" height="300px"/><br>
   </a>
 </details>
 
 <details>
-  <summary><b>Cостояние состояния (Services, Redux, Mobx, DCI)</b> - Алексей Охрименко [version 4.x]</summary>
+  <summary><b>Cостояние состояния (Services, Redux, Mobx, DCI)</b> - Алексей Охрименко</summary>
   <a href="https://www.youtube.com/watch?v=8VesYob7OJg">
     <br><img src="https://img.youtube.com/vi/8VesYob7OJg/0.jpg" align="center" height="300px"/><br>
   </a>
-</details><br>
+</details>
   
 <details>
-  <summary><b>PrimeNG, опыт использования</b> - Вадим Жамков [version 4.x]</summary>
+  <summary><b>PrimeNG, опыт использования</b> - Вадим Жамков</summary>
   <a href="https://www.youtube.com/watch?v=jNsr_CaTavY">
     <br><img src="https://img.youtube.com/vi/jNsr_CaTavY/0.jpg" align="center" height="300px"/><br>
   </a>
 </details>
 
 <details>
-  <summary><b>Angular Router вдоль и поперек</b> - Юлия Царева [version 4.x]</summary>
+  <summary><b>Angular Router вдоль и поперек</b> - Юлия Царева</summary>
   <a href="https://www.youtube.com/watch?v=ovsBd6Y5DN0">
     <br><img src="https://img.youtube.com/vi/ovsBd6Y5DN0/0.jpg" align="center" height="300px"/><br>
   </a>
-</details>
-  
+</details><br>
+
+[version 2.x]
 <details>
-  <summary><b>Динамическое создание компонентов в Angular</b> - Андрей Яманов [version 2.x]</summary>
+  <summary><b>Динамическое создание компонентов в Angular</b> - Андрей Яманов </summary>
   <a href="https://www.youtube.com/watch?v=blSENg8Gssw">
     <br><img src="https://img.youtube.com/vi/blSENg8Gssw/0.jpg" align="center" height="300px"/><br>
   </a>
 </details>
   
 <details>
-  <summary><b>Angular Upgrade</b> - Михаил Желудев [version 2.x]</summary>
+  <summary><b>Angular Upgrade</b> - Михаил Желудев</summary>
   <a href="https://www.youtube.com/watch?v=fUxAR2LNo-w">
     <br><img src="https://img.youtube.com/vi/fUxAR2LNo-w/0.jpg" align="center" height="300px"/><br>
   </a>
 </details>
   
 <details>
-  <summary><b>SPA на сервере своими руками</b> - Иван Матвейчук [version 2.x]</summary>
+  <summary><b>SPA на сервере своими руками</b> - Иван Матвейчук</summary>
   <a href="https://www.youtube.com/watch?v=YGDJOfwgu-A">
     <br><img src="https://img.youtube.com/vi/YGDJOfwgu-A/0.jpg" align="center" height="300px"/><br>
   </a>
