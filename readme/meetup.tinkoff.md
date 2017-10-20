@@ -6,14 +6,12 @@
 <a href="https://yandex.ru/maps/213/moscow/?um=constructor%3AYCv8GuMaLknNWuSsMnpGdwYvhFpdU4ed&amp%3Bsource=constructorLink&mode=usermaps&ll=37.494152%2C55.839493&z=16" 
 style="float: left">
   <b>Место проведения</b>: Москва, БЦ Водный, Головинское шоссе, д. 5
-</a>
-
+</a>&emsp;
 <a href="https://meetup.tinkoff.ru/#subscription" target="_blank" style="float: left">
-  &emsp;&#10092;Подписка&#10093;
-</a>
-
+  <b>Подписка</b>
+</a>&emsp;
 <a href="https://meetup.tinkoff.ru/#archive" target="_blank" style="float: left">
-  &emsp;&#10092;Архив&#10093;
+  <b>Архив</b>
 </a>
 
 
