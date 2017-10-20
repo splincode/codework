@@ -23,8 +23,8 @@ style="float: left">
 
 Примечание: не факт что тема была освещена полностью поэтому если есть что добавить или сказать не стесняйтесь предлагать.
 
-<details open>
-<summary>##### Angular Router вдоль и поперек - Юлия Царева [version 4.x]</summary>
+<details>
+  <summary><b>Angular Router вдоль и поперек</b> - Юлия Царева [version 4.x]</summary>
 <br>
-Well, you asked for it!
+[![youtube](https://www.youtube.com/watch?v=ovsBd6Y5DN0&feature=youtu.be)
 <details>
