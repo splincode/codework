@@ -1,1 +1,2 @@
-<img src="https://pp.userapi.com/c639823/v639823850/5343c/JRLfegN6j4E.jpg" align="center" />
+<img src="https://meetup.tinkoff.ru/assets/images/event/logo_angular.svg" align="left" width="32px" height="32px" />
+Angular Meetup by Tinkoff
