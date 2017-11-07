@@ -106,3 +106,4 @@
 - [Продукционная модель](https://github.com/splincode/codework/blob/master/javascript/production_system/)
 - [Система решения задач теоретической механики методом сил](https://github.com/splincode/codework/blob/master/javascript/cad/)
 - [Графический редактор](https://github.com/splincode/codework/tree/master/javascript/grapheditor/)
+- [Разработка программы разграничения полномочий пользователей на основе парольной аутентификации](https://github.com/splincode/simple-authorize-service)
