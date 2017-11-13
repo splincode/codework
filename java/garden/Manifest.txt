@@ -1,3 +1,0 @@
-Manifest-version: 1.0
-Created-By: 1.0
-Main-Class: ru.splincode.garden.Main
