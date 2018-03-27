@@ -3,6 +3,13 @@
 
 --------------
 
+<img src="https://avatars3.githubusercontent.com/u/33398667?s=400&u=370605b1fbc1027c69d860195f550958670c28f3&v=4" width="10%" alt="" />
+
+#### JavaScript
+- [2018. Визуализация Change Detection в Angular](https://github.com/Angular-RU/change-detection-tree)
+
+--------------
+
 <img src="https://pbs.twimg.com/profile_images/545505809036103680/Bd1I7Nav.jpeg" width="10%" alt="" />
 
 #### JavaScript
