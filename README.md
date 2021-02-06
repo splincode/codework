@@ -13,7 +13,7 @@
 <img src="https://pbs.twimg.com/profile_images/545505809036103680/Bd1I7Nav.jpeg" width="10%" alt="" />
 
 #### JavaScript
-- [2017. Логгирование web-приложений](https://github.com/splincodewd/client-logger)
+- [2017. Библиотека по логгированию web-приложения](https://github.com/splincodewd/client-logger)
 
 --------------
 
@@ -66,7 +66,7 @@
 
 --------------
 
-<img src="https://avatars.yandex.net/get-bunker/7dab1734c4d1632185bd09b2d8e6b66e8cafb732/normal/7dab17.png" width="10%" height="10%" alt="">
+<img src="https://cdn.worldvectorlogo.com/logos/yandex-2.svg" width="10%" height="10%" alt="">
 
 #### JavaScript
 
