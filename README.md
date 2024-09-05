@@ -49,7 +49,7 @@
 
 --------------
 
-<img src="http://json.tv/images/general/2014/12/09/20141209192310-1292.png" width="18%" height="10%" alt="">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/768px-JavaScript-logo.png" width="18%" height="10%" alt="">
 
 #### JavaScript
 - [2016. Проверка теоретических знаний](https://github.com/splincodewd/collection-codework/tree/master/javascript/theory)
