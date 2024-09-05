@@ -4,7 +4,7 @@
 
 --------------
 
-<img src="https://filearchive.cnews.ru/img/book/2022/06/15/yandeks.praktikum.jpeg" width="10%" alt="" />
+<img src="https://assets.themuse.com/uploaded/companies/12415/small_logo.png?v=1662576257https://filearchive.cnews.ru/img/book/2022/06/15/yandeks.praktikum.jpeg" width="10%" alt="" />
 
 #### Java
 - [2022. Java Kanban Board (springframework)]([https://github.com/Angular-RU/change-detection-tree](https://github.com/splincode/java-filmorate))
