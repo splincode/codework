@@ -1,6 +1,14 @@
 # Мои упражнения
 #### Список задач, которые являются типовыми задачами в программировании, встречающиеся мне на пути обучения в университете и различных компаниях (на собеседовании или во время трудоустройства):
 
+
+--------------
+
+<img src="https://filearchive.cnews.ru/img/book/2022/06/15/yandeks.praktikum.jpeg" width="10%" alt="" />
+
+#### Java
+- [2022. Java Kanban Board (springframework)]([https://github.com/Angular-RU/change-detection-tree](https://github.com/splincode/java-filmorate))
+
 --------------
 
 <img src="https://avatars3.githubusercontent.com/u/33398667?s=400&u=370605b1fbc1027c69d860195f550958670c28f3&v=4" width="10%" alt="" />
