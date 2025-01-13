@@ -2,6 +2,12 @@
 #### Список задач, которые являются типовыми задачами в программировании, встречающиеся мне на пути обучения в университете и различных компаниях (на собеседовании или во время трудоустройства):
 
 
+
+#### Hexlet
+
+#### JavaScript
+- [2025. Форма входа (springframework)](https://github.com/splincodewd/collection-codework/tree/master/javascript/hexlet)
+
 --------------
 
 <img src="https://assets.themuse.com/uploaded/companies/12415/small_logo.png?v=1662576257https://filearchive.cnews.ru/img/book/2022/06/15/yandeks.praktikum.jpeg" width="10%" alt="" />
