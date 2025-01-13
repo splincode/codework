@@ -5,8 +5,7 @@
 
 #### Hexlet
 
-#### JavaScript
-- [2025. Форма входа (springframework)](https://github.com/splincodewd/collection-codework/tree/master/javascript/hexlet)
+- [2025. Форма входа на Yup](https://github.com/splincodewd/collection-codework/tree/master/javascript/hexlet)
 
 --------------
 
