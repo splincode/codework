@@ -1,6 +1,6 @@
 # Лабораторные работы / домашние задания
 
-- [x] [<b>2025. JavaScript</b>. Форма входа на Yup](https://github.com/splincodewd/collection-codework/tree/master/javascript/hexlet)
+- [x] [<b>2025. JavaScript</b>. Форма входа на Yup](https://github.com/splincodewd/collection-codework/blob/master/javascript/hexlet/login/application.js)
 - [x] [<b>2018. Java</b>. Kanban Board (springframework)](https://github.com/splincode/java-filmorate)
 - [x] [<b>2018. JavaScript</b>. Визуализация Change Detection в Angular](https://github.com/Angular-RU/change-detection-tree)
 - [x] [<b>2017. JavaScript</b>. Библиотека по логгированию web-приложения](https://github.com/splincodewd/client-logger)
