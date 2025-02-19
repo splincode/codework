@@ -1,5 +1,16 @@
 # Лабораторные работы / домашние задания
 
+- [x] [<b>2025. JavaScript</b>. Todo лист на React](https://github.com/splincodewd/collection-codework/blob/master/javascript/hexlet/todos/src/TodoBox.jsx)
+- [x] [<b>2025. JavaScript</b>. Работа с табами и контекстом в React](https://github.com/splincodewd/collection-codework/blob/master/javascript/hexlet/tabs/src/App.jsx)
+- [x] [<b>2025. JavaScript</b>. Написание модального окна на React](https://github.com/splincodewd/collection-codework/blob/master/javascript/hexlet/modal/src/Component.jsx)
+- [x] [<b>2025. JavaScript</b>. Задачка на использование Markdown Editor в React](https://github.com/splincodewd/collection-codework/blob/master/javascript/hexlet/markdown/src/MarkdownEditor.jsx)
+- [x] [<b>2025. JavaScript</b>. Задачка на логирование счетчика на React](https://github.com/splincodewd/collection-codework/blob/master/javascript/hexlet/logs/src/Component.jsx)
+- [x] [<b>2025. JavaScript</b>. Карусель на React](https://github.com/splincodewd/collection-codework/blob/master/javascript/hexlet/carousel/src/Carousel.jsx)
+- [x] [<b>2025. JavaScript</b>. Collapse на React](https://github.com/splincodewd/collection-codework/blob/master/javascript/hexlet/collapse/src/Collapse.jsx)
+- [x] [<b>2025. JavaScript</b>. Автокомплит поле на React](https://github.com/splincodewd/collection-codework/blob/master/javascript/hexlet/autocomplete/src/Autocomplete.jsx)
+- [x] [<b>2025. JavaScript</b>. Форма логина на React](https://github.com/splincodewd/collection-codework/blob/master/javascript/hexlet/form/src/Collapse.jsx)
+- [x] [<b>2025. JavaScript</b>. Карточка на React](https://github.com/splincodewd/collection-codework/blob/master/javascript/hexlet/carousel/src/Carousel.jsx)
+- [x] [<b>2025. JavaScript</b>. Работа с i18next](https://github.com/splincodewd/collection-codework/blob/master/javascript/hexlet/i18n/application.js)
 - [x] [<b>2025. JavaScript</b>. Форма входа на Yup](https://github.com/splincodewd/collection-codework/blob/master/javascript/hexlet/login/application.js)
 - [x] [<b>2018. Java</b>. Kanban Board (springframework)](https://github.com/splincode/java-filmorate)
 - [x] [<b>2018. JavaScript</b>. Визуализация Change Detection в Angular](https://github.com/Angular-RU/change-detection-tree)
