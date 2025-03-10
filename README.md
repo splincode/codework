@@ -1,5 +1,7 @@
 # Лабораторные работы / домашние задания
 
+- [x] [<b>2025. JavaScript</b>. Использование useHook в React, калькулятор товаров](https://github.com/splincodewd/collection-codework/blob/master/javascript/hexlet/js-react-hooks/use-effect/src/Products.jsx)
+- [x] [<b>2025. JavaScript</b>. Использование useState в React](https://github.com/splincodewd/collection-codework/blob/master/javascript/hexlet/js-react-hooks/use-state/src/BtnGroup.jsx)
 - [x] [<b>2025. JavaScript</b>. Todo лист на React](https://github.com/splincodewd/collection-codework/blob/master/javascript/hexlet/todos/src/TodoBox.jsx)
 - [x] [<b>2025. JavaScript</b>. Работа с табами и контекстом в React](https://github.com/splincodewd/collection-codework/blob/master/javascript/hexlet/tabs/src/App.jsx)
 - [x] [<b>2025. JavaScript</b>. Написание модального окна на React](https://github.com/splincodewd/collection-codework/blob/master/javascript/hexlet/modal/src/Component.jsx)
