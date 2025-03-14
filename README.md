@@ -1,4 +1,4 @@
-# Лабораторные работы / домашние задания
+# Выполненные домашние задания по учебе
 
 - [x] [<b>2025. JavaScript</b>. Использование useCallback в React](https://github.com/splincodewd/collection-codework/tree/master/javascript/hexlet/js-react-hooks/use-callback)
 - [x] [<b>2025. JavaScript</b>. Использование useRef в React](https://github.com/splincodewd/collection-codework/tree/master/javascript/hexlet/js-react-hooks/use-ref)
