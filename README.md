@@ -1,5 +1,7 @@
 # Выполненные домашние задания по учебе
 
+- [x] [<b>2025. JavaScript</b>. Написание редьюсеров](https://github.com/splincodewd/collection-codework/tree/master/javascript/hexlet/js-redux-toolkit/reducers)
+- [x] [<b>2025. JavaScript</b>. Работа с Redux](https://github.com/splincodewd/collection-codework/tree/master/javascript/hexlet/js-redux-toolkit/redux)
 - [x] [<b>2025. JavaScript</b>. Использование useCallback в React](https://github.com/splincodewd/collection-codework/tree/master/javascript/hexlet/js-react-hooks/use-callback)
 - [x] [<b>2025. JavaScript</b>. Использование useRef в React](https://github.com/splincodewd/collection-codework/tree/master/javascript/hexlet/js-react-hooks/use-ref)
 - [x] [<b>2025. JavaScript</b>. Использование useContext в React](https://github.com/splincodewd/collection-codework/tree/master/javascript/hexlet/js-react-hooks/use-context)
