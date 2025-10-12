@@ -1,4 +1,4 @@
-# Выполненные домашние задания по учебе
+# Выполненное домашнее задания по учебе
 
 - [x] [<b>2025. JavaScript</b>. Написание редьюсеров](https://github.com/splincodewd/collection-codework/tree/master/javascript/hexlet/js-redux-toolkit/reducers)
 - [x] [<b>2025. JavaScript</b>. Работа с Redux](https://github.com/splincodewd/collection-codework/tree/master/javascript/hexlet/js-redux-toolkit/redux)
