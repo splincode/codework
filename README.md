@@ -1,5 +1,6 @@
 # Выполненное домашнее задания по учебе
 
+- [x] [<b>2026. JavaScript</b>. Контрибьют в опенсорс. Улучшение логов в Angular компиляторе](https://github.com/angular/angular/pull/64361)
 - [x] [<b>2025. JavaScript</b>. Написание редьюсеров](https://github.com/splincodewd/collection-codework/tree/master/javascript/hexlet/js-redux-toolkit/reducers)
 - [x] [<b>2025. JavaScript</b>. Работа с Redux](https://github.com/splincodewd/collection-codework/tree/master/javascript/hexlet/js-redux-toolkit/redux)
 - [x] [<b>2025. JavaScript</b>. Использование useCallback в React](https://github.com/splincodewd/collection-codework/tree/master/javascript/hexlet/js-react-hooks/use-callback)
